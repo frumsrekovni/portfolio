@@ -27,7 +27,7 @@
             background-color: rgb(144, 192, 33);                    
             display:flex; /*Makes align-items and justify-content work*/
             align-items:center; /*Puts subtitle inline with title*/
-            justify-content:center; /*Puth subtitle and title in the middle of the screen*/
+            justify-content:center; /*Puts subtitle and title in the middle of the screen*/
         }
         h1{
             background-color: blue;
@@ -48,7 +48,15 @@
             font-weight: 255;
             color:grey;
         }
-
+        @keyframes pulseAnimation {
+            0%   { opacity:1; }
+            25%  { opacity:0; }
+            40% { opacity:1; }
+        }
+        .animate_subtitle{
+            opacity: 1;
+            animation: pulseAnimation 5s infinite;
+        }
         nav{
             background-color: red;
             display: flex;
@@ -96,7 +104,7 @@
             </h1>
             <div class="hero_subtitle_body">
                 <div class="hero_subtitle">
-                    <span class="subtitle_text">Aspiring</span>
+                    <span class="subtitle_text animate_subtitle">Aspiring</span>
                     <span class="subtitle_text">Programmer</span>
                 </div>
             </div>
