@@ -6,7 +6,7 @@ const element = document.getElementById("main_page_aspiring_text");
 setInterval(_get_Random_Word, 5200);
 
 function _get_Random_Word(){
-    const aspiring_words = ['Aspiring','Dynamic','Enthusiastic' ,'Endeavoring','Eager','Striving','Ambitious','Diligent','Keen','Raring','Zealous','Aspirant','Wishful','Determined'];
+    const aspiring_words = ['Ambitious','Aspiring', 'Aspirant','Avid','Ardent','Dynamic','Determined','Driven','Diligent','Enthusiastic' ,'Endeavoring','Fervent','Eager','Keen','Raring','Ready','Resolved','Striving','Self-seeking','Go-getting','Passionate','Zealous','Wishful','Willing'];
     element.textContent = aspiring_words[Math.floor(Math.random() * aspiring_words.length)];
     element.classList.add('fadeIn_fadeOut');
 };
