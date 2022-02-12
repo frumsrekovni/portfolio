@@ -48,15 +48,19 @@
             font-weight: 255;
             color:grey;
         }
-        @keyframes pulseAnimation {
-            0%   { opacity:1; }
-            25%  { opacity:0; }
-            40% { opacity:1; }
+        @keyframes fadeIn_fadeOut {
+            0%      { opacity:0; }
+            20%     { opacity:1; }
+            80%     { opacity:1; }
+            100%     { opacity:0; }
+
         }
-        .animate_subtitle{
-            opacity: 1;
-            animation: pulseAnimation 5s infinite;
+
+        .fadeIn_fadeOut{
+            opacity: 0;
+            animation: fadeIn_fadeOut 5s;
         }
+
         nav{
             background-color: red;
             display: flex;
@@ -65,7 +69,6 @@
             position: absolute;
             width: 100%;
             top: 0px;
-
         }
         h2{
             display: flex;
@@ -108,7 +111,7 @@
             </h1>
             <div class="hero_subtitle_body">
                 <div class="hero_subtitle">
-                    <span id="main_page_aspiring_text" class="subtitle_text animate_subtitle">Aspiring</span>
+                    <span id="main_page_aspiring_text" class="subtitle_text fadeIn_fadeOut">Aspiring</span>
                     <span class="subtitle_text">Programmer</span>
                 </div>
             </div>
