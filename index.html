@@ -10,26 +10,32 @@
     <link href="https://fonts.googleapis.com/css2?family=Yantramanav:wght@100;300&display=swap" rel="stylesheet">
     <script src="js/aspiringtext.js" defer></script>
     <style>
+        html{
+            scroll-behavior: smooth;
+        }
         body{
             font-family: "Yantramanav", Helvetica, Arial, sans-serif; 
             font-weight: 255;
-            height: 1080px;
+            height: 11080px;
             background-color: #320549;/* For browsers that do not support gradients */
             background-image: linear-gradient(#7a0eef,#320549);
             margin: 0; /*Make header flush with top corners*/
             padding: 0; 
-            
         }
         header{
             background-color: rgb(143, 142, 145);
             padding: 20px;
         }
+        .hero_body{
+            position: absolute;
+            top:30%;
+            left: 30%;
+            
+        }
         .hero_title{                   
             display:flex;           /*Makes align-items and justify-content work*/
             align-items:center;     /*Puts subtitle inline with title*/
             justify-content:center; /*Puts subtitle and title in the middle of the screen*/
-            position: relative;
-            bottom: -30vh;
         }
         h1{
             font-weight: 255;
@@ -37,8 +43,6 @@
             font-size: 95px;
             text-align: center;
             filter: drop-shadow(0.3rem 0.3rem 0.2rem rgba(0, 0, 0, 0.5));
-        }
-        .hero_subtitle_body{
         }
         .hero_subtitle{
             display:flex;
@@ -61,11 +65,39 @@
             opacity: 0;
             animation: fadeIn_fadeOut 5s;
         }
+        @keyframes down_scroll_button_animation {
+            0% {
+                transform: rotate(-45deg) translate(0, 0)
+            }
+            20% {
+                transform: rotate(-45deg) translate(-15px, 15px)
+            }
+            40% {
+                transform: rotate(-45deg) translate(0, 0)
+            }
+        }
+        /*transform: rotate(-45deg) translate(-10px, 10px);*/        
+        .down_scroll_button{
+            border-left: 1px solid #fff;
+            border-bottom: 1px solid #fff;
+            transform: rotate(-45deg);
+            padding: 0.75em;
+            display:inline-flex;
+            position: relative;
+            left: 50%;
+            
+            animation: down_scroll_button_animation 2s infinite;
+        }
+
+        .down_scroll_button:hover{
+            opacity: 0.5;
+        }
 
         nav{
             background-color: aliceblue;
             opacity: 0.88;
             display: flex;          /*Keep the buttons inline*/
+            flex-wrap: wrap;
             list-style-type: none;  /*Remove the list dots*/
             justify-content:center; /*How the buttons in the nav bar will be positioned*/
             
@@ -86,31 +118,44 @@
         nav li a:hover{
             opacity: 0.5;
         }
+        #first_slide{
+            background-color: red;
+            font-size: 50px;
+            font-weight: 600;
+            text-align: center;
+            padding: 25px;
 
+            position: relative;
+            top: 100vh;
 
+        }
     </style>
 </head>
 <body>
+    <nav class="navigation_bar">
+        <li><a href="index.html", class="navbutton">Portfolio</a></li>
+        <li><a href="index.html", class="navbutton">CV</a></li>
+        <li><a href="mailto:joshua.backstrom@gmail.com", class="navbutton">Email</a></li>
+        <li><a href="https://github.com/frumsrekovni", class="navbutton">Github</a></li>
+        <li><a href="https://www.linkedin.com/in/joshua-b%C3%A4ckstr%C3%B6m-91360b113/", class="navbutton">LinkedIn</a></li>
+        <li><a href="pages/projects.html", class="navbutton">Projects</a></li>
+    </nav>
     <div class="hero_body">
         <div class="hero_title">
             <h1>
                 Joshua Bäckström
             </h1>
-            <div class="hero_subtitle_body">
-                <div class="hero_subtitle">
-                    <span id="main_page_aspiring_text" class="subtitle_text fadeIn_fadeOut">Aspiring</span>
-                    <span class="subtitle_text">Programmer</span>
-                </div>
+            <div class="hero_subtitle">
+                <span id="main_page_aspiring_text" class="subtitle_text fadeIn_fadeOut">Aspiring</span>
+                <span class="subtitle_text">Programmer</span>
             </div>
         </div>
-        <nav>
-            <li><a href="index.html", class="navbutton">Portfolio</a></li>
-            <li><a href="index.html", class="navbutton">CV</a></li>
-            <li><a href="mailto:joshua.backstrom@gmail.com", class="navbutton">Email</a></li>
-            <li><a href="https://github.com/frumsrekovni", class="navbutton">Github</a></li>
-            <li><a href="https://www.linkedin.com/in/joshua-b%C3%A4ckstr%C3%B6m-91360b113/", class="navbutton">LinkedIn</a></li>
-            <li><a href="pages/projects.html", class="navbutton">Projects</a></li>
-        </nav>
+        <a href="#first_slide", class="down_scroll_button" ></a>
+
+    </div>
+
+    <div id="first_slide">
+        Automated Image macro creator
     </div>
 </body>
 </html>
