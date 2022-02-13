@@ -25,8 +25,8 @@
             padding: 20px;
         }
         .hero_title{                   
-            display:flex; /*Makes align-items and justify-content work*/
-            align-items:center; /*Puts subtitle inline with title*/
+            display:flex;           /*Makes align-items and justify-content work*/
+            align-items:center;     /*Puts subtitle inline with title*/
             justify-content:center; /*Puts subtitle and title in the middle of the screen*/
             position: relative;
             bottom: -30vh;
@@ -55,7 +55,6 @@
             20%     { opacity:1; }
             80%     { opacity:1; }
             100%     { opacity:0; }
-
         }
 
         .fadeIn_fadeOut{
@@ -64,45 +63,31 @@
         }
 
         nav{
-            background-color: red;
-            display: flex;
-            list-style-type: none;
-            justify-content: center;
-            position: absolute;
+            background-color: aliceblue;
+            opacity: 0.88;
+            display: flex;          /*Keep the buttons inline*/
+            list-style-type: none;  /*Remove the list dots*/
+            justify-content:center; /*How the buttons in the nav bar will be positioned*/
+            
+            position: absolute;     /*Make the nav bar flush to the top of the page*/
             width: 100%;
-            top: 0px;
+            top: 0%;
         }
-        h2{
-            display: flex;
+        nav li{
+            margin-inline: 1%; /*Keep the buttons separated*/
+            text-transform:capitalize;
+            font-size: x-large;
+            text-decoration:none;
         }
-        h2 li{
-            padding: 10px;
-            margin: 10px;
-            background-color: aqua;
-        }
-        h2 li .category{
+        nav li a{
+            color: black;
             text-decoration: none;
         }
-        h2 li .category:hover{
-            text-decoration: underline;
+        nav li a:hover{
+            opacity: 0.5;
         }
-        .projects_container{
-            margin: 20px;
-            width: 250px;
-            background-color: brown;
-            display:inline-flex;
-            justify-content: center;
-            flex-flow: column wrap;
-            word-break: break-all;
-        }
-        .projects_container .projects_subject{
-            background-color: rgb(209, 121, 20);
-            border-radius: 0;
-        }
-        .projects li{
-            background-color: bisque;
-            border-radius: 10px;
-        }
+
+
     </style>
 </head>
 <body>
@@ -119,11 +104,12 @@
             </div>
         </div>
         <nav>
-            <h2>
-                <li><a href="index.html", class="category">CV</a></li>
-                <li><a href="https://github.com/frumsrekovni", class="category">Github</a></li>
-                <li>LinkedIn</li>
-            </h2>
+            <li><a href="index.html", class="navbutton">Portfolio</a></li>
+            <li><a href="index.html", class="navbutton">CV</a></li>
+            <li><a href="mailto:joshua.backstrom@gmail.com", class="navbutton">Email</a></li>
+            <li><a href="https://github.com/frumsrekovni", class="navbutton">Github</a></li>
+            <li><a href="https://www.linkedin.com/in/joshua-b%C3%A4ckstr%C3%B6m-91360b113/", class="navbutton">LinkedIn</a></li>
+            <li><a href="pages/projects.html", class="navbutton">Projects</a></li>
         </nav>
     </div>
 </body>
