@@ -22,15 +22,10 @@
             margin: 0; /*Make header flush with top corners*/
             padding: 0; 
         }
-        header{
-            background-color: rgb(143, 142, 145);
-            padding: 20px;
-        }
         .hero_body{
             position: absolute;
             top:30%;
-            left: 30%;
-            
+            left: 30%; 
         }
         .hero_title{                   
             display:flex;           /*Makes align-items and justify-content work*/
@@ -76,7 +71,28 @@
                 transform: rotate(-45deg) translate(0, 0)
             }
         }
-        /*transform: rotate(-45deg) translate(-10px, 10px);*/        
+        @keyframes down_scroll_button_animation_when_hovered {
+            0% {
+                transform: rotateY(0) rotateZ(-45deg);
+            }
+            100% {
+                transform: rotateY(720deg) rotateZ(-45deg);
+            }
+        }
+        .welcome_screen{
+            width: 100%;
+            height: 100vh;
+            position: absolute;
+            display: flex;
+            align-items: flex-end;
+            
+        }
+        .down_scroll_button_click_area{
+            position: relative;
+            display: inline-flex;
+            width: 100%;
+            height: 20vh;
+        }
         .down_scroll_button{
             border-left: 1px solid #fff;
             border-bottom: 1px solid #fff;
@@ -85,12 +101,13 @@
             display:inline-flex;
             position: relative;
             left: 50%;
+            height: 0;
             
-            animation: down_scroll_button_animation 2s infinite;
+            animation: down_scroll_button_animation 3s infinite;
         }
 
-        .down_scroll_button:hover{
-            opacity: 0.5;
+        .down_scroll_button_click_area:hover .down_scroll_button{
+            animation: down_scroll_button_animation_when_hovered 2s infinite;
         }
 
         nav{
@@ -118,44 +135,104 @@
         nav li a:hover{
             opacity: 0.5;
         }
-        #first_slide{
+        #first_projects{
+            background-color: pink;
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            top: 100vh;
+        }
+        #second_projects{
+            background-color: olivedrab;
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            top: 100vh;
+        }
+        #third_projects{
+            background-color: orangered;
+            width: 100%;
+            height: 100vh;
+            position: relative;
+            top: 100vh;
+        }
+        .body_text{
+            background-color: cyan;
+            position:absolute;
+            top:10px;
+        }
+        .page_header{
             background-color: red;
+            opacity: 0.3;
             font-size: 50px;
             font-weight: 600;
             text-align: center;
             padding: 25px;
-
-            position: relative;
-            top: 100vh;
-
+        }
+        #first_header{
+            position: absolute;
+            width: 100%;
+        }
+        #second_header{
+            position: absolute;
+            width: 100%;
+        }
+        #third_header{
+            position: absolute;
+            width: 100%;
         }
     </style>
 </head>
 <body>
-    <nav class="navigation_bar">
-        <li><a href="index.html", class="navbutton">Portfolio</a></li>
-        <li><a href="index.html", class="navbutton">CV</a></li>
-        <li><a href="mailto:joshua.backstrom@gmail.com", class="navbutton">Email</a></li>
-        <li><a href="https://github.com/frumsrekovni", class="navbutton">Github</a></li>
-        <li><a href="https://www.linkedin.com/in/joshua-b%C3%A4ckstr%C3%B6m-91360b113/", class="navbutton">LinkedIn</a></li>
-        <li><a href="pages/projects.html", class="navbutton">Projects</a></li>
-    </nav>
-    <div class="hero_body">
-        <div class="hero_title">
-            <h1>
-                Joshua Bäckström
-            </h1>
-            <div class="hero_subtitle">
-                <span id="main_page_aspiring_text" class="subtitle_text fadeIn_fadeOut">Aspiring</span>
-                <span class="subtitle_text">Programmer</span>
+    <div class="welcome_screen">
+        <nav class="navigation_bar">
+            <li><a href="index.html", class="navbutton">Portfolio</a></li>
+            <li><a href="pages/cv.html", class="navbutton">CV</a></li>
+            <li><a href="mailto:joshua.backstrom@gmail.com", class="navbutton">Email</a></li>
+            <li><a href="https://github.com/frumsrekovni", class="navbutton">Github</a></li>
+            <li><a href="https://www.linkedin.com/in/joshua-b%C3%A4ckstr%C3%B6m-91360b113/", class="navbutton">LinkedIn</a></li>
+            <li><a href="pages/projects.html", class="navbutton">Projects</a></li>
+        </nav>
+        <div class="hero_body">
+            <div class="hero_title">
+                <h1>
+                    Joshua Bäckström
+                </h1>
+                <div class="hero_subtitle">
+                    <span id="main_page_aspiring_text" class="subtitle_text fadeIn_fadeOut">Aspiring</span>
+                    <span class="subtitle_text">Programmer</span>
+                </div>
             </div>
         </div>
-        <a href="#first_slide", class="down_scroll_button" ></a>
-
+        <a href="#first_projects", class="down_scroll_button_click_area">
+            <div class="down_scroll_button"></div>
+        </a>
     </div>
 
-    <div id="first_slide">
-        Automated Image macro creator
+    <div id="first_projects">
+        <div id="first_header", class="page_header">
+            Automation and Webscraping
+        </div>
+        <div class="body_text">
+            In my freetime I have made an automated image macro creator and a script that beats both versions of cookie clicker
+        </div>
+    </div>
+
+    <div id="second_projects">
+        <div id="second_header", class="page_header">
+            Machine Close
+        </div>
+        <div class="body_text">
+            In university I worked closely with hardware using C/C++, ADA and VHDL
+        </div>
+    </div>
+    <div id="third_projects">
+        <div id="third_header", class="page_header">
+            Frontend
+        </div>
+        <div class="body_text">
+            BLABLABLABLA
+        </div>
     </div>
 </body>
 </html>
