@@ -25,11 +25,16 @@
         .hero_body{
             position: absolute;
             top:30%;
-            left: 30%; 
+            left: 27%; 
+            width: 50vw;
+            display: inline-flexbox;
+            text-align: center;
+            
         }
-        .hero_title{                   
+        .hero_title{                 
             display:flex;           /*Makes align-items and justify-content work*/
             align-items:center;     /*Puts subtitle inline with title*/
+            text-align:start;
             justify-content:center; /*Puts subtitle and title in the middle of the screen*/
         }
         h1{
@@ -48,6 +53,12 @@
             font-weight: 255;
             color:grey;
             filter: drop-shadow(0.3rem 0.3rem 0.19rem rgba(0, 0, 0, 0.5));
+        }
+        .hero_body_text{
+            font-size: x-large;
+            overflow-wrap: break-word;
+            width: 35vw;
+            display: inline-block;
         }
         @keyframes fadeIn_fadeOut {
             0%      { opacity:0; }
@@ -135,27 +146,15 @@
         nav li a:hover{
             opacity: 0.5;
         }
-        #first_projects{
-            background-color: pink;
+        .entire_viewport{
             width: 100%;
             height: 100vh;
             position: relative;
             top: 100vh;
+            display: flex;
+            align-items: flex-end;
         }
-        #second_projects{
-            background-color: olivedrab;
-            width: 100%;
-            height: 100vh;
-            position: relative;
-            top: 100vh;
-        }
-        #third_projects{
-            background-color: orangered;
-            width: 100%;
-            height: 100vh;
-            position: relative;
-            top: 100vh;
-        }
+
         .body_text{
             background-color: cyan;
             position:absolute;
@@ -163,21 +162,11 @@
         }
         .page_header{
             background-color: red;
-            opacity: 0.3;
             font-size: 50px;
             font-weight: 600;
             text-align: center;
             padding: 25px;
-        }
-        #first_header{
-            position: absolute;
-            width: 100%;
-        }
-        #second_header{
-            position: absolute;
-            width: 100%;
-        }
-        #third_header{
+            top: 0;
             position: absolute;
             width: 100%;
         }
@@ -203,36 +192,58 @@
                     <span class="subtitle_text">Programmer</span>
                 </div>
             </div>
+            <div class="hero_body_text">
+                Hello, I’m Joshua Bäckström A computer science student that currently programs whatever I want. Take a peek at some of the stuff down below. If you want to contact me just email me at joshua.backstrom@gmail.com
+            </div>
         </div>
         <a href="#first_projects", class="down_scroll_button_click_area">
             <div class="down_scroll_button"></div>
         </a>
     </div>
-
-    <div id="first_projects">
+    <!-- Write your comments here 
+    <div id="first_projects", class="entire_viewport">
         <div id="first_header", class="page_header">
             Automation and Webscraping
         </div>
         <div class="body_text">
             In my freetime I have made an automated image macro creator and a script that beats both versions of cookie clicker
         </div>
+        <a href="#second_projects", class="down_scroll_button_click_area">
+            <div class="down_scroll_button"></div>
+        </a>
     </div>
 
-    <div id="second_projects">
+    <div id="second_projects", class="entire_viewport">
         <div id="second_header", class="page_header">
             Machine Close
         </div>
         <div class="body_text">
             In university I worked closely with hardware using C/C++, ADA and VHDL
         </div>
+        <a href="#third_projects", class="down_scroll_button_click_area">
+            <div class="down_scroll_button"></div>
+        </a>
     </div>
-    <div id="third_projects">
+    <div id="third_projects", class="entire_viewport">
         <div id="third_header", class="page_header">
             Frontend
         </div>
         <div class="body_text">
             BLABLABLABLA
         </div>
+        <a href="#bottom_projects", class="down_scroll_button_click_area">
+            <div class="down_scroll_button"></div>
+        </a>
     </div>
+
+    <div id="bottom_projects", class="entire_viewport">
+        <div id="bottom_header", class="page_header">
+            You are at the bottom!
+        </div>
+        <div class="body_text">
+            This is the body text of the bottom viewport
+        </div>
+    </div>
+    -->
 </body>
 </html>
