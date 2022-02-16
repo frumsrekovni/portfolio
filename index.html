@@ -102,7 +102,7 @@
             position: relative;
             display: inline-flex;
             width: 100%;
-            height: 20vh;
+            height: 14vh;
         }
         .down_scroll_button{
             border-left: 1px solid #fff;
@@ -154,10 +154,21 @@
             display: flex;
             align-items: flex-end;
         }
+        .projects_body{
+            background-color: pink;
+            position: absolute;
+            display: flex;
+            margin: 5%;
+            top: 20vh;
+            left: 15vw;
+        }
+        .embedded_youtube_video{
+            position: relative;
+        }
 
         .body_text{
-            background-color: cyan;
-            position:absolute;
+            background-color: olivedrab;
+            position: relative;
             top:10px;
         }
         .page_header{
@@ -200,13 +211,18 @@
             <div class="down_scroll_button"></div>
         </a>
     </div>
-    <!-- Write your comments here 
+    
     <div id="first_projects", class="entire_viewport">
         <div id="first_header", class="page_header">
             Automation and Webscraping
         </div>
-        <div class="body_text">
-            In my freetime I have made an automated image macro creator and a script that beats both versions of cookie clicker
+        <div class="projects_body">
+            <div class="embedded_youtube_video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/TXXjeIF7M7I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="body_text">
+                In my freetime I have made an automated image macro creator and a script that beats both versions of cookie clicker
+            </div>
         </div>
         <a href="#second_projects", class="down_scroll_button_click_area">
             <div class="down_scroll_button"></div>
@@ -217,20 +233,40 @@
         <div id="second_header", class="page_header">
             Machine Close
         </div>
-        <div class="body_text">
-            In university I worked closely with hardware using C/C++, ADA and VHDL
+        <div class="projects_body">
+            <div class="embedded_youtube_video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/URNyUOA4cZo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="body_text">
+                In university I worked closely with hardware using C/C++, ADA and VHDL
+            </div>
         </div>
         <a href="#third_projects", class="down_scroll_button_click_area">
             <div class="down_scroll_button"></div>
         </a>
     </div>
+    
     <div id="third_projects", class="entire_viewport">
         <div id="third_header", class="page_header">
             Frontend
         </div>
-        <div class="body_text">
-            BLABLABLABLA
+        <div class="projects_body">
+            <div class="embedded_youtube_video">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/YGIhDIQoLCA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="body_text">
+                I am aware of the usual tools used for frontend development like the MEAN stack and all its variations.
+                But it always feels like wrong to start learning the syntax and process of for example React.js before even knowing the syntax of HTML and CSS. 
+                I believe that getting reasonably close to the nitty gritty of really anything not just web dev is the best way to learn even if initially it is very daunting and confusing,
+                but you need a strong foundation before partying ontop of the skyscraper. Even to the dismay of being forced to learn C/++, Ada and other low level languages in uni it has 
+                strongly changed how I approach programming in my now love language Python and I am ever grateful for learning the coding essentials in those languages first.
+                
+                Therefore, I wanted to build my own website with only HTML and CSS. Since I believe that best way to stay consistent in learning is to make something meaningful with the tools
+                you are discovering. The result is what you are looking at right now.
+                
+            </div>
         </div>
+
         <a href="#bottom_projects", class="down_scroll_button_click_area">
             <div class="down_scroll_button"></div>
         </a>
@@ -244,6 +280,5 @@
             This is the body text of the bottom viewport
         </div>
     </div>
-    -->
 </body>
 </html>
