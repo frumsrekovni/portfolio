@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yantramanav:wght@100;300&display=swap" rel="stylesheet">
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+        body{
+            font-family: "Yantramanav", Helvetica, Arial, sans-serif; 
+            font-weight: 255;
+            height: 11080px;
+            background-color: #320549;/* For browsers that do not support gradients */
+            background-image: linear-gradient(#7a0eef,#320549);
+            margin: 0; /*Make header flush with top corners*/
+            padding: 0; 
+        }
+        nav{
+            background-color: aliceblue;
+            opacity: 0.88;
+            display: flex;          /*Keep the buttons inline*/
+            flex-wrap: wrap;
+            list-style-type: none;  /*Remove the list dots*/
+            justify-content:center; /*How the buttons in the nav bar will be positioned*/
+            
+            position: absolute;     /*Make the nav bar flush to the top of the page*/
+            width: 100%;
+            top: 0%;
+        }
+        nav li{
+            margin-inline: 1%; /*Keep the buttons separated*/
+            text-transform:capitalize;
+            font-size: x-large;
+            text-decoration:none;
+        }
+        nav li a{
+            color: black;
+            text-decoration: none;
+        }
+        nav li a:hover{
+            opacity: 0.5;
+        }
+        .all_projects{
+            background-color: aqua;
+            
+            position: absolute;
+            top:30%;
+            left:27%; 
+            display: inline-flex;
+        }
+        .a_project{
+            position: relative;
+            
+        }
+        .all_projects li{
+            background-color: blue;
+            list-style: none;
+            width: 200px;
+            height: 200px;
+            border-radius: 20%;
+        }
+        .project_title{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+        }
+    </style>
+    <title>CV | Joshua Bäckström</title>
+</head>
+<body>
+    <nav class="navigation_bar">
+        <li><a href="../index.html", class="navbutton">Portfolio</a></li>
+        <li><a href="cv.html", class="navbutton">CV</a></li>
+        <li><a href="mailto:joshua.backstrom@gmail.com", class="navbutton">Email</a></li>
+        <li><a href="https://github.com/frumsrekovni", class="navbutton">Github</a></li>
+        <li><a href="https://www.linkedin.com/in/joshua-b%C3%A4ckstr%C3%B6m-91360b113/", class="navbutton">LinkedIn</a></li>
+        <li><a href="../index.html", class="navbutton">Projects</a></li>
+    </nav>
+    <div class="all_projects">
+        <li class="a_project"> <div class="project_title">Pomodoro Technique Timer</div> <img src="../images/Pomodoro_Technique.jpg" alt="Image not found" style="width:200px;height:200px;"> </li>
+        <li class="a_project"> <div class="project_title">Quiz Application</div> <img src="../images/quiz.png" alt="Image not found" style="width:200px;height:200px;"> </li>
+        <li>Image Macro creator</li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </div>
+</body>
+</html>
