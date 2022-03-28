@@ -45,24 +45,44 @@
         nav li a:hover{
             opacity: 0.5;
         }
+
+        .page_title{
+            position: absolute;
+            left: 50%;
+            margin-top: 150px;
+            transform: translate(-50%,-50%);
+            text-align: center;
+            font-weight:400;
+            font-size: 75px;
+        }
+        .sub_title{
+            font-size: small;
+            font-size: 25px;
+        }
         .all_projects{
             background-color: aqua;
             
             position: absolute;
-            top:30%;
-            left:27%; 
+            left: 50%;
+            top: 75%;
+            transform: translate(-50%,-50%);
             display: inline-flex;
+            flex-wrap: wrap;
+            width: 1050px;
         }
-        .a_project{
-            position: relative;
-            
+        .a_project{position: relative;}
+        .a_project img{
+            width:200px;
+            height:200px;
+            border-radius: 10%;
         }
         .all_projects li{
             background-color: blue;
             list-style: none;
             width: 200px;
             height: 200px;
-            border-radius: 20%;
+            margin: 30px;
+            margin-bottom: 60px;    
         }
         .project_title{
             position: absolute;
@@ -70,6 +90,10 @@
             top: 50%;
             transform: translate(-50%,-50%);
         }
+        #pomodoro_timer_project img:hover{
+            content:url(../images/disintegrate.gif);
+        }
+        
     </style>
     <title>CV | Joshua Bäckström</title>
 </head>
@@ -82,13 +106,27 @@
         <li><a href="https://www.linkedin.com/in/joshua-b%C3%A4ckstr%C3%B6m-91360b113/", class="navbutton">LinkedIn</a></li>
         <li><a href="../index.html", class="navbutton">Projects</a></li>
     </nav>
+    <div class="page_title">
+        Projects
+        <div class="sub_title">
+            All projects that I have done myself or been apart of both
+            that I felt like documenting for future reference. Everything from the university forced
+            backend projects like building an operating system to the very frontend like this website you are currently looking at.
+            Also some real physical projects using microcontrollers
+            
+
+        </div>
+    </div>
     <div class="all_projects">
-        <li class="a_project"> <div class="project_title">Pomodoro Technique Timer</div> <img src="../images/Pomodoro_Technique.jpg" alt="Image not found" style="width:200px;height:200px;"> </li>
-        <li class="a_project"> <div class="project_title">Quiz Application</div> <img src="../images/quiz.png" alt="Image not found" style="width:200px;height:200px;"> </li>
-        <li>Image Macro creator</li>
-        <li></li>
-        <li></li>
-        <li></li>
+        <li class="a_project" id="pomodoro_timer_project"> <div class="project_title">Pomodoro Technique Timer</div> <img src="../images/Pomodoro_Technique.jpg" alt="Image of Pomodoro Technique Timer"> </li>
+        <li class="a_project"> <div class="project_title">Quiz Application</div> <img src="../images/quiz.png" alt="Image of Quiz App"> </li>
+        <li class="a_project"> <div class="project_title">Quiz Application</div> <img src="../images/quiz.png" alt="Image of Quiz App"> </li>
+        <li class="a_project"> <div class="project_title">Pomodoro Technique Timer</div> <img src="../images/Pomodoro_Technique.jpg" alt="Image of Pomodoro Technique Timer"> </li>
+        <li class="a_project"> <div class="project_title">Quiz Application</div> <img src="../images/quiz.png" alt="Image of Quiz App"> </li>
+        <li class="a_project"> <div class="project_title">Quiz Application</div> <img src="../images/quiz.png" alt="Image of Quiz App"> </li>
+        <li class="a_project"> <div class="project_title">Pomodoro Technique Timer</div> <img src="../images/Pomodoro_Technique.jpg" alt="Image of Pomodoro Technique Timer"> </li>
+        <li class="a_project"> <div class="project_title">Quiz Application</div> <img src="../images/quiz.png" alt="Image of Quiz App"> </li>
+        <li class="a_project"> <div class="project_title">Quiz Application</div> <img src="../images/quiz.png" alt="Image of Quiz App"> </li>
     </div>
 </body>
 </html>
