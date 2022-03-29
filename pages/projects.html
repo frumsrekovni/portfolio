@@ -14,7 +14,7 @@
         body{
             font-family: "Yantramanav", Helvetica, Arial, sans-serif; 
             font-weight: 255;
-            height: 11080px;
+            height: 3000px;
             background-color: #320549;/* For browsers that do not support gradients */
             background-image: linear-gradient(#7a0eef,#320549);
             margin: 0; /*Make header flush with top corners*/
@@ -45,12 +45,17 @@
         nav li a:hover{
             opacity: 0.5;
         }
-
-        .page_title{
+        .hero_body{
+            background-color: rgb(151, 60, 60);
             position: absolute;
+            display:inline-flexbox;
             left: 50%;
-            margin-top: 150px;
-            transform: translate(-50%,-50%);
+            top: 10%;
+            transform: translate(-50%,0%); /*If not 0% it will grow upwards when screen gets smaller*/
+            width: 60vw;
+            
+        }
+        .page_title{
             text-align: center;
             font-weight:400;
             font-size: 75px;
@@ -61,23 +66,20 @@
         }
         .all_projects{
             background-color: aqua;
-            
-            position: absolute;
-            left: 50%;
-            top: 75%;
-            transform: translate(-50%,-50%);
             display: inline-flex;
-            flex-wrap: wrap;
-            width: 1050px;
+            flex-wrap:wrap;
+            justify-content:space-evenly;
+            opacity: 0.4;
         }
-        .a_project{position: relative;}
+        .a_project{
+            position: relative; /*Puts each project title inside the square */
+        }
         .a_project img{
             width:200px;
             height:200px;
             border-radius: 10%;
         }
         .all_projects li{
-            background-color: blue;
             list-style: none;
             width: 200px;
             height: 200px;
@@ -87,11 +89,14 @@
         .project_title{
             position: absolute;
             left: 50%;
-            top: 50%;
+            top: 20%;
             transform: translate(-50%,-50%);
         }
         #pomodoro_timer_project img:hover{
             content:url(../images/disintegrate.gif);
+        }
+        @media screen and (max-width: 1100px) {
+
         }
         
     </style>
@@ -106,27 +111,30 @@
         <li><a href="https://www.linkedin.com/in/joshua-b%C3%A4ckstr%C3%B6m-91360b113/", class="navbutton">LinkedIn</a></li>
         <li><a href="../index.html", class="navbutton">Projects</a></li>
     </nav>
-    <div class="page_title">
-        Projects
-        <div class="sub_title">
-            All projects that I have done myself or been apart of both
-            that I felt like documenting for future reference. Everything from the university forced
-            backend projects like building an operating system to the very frontend like this website you are currently looking at.
-            Also some real physical projects using microcontrollers
-            
-
+    <div class="hero_body">
+        <div class="page_title">
+            Projects
+            <div class="sub_title">
+                All projects that I have done myself or been apart of both
+                that I felt like documenting for future reference. Everything from the university forced
+                backend projects like building an operating system to the very frontend like this website you are currently looking at.
+                Also some real physical projects using microcontrollers
+                
+    
+            </div>
+        </div>
+        <div class="all_projects">
+            <li class="a_project" id="pomodoro_timer_project"> <div class="project_title">Pomodoro Tim</div> <img src="../images/Pomodoro_Technique.jpg" alt="Image of Pomodoro Technique Timer"> </li>
+            <li class="a_project"> <div class="project_title">Quiz Application</div> <img src="../images/quiz.png" alt="Image of Quiz App"> </li>
+            <li class="a_project"> <div class="project_title">Quiz Application</div> <img src="../images/quiz.png" alt="Image of Quiz App"> </li>
+            <li class="a_project"> <div class="project_title">Pomodoro Technique Timer</div> <img src="../images/Pomodoro_Technique.jpg" alt="Image of Pomodoro Technique Timer"> </li>
+            <li class="a_project"> <div class="project_title">Quiz Application</div> <img src="../images/quiz.png" alt="Image of Quiz App"> </li>
+            <li class="a_project"> <div class="project_title">Quiz Application</div> <img src="../images/quiz.png" alt="Image of Quiz App"> </li>
+            <li class="a_project"> <div class="project_title">Pomodoro Technique Timer</div> <img src="../images/Pomodoro_Technique.jpg" alt="Image of Pomodoro Technique Timer"> </li>
+            <li class="a_project"> <div class="project_title">Quiz Application</div> <img src="../images/quiz.png" alt="Image of Quiz App"> </li>
+            <li class="a_project"> <div class="project_title">Quiz Application</div> <img src="../images/quiz.png" alt="Image of Quiz App"> </li>
         </div>
     </div>
-    <div class="all_projects">
-        <li class="a_project" id="pomodoro_timer_project"> <div class="project_title">Pomodoro Technique Timer</div> <img src="../images/Pomodoro_Technique.jpg" alt="Image of Pomodoro Technique Timer"> </li>
-        <li class="a_project"> <div class="project_title">Quiz Application</div> <img src="../images/quiz.png" alt="Image of Quiz App"> </li>
-        <li class="a_project"> <div class="project_title">Quiz Application</div> <img src="../images/quiz.png" alt="Image of Quiz App"> </li>
-        <li class="a_project"> <div class="project_title">Pomodoro Technique Timer</div> <img src="../images/Pomodoro_Technique.jpg" alt="Image of Pomodoro Technique Timer"> </li>
-        <li class="a_project"> <div class="project_title">Quiz Application</div> <img src="../images/quiz.png" alt="Image of Quiz App"> </li>
-        <li class="a_project"> <div class="project_title">Quiz Application</div> <img src="../images/quiz.png" alt="Image of Quiz App"> </li>
-        <li class="a_project"> <div class="project_title">Pomodoro Technique Timer</div> <img src="../images/Pomodoro_Technique.jpg" alt="Image of Pomodoro Technique Timer"> </li>
-        <li class="a_project"> <div class="project_title">Quiz Application</div> <img src="../images/quiz.png" alt="Image of Quiz App"> </li>
-        <li class="a_project"> <div class="project_title">Quiz Application</div> <img src="../images/quiz.png" alt="Image of Quiz App"> </li>
-    </div>
+
 </body>
 </html>
