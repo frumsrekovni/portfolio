@@ -21,21 +21,21 @@
             padding: 0; 
         }
         nav{
-            background-color: aliceblue;
+            background-image: linear-gradient(to top right, beige, #98ff98);
             opacity: 0.88;
-            display: flex;          /*Keep the buttons inline*/
-            flex-wrap: wrap;
-            list-style-type: none;  /*Remove the list dots*/
-            justify-content:center; /*How the buttons in the nav bar will be positioned*/
-            
             position: absolute;     /*Make the nav bar flush to the top of the page*/
             width: 100%;
             top: 0%;
-            
-
+        }
+        nav .all_redirects{
+            margin: 0;
+            list-style-type: none;  /*Remove the list dots*/
+            display: flex;          /*Keep the buttons inline*/
+            flex-wrap: wrap;
+            justify-content:center; /*How all the redirects in the nav bar will be positioned*/
         }
         nav li{
-            margin-inline: 1%; /*Keep the buttons separated*/
+            margin-inline: 1.5%; /*Keep the buttons separated*/
             text-transform:capitalize;
             font-size: x-large;
             text-decoration:none;
@@ -43,9 +43,11 @@
         nav li a{
             color: black;
             text-decoration: none;
+            transition: 250ms ease;
         }
         nav li a:hover{
-            opacity: 0.5;
+            color: white;
+            transition: 250ms ease;
         }
         .hero_body{
             background-color: rgb(151, 60, 60);
@@ -108,12 +110,14 @@
 <body>
   
     <nav>
-        <li><a href="../index.html", class="navbutton">Portfolio</a></li>
-        <li><a href="cv.html", class="navbutton">CV</a></li>
-        <li><a href="mailto:joshua.backstrom@gmail.com", class="navbutton">Email</a></li>
-        <li><a href="https://github.com/frumsrekovni", class="navbutton">Github</a></li>
-        <li><a href="https://www.linkedin.com/in/joshua-b%C3%A4ckstr%C3%B6m-91360b113/", class="navbutton">LinkedIn</a></li>
-        <li><a href="../index.html", class="navbutton">Projects</a></li>
+        <ul class="all_redirects">
+            <li><a href="../index.html", class="navbutton">Portfolio</a></li>
+            <li><a href="projects.html", class="navbutton">Projects</a></li>
+            <li><a href="cv.html", class="navbutton">CV</a></li>
+            <li><a href="mailto:joshua.backstrom@gmail.com", class="navbutton">Email</a></li>
+            <li><a href="https://github.com/frumsrekovni", class="navbutton">Github</a></li>
+            <li><a href="https://www.linkedin.com/in/joshua-b%C3%A4ckstr%C3%B6m-91360b113/", class="navbutton">LinkedIn</a></li>
+        </ul>
     </nav>
 
     <div class="hero_body">
