@@ -22,23 +22,71 @@
         }
         nav{
             background-image: linear-gradient(to top right, beige, #98ff98);
-            opacity: 0.88;
-            position: absolute;     /*Make the nav bar flush to the top of the page*/
             width: 100%;
             top: 0%;
+            height: 40px;
+            display: flex;          /*Keep the buttons inline*/
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content:center;
         }
-        nav .all_redirects{
+        .all_redirects{
             margin: 0;
             list-style-type: none;  /*Remove the list dots*/
             display: flex;          /*Keep the buttons inline*/
             flex-wrap: wrap;
             justify-content:center; /*How all the redirects in the nav bar will be positioned*/
         }
+        .hamburger_menu{ /*The clickable area of the hamburger menu*/
+            display: none; /*The hamburger menu should only show up when the screen is narrow*/
+            height: 100%; /*The entire height of whatever the nav bar is*/
+            width: 50px;
+            cursor: pointer;
+            justify-content: center; /*Center the visible parts of the hamburger menu to the clickable container*/
+            align-items: center;     /*Center the visible parts of the hamburger menu to the clickable container*/
+        }
+        #hamburger_menu_toggle {/*The hamburger menu is really just a checkbox wrapped in a styled label*/
+            display: none;
+        }
+        .hamburger_slice,
+        .hamburger_slice::before,
+        .hamburger_slice::after { /*The visible part of the hamburger menu*/
+        /* display: block; */
+        background-color: white;
+        position: absolute;
+        height: 4px; /*The height of each indivisual hamburger line*/
+        width: 33px; /*The width of each indivisual hamburger line*/
+        transition-timing-function: cubic-bezier(0.2, 1, 0.32, 1);
+        transition-duration: 500ms;
+        border-radius: 2px;
+        }
+        .hamburger_slice::before {
+        content: '';
+        margin-top: -10px;  /*How far above the middle line the top line will be*/
+        }
+
+        .hamburger_slice::after {
+        content: '';
+        margin-top: 10px;   /*How far below the middle line the bottom line will be*/
+        }
+
+        #hamburger_menu_toggle:checked + .hamburger_menu .hamburger_slice::before { /*When the hamburger menu is checked the hamburger slices needs to animate*/
+        margin-top: 0px;
+        transform: rotate(765deg); /*45 will just go to down. 405 will spin one time before going down etc just add 360 per spin*/
+        }
+
+        #hamburger_menu_toggle:checked + .hamburger_menu .hamburger_slice {
+        background: rgba(255, 255, 255, 0); /*Make the middle slice dissappear when hamburger menu is checked*/
+        }
+
+        #hamburger_menu_toggle:checked + .hamburger_menu .hamburger_slice::after {
+        margin-top: 0px;
+        transform: rotate(-765deg);
+        }
         nav li{
-            margin-inline: 1.5%; /*Keep the buttons separated*/
+            margin-inline: 2%; /*Keep the buttons separated*/
             text-transform:capitalize;
             font-size: x-large;
-            text-decoration:none;
         }
         nav li a{
             color: black;
@@ -58,7 +106,6 @@
             transform: translate(-50%,0%); /*If not 0% it will grow upwards when screen gets smaller*/
             width: 60vw;
             opacity: 0.4;
-            
         }
         .page_title{
             text-align: center;
@@ -100,9 +147,48 @@
         #pomodoro_timer_project img:hover{
             content:url(../images/disintegrate.gif);
         }
-        @media screen and (max-width: 500px) {
-
+        @media (max-width: 600px) {
+            .hamburger_menu {
+                display: flex;
+                
+            }
+            .all_redirects{
+                position: absolute;
+                top:0;
+                margin-top: 50px;
+                left: 0;
+                flex-direction: column;
+                width: 100%;
+                justify-content: center;
+                align-items: center;
+            }
+            #hamburger_menu_toggle ~ .all_redirects li {
+                height: 0;
+                margin: 0;
+                padding: 0;
+                border: 0;
+                transition:500ms cubic-bezier(0.2, 1, 0.3, 1);
+                pointer-events: none;
+                opacity: 0;
+                
+            }
+            #hamburger_menu_toggle:checked ~ .all_redirects li {
+                border: 1px solid #333;
+                height: 2em;
+                transition:500ms cubic-bezier(0.2, 1, 0.3, 1);
+                pointer-events:all;
+                opacity: 1;
+            }
+            .all_redirects > li {
+                display: inline-flex;
+                justify-content: center;
+                width: 100%;
+                color: white;
+                background-color: rgb(0, 0, 0);
+                
+            }       
         }
+
         
     </style>
     <title>Projects | Joshua Bäckström</title>
@@ -110,6 +196,10 @@
 <body>
   
     <nav>
+        <input id="hamburger_menu_toggle" type="checkbox">
+        <label class="hamburger_menu" for="hamburger_menu_toggle">
+            <div class='hamburger_slice'></div>
+        </label>
         <ul class="all_redirects">
             <li><a href="../index.html", class="navbutton">Portfolio</a></li>
             <li><a href="projects.html", class="navbutton">Projects</a></li>
