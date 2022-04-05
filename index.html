@@ -195,6 +195,7 @@
             margin-inline: 2%; /*Keep the buttons separated*/
             text-transform:capitalize;
             font-size: x-large;
+            filter: drop-shadow(0.3rem 0.3rem 0.19rem rgba(0, 0, 0, 0.5));
         }
         nav li a{
             color: white;
@@ -239,6 +240,33 @@
             top: 0;
             position: absolute;
             width: 100%;
+        }
+        @media (max-width: 1700px) {
+            h1{
+            font-size: 80px;
+            }
+            .hero_subtitle .subtitle_text{
+            font-size: x-large;
+            }
+        }
+        @media (max-width: 1000px) {
+            h1{
+            font-size: 50px;
+            }
+            .hero_subtitle .subtitle_text{
+            font-size: 16px;
+            }
+        }
+        @media (max-width: 400px) {
+            h1{
+            font-size: x-large;
+            }
+            .hero_subtitle .subtitle_text{
+            font-size: large;
+            }
+            .hero_body_text{
+            font-size: large;
+            }
         }
         @media (max-width: 600px) {
             .hamburger_menu {
