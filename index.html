@@ -17,6 +17,7 @@
             font-family: "Yantramanav", Helvetica, Arial, sans-serif; 
             font-weight: 255;
             height: 11080px;
+            
             background-color: rgb(24, 24, 24);;/* For browsers that do not support gradients */
             background: linear-gradient(180deg, rgba(50,5,73,1) 0%, rgba(26,26,26,1) 5%);
             margin: 0; /*Make header flush with top corners*/
@@ -216,9 +217,13 @@
             background-color: pink;
             position: absolute;
             display: flex;
+            flex-wrap: wrap;
             margin: 5%;
-            top: 20vh;
-            left: 15vw;
+            /* top: 20vh;
+            left: 15vw; */
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
         }
         .embedded_youtube_video{
             position: relative;
@@ -247,7 +252,7 @@
             font-size: x-large;
             }
         }
-        @media (max-width: 1100px) {
+        @media (max-width: 1450px) {
             h1{
             font-size: 50px;
             }
@@ -255,9 +260,9 @@
             font-size: x-large;
             }
         }
-        @media (max-width: 400px) {
+        @media (max-width: 600px) {
             h1{
-            font-size: x-large;
+            font-size: 40px;
             }
             .hero_subtitle .subtitle_text{
             font-size: large;
@@ -265,8 +270,6 @@
             .hero_body_text{
             font-size: large;
             }
-        }
-        @media (max-width: 600px) {
             .hamburger_menu {
                 display: flex;      /*When the viewport is narrow is when the hamburger menu should be displayed. It's none by default.*/
             }
@@ -304,11 +307,23 @@
                 color: gold;
             }       
         }
+        @media (max-width: 400px) {
+            h1{
+            font-size: x-large;
+            }
+            .hero_subtitle .subtitle_text{
+            font-size: large;
+            }
+            .hero_body_text{
+            font-size: large;
+            }
+        }
+        
     </style>
 </head>
 <body>
     <div class="welcome_screen">
-        <nav>
+        <nav id="nav_bar">
             <input id="hamburger_menu_toggle" type="checkbox">
             <label class="hamburger_menu" for="hamburger_menu_toggle">
                 <div class='hamburger_slice'></div>
@@ -337,7 +352,7 @@
                 </div>
             </div>
             <div class="hero_body_text">
-                A computer science student based in Sweden that loves making anything that makes atleast one person go "oh cool", even if that one person is me.
+                A computer science student based in Sweden that loves making anything that makes atleast one person go "oh cool", even if that one person is only me.
                 If you are interested in who I am or just want a tiny glimpse in what I've made just scroll down. Otherwise I go into detail on my Projects page. 
             </div>
         </div>
@@ -358,36 +373,15 @@
                 In my freetime I have made an automated image macro creator and a script that beats both versions of cookie clicker
             </div>
         </div>
-        <a href="#second_projects", class="down_scroll_button_click_area">
-            <div class="down_scroll_button"></div>
-        </a>
-    </div>
-
-    <div id="second_projects", class="entire_viewport">
-        <div id="second_header", class="page_header">
-            Machine Close
-        </div>
-        <div class="projects_body">
-            <div class="embedded_youtube_video">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/URNyUOA4cZo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <div class="body_text">
-                In university I worked closely with hardware using C/C++, ADA and VHDL
-            </div>
-        </div>
         <a href="#third_projects", class="down_scroll_button_click_area">
             <div class="down_scroll_button"></div>
         </a>
     </div>
-    
     <div id="third_projects", class="entire_viewport">
         <div id="third_header", class="page_header">
             Frontend
         </div>
         <div class="projects_body">
-            <div class="embedded_youtube_video">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/YGIhDIQoLCA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
             <div class="body_text">
                 I am aware of the usual tools used for frontend development like the MEAN stack and all its variations.
                 But it always feels like wrong to start learning the syntax and process of for example React.js before even knowing the syntax of HTML and CSS. 
@@ -401,18 +395,9 @@
             </div>
         </div>
 
-        <a href="#bottom_projects", class="down_scroll_button_click_area">
+        <a href="#nav_bar", class="down_scroll_button_click_area">
             <div class="down_scroll_button"></div>
         </a>
-    </div>
-
-    <div id="bottom_projects", class="entire_viewport">
-        <div id="bottom_header", class="page_header">
-            You are at the bottom!
-        </div>
-        <div class="body_text">
-            This is the body text of the bottom viewport
-        </div>
     </div>
 </body>
 </html>
