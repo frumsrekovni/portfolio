@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Joshua's Portfolio</title>
+    <title>Joshua Bäckström</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Yantramanav:wght@100;300&display=swap" rel="stylesheet">
@@ -86,6 +86,17 @@
                 transform: rotate(-45deg) translate(0, 0)
             }
         }
+        @keyframes up_scroll_button_animation {
+            0% {
+                transform: rotate(-45deg) translate(0, 0)
+            }
+            20% {
+                transform: rotate(-45deg) translate(-15px, 15px)
+            }
+            40% {
+                transform: rotate(-45deg) translate(0, 0)
+            }
+        }
         @keyframes down_scroll_button_animation_when_hovered {
             0% {
                 transform: rotateY(0) rotateZ(-45deg);
@@ -94,13 +105,20 @@
                 transform: rotateY(720deg) rotateZ(-45deg);
             }
         }
+        @keyframes up_scroll_button_animation_when_hovered {
+            0% {
+                transform: rotateY(0) rotateZ(135deg);
+            }
+            100% {
+                transform: rotateY(720deg) rotateZ(135deg);
+            }
+        }
         .welcome_screen{
             width: 100%;
             height: 100vh;
             position: absolute;
             display: flex;
             align-items: flex-end;
-            
         }
         .down_scroll_button_click_area{
             position: relative;
@@ -120,9 +138,22 @@
             
             animation: down_scroll_button_animation 3s infinite;
         }
+        .up_scroll_button{
+            border-left: 1px solid #fff;
+            border-bottom: 1px solid #fff;
+            transform: rotate(135deg);
+            padding: 0.75em;
+            display:inline-flex;
+            position: relative;
+            left: 50%;
+            height: 0;
+        }
 
         .down_scroll_button_click_area:hover .down_scroll_button{
             animation: down_scroll_button_animation_when_hovered 2s infinite;
+        }
+        .down_scroll_button_click_area:hover .up_scroll_button{
+            animation: up_scroll_button_animation_when_hovered 2s infinite;
         }
 
         nav{
@@ -198,8 +229,8 @@
         }
         nav li a{
             color: white;
-            text-decoration: none;
             transition: 250ms ease;
+            text-decoration: none;
         }
         nav li a:hover{
             color: black;
@@ -225,6 +256,18 @@
             top: 50%;
             transform: translate(-50%,-50%);
         }
+        .all_nodes{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            list-style: none;
+        }
+        .all_nodes li{
+            background-color: red;
+            padding: 20px;
+            margin:    20px;
+        }
         .embedded_youtube_video{
             position: relative;
         }
@@ -235,11 +278,11 @@
             top:10px;
         }
         .page_header{
-            background-color: red;
-            font-size: 50px;
-            font-weight: 600;
+            font-weight: 255;
+            color: rgb(212, 212, 212);
+            font-size: 100px;
             text-align: center;
-            padding: 25px;
+            filter: drop-shadow(0.3rem 0.3rem 0.3rem rgb(0, 0, 0, 0.7));
             top: 0;
             position: absolute;
             width: 100%;
@@ -263,6 +306,9 @@
         @media (max-width: 600px) {
             h1{
             font-size: 40px;
+            }
+            .page_header{
+            font-size: 60px;
             }
             .hero_subtitle .subtitle_text{
             font-size: large;
@@ -352,51 +398,38 @@
                 </div>
             </div>
             <div class="hero_body_text">
-                A computer science student based in Sweden that loves making anything that makes atleast one person go "oh cool", even if that one person is only me.
-                If you are interested in who I am or just want a tiny glimpse in what I've made just scroll down. Otherwise I go into detail on my Projects page. 
+                Head over to my projects page where I describe them in detail <br>
+                Curious about me? Keep scrolling!
+                <br> Want to contact me? Email me!
             </div>
         </div>
-        <a href="#first_projects", class="down_scroll_button_click_area">
+        <a href="#personal_timeline", class="down_scroll_button_click_area">
             <div class="down_scroll_button"></div>
         </a>
     </div>
     
-    <div id="first_projects", class="entire_viewport">
+    <div id="personal_timeline", class="entire_viewport">
         <div id="first_header", class="page_header">
-            Automation and Webscraping
+            My Timeline
         </div>
-        <div class="projects_body">
-            <div class="embedded_youtube_video">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/TXXjeIF7M7I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <div class="body_text">
-                In my freetime I have made an automated image macro creator and a script that beats both versions of cookie clicker
-            </div>
+        <div class="all_nodes">
+            <li>Born when <span id="tv_show">Xena: Warrior Princess</span> was on air. <br>
+                Born and raised in a suburb close to Stockholm, Sweden.
+                An entire elementary school worth of runescape and ice-hockey playing later I enter a language upper secondary school
+                with non-existent retention of my spanish classes because it was the only local school that offered university 
+                preparing math classes.
+            </li>
+            <li>Language school done and being 18 years old. <br>
+                There is nothing more I want to do but to not learn formulas for a second. Nepotism is a virtue.. 
+                and I became a traffic flagger for a construction company, which in reality also meant construction fence builder.
+                Never in my life have I gained this much appreciation toward air-conditioning.</li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
         </div>
-        <a href="#third_projects", class="down_scroll_button_click_area">
-            <div class="down_scroll_button"></div>
-        </a>
-    </div>
-    <div id="third_projects", class="entire_viewport">
-        <div id="third_header", class="page_header">
-            Frontend
-        </div>
-        <div class="projects_body">
-            <div class="body_text">
-                I am aware of the usual tools used for frontend development like the MEAN stack and all its variations.
-                But it always feels like wrong to start learning the syntax and process of for example React.js before even knowing the syntax of HTML and CSS. 
-                I believe that getting reasonably close to the nitty gritty of really anything not just web dev is the best way to learn even if initially it is very daunting and confusing,
-                but you need a strong foundation before partying ontop of the skyscraper. Even to the dismay of being forced to learn C/++, Ada and other low level languages in uni it has 
-                strongly changed how I approach programming in my now love language Python and I am ever grateful for learning the coding essentials in those languages first.
-                
-                Therefore, I wanted to build my own website with only HTML and CSS. Since I believe that best way to stay consistent in learning is to make something meaningful with the tools
-                you are discovering. The result is what you are looking at right now.
-                
-            </div>
-        </div>
-
         <a href="#nav_bar", class="down_scroll_button_click_area">
-            <div class="down_scroll_button"></div>
+            <div class="up_scroll_button"></div>
         </a>
     </div>
 </body>
