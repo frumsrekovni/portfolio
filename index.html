@@ -64,10 +64,22 @@
             color: rgb(213, 245, 204);
             filter: drop-shadow(0.3rem 0.3rem 0.19rem rgba(0, 0, 0, 0.5));
         }
-        .hero_body_text div:hover span{
+        .hero_body_text a{
+            text-decoration: none;
+        }
+
+        .hero_body_text a .projects_hero_redirect{
+            color: rgb(213, 245, 204);
+            transition:0.6s cubic-bezier(0.16, 0.84, 0.44, 1);
+        }
+        .hero_body_text a:hover .projects_hero_redirect{
+            filter: drop-shadow(0rem 0rem 0.1rem rgba(255, 223, 0, 1));
+            font-size: 1030;
+        }
+        .hero_body_text .emaildiv:hover span{
             display: none;
         }
-        .hero_body_text div:hover::before{
+        .hero_body_text .emaildiv:hover::before{
             content: "joshua.backstrom@gmail.com";
         }
         .copy_alert{ /*Alert that shows up for 1s when user clicks on "Email me!"*/
@@ -77,7 +89,7 @@
             transform: translate(-50%,-50%);
             padding: 5px;
             font-size: x-large;
-            font-weight: 600;
+            font-weight: 500;
             background-color:white;
             opacity: 0.9;
             border-radius: 2px;
@@ -399,9 +411,9 @@
                 </div>
             </div>
             <div class="hero_body_text">
-                What have I programmed? Check out my projects page! <br>
+                What have I programmed? Check out my <a href="pages/projects.html" ><span class="projects_hero_redirect">projects</span></a> page! <br>
                 Who am I? Keep scrolling!
-                <br> Want to contact me? <div onclick="copyEmail()"><span id="email_me">Email me!</span></div>
+                <br> Want to contact me? <div class="emaildiv" onclick="copyEmail()"><span id="email_me">Email me!</span></div>
             </div>
         </div>
         <a href="#personal_timeline", class="down_scroll_button_click_area">
