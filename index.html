@@ -64,6 +64,26 @@
             color: rgb(213, 245, 204);
             filter: drop-shadow(0.3rem 0.3rem 0.19rem rgba(0, 0, 0, 0.5));
         }
+        .hero_body_text div:hover span{
+            display: none;
+        }
+        .hero_body_text div:hover::before{
+            content: "joshua.backstrom@gmail.com";
+        }
+        .copy_alert{ /*Alert that shows up for 1s when user clicks on "Email me!"*/
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            padding: 5px;
+            font-size: x-large;
+            font-weight: 600;
+            background-color:white;
+            opacity: 0.9;
+            border-radius: 2px;
+        }
+
+        
         @keyframes fadeIn_fadeOut {
             0%      { opacity:0; }
             20%     { opacity:1; }
@@ -381,7 +401,7 @@
             <div class="hero_body_text">
                 What have I programmed? Check out my projects page! <br>
                 Who am I? Keep scrolling!
-                <br> Want to contact me? Email me!
+                <br> Want to contact me? <div onclick="copyEmail()"><span id="email_me">Email me!</span></div>
             </div>
         </div>
         <a href="#personal_timeline", class="down_scroll_button_click_area">
