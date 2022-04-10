@@ -16,10 +16,11 @@
         body{
             font-family: "Yantramanav", Helvetica, Arial, sans-serif; 
             font-weight: 255;
-            height: 11080px;
+            height: 3750px;
             
             background-color: rgb(24, 24, 24);;/* For browsers that do not support gradients */
-            background: linear-gradient(180deg, rgba(50,5,73,1) 0%, rgba(26,26,26,1) 5%);
+            background: linear-gradient(180deg, rgba(50,5,73,1) 0%, rgba(26,26,26,1) 15%,rgba(26,26,26,1) 85%,rgba(50,5,73,1) 100%);
+            
             margin: 0; /*Make header flush with top corners*/
             padding: 0; 
         }
@@ -59,7 +60,7 @@
         .hero_body_text{
             font-size: x-large;
             overflow-wrap: break-word;
-            width: 40vw;
+            width: 50vw;
             display: inline-block;
             color: rgb(213, 245, 204);
             filter: drop-shadow(0.3rem 0.3rem 0.19rem rgba(0, 0, 0, 0.5));
@@ -276,7 +277,7 @@
         }
         .entire_viewport{
             width: 100%;
-            height: 500vh;
+            
             top: 100vh;     /*It is positioned under the initial landing screen*/
             position: relative;
             display: flex;
@@ -382,6 +383,14 @@
             font-size: large;
             }
         }
+        @media (max-width: 700px) and (orientation: landscape) {
+            h1{
+                font-size: 30px;
+            }
+            .hero_body_text{
+                font-size: large;
+            }
+        }
         
     </style>
 </head>
@@ -442,20 +451,23 @@
                 so I quickly found myself as a traffic flagger for a construction company, which in reality also meant construction fence builder.
                 Never in my life have I gained this much appreciation toward air-conditioning.</li>
             <li>University<br>
-                Entered Linköping University for Computer Science. The amount of work ethic and discipline required at this level swiftly knocked my behind to the floor. I grit my teeth through building entire operative systems in C, 
+                Entered Linköping University for Computer Science. The work ethic and discipline required here swiftly knocked me to the ground. I grit my teeth through building entire operative systems in C, 
                 building a little machine learning virtual rocket ship that needs to learn to hover by itself and often moving literal ones and zeroes in order to test 
                 microchips. This was my introduction to the world of programming and computer science and it was equal parts amazingly cool and amazingly laborious.
             </li>
-            <li>Burnt Out<br>
-                Similar to my graduation from language school, after university I wanted nothing more but to not learn formulas for a second. 
-                I ended up working front desk for a hostel which made me meet more people in a year than I have collectively met in my entire life.
-                Good for developing people skills but certainly did not feel like my calling.
+            <li>Flashback<br>
+                With university done there is nothing more I want to do but to not learn formulas for a second. 
+                I ended up working front desk for a hostel which made me meet more people in a few years than I have collectively met in my entire life.
+                Good for developing people skills but in the end did not feel like my calling.
             </li>
-            <li>Got inspired by this blogpost https://medium.com/@rieckpil/30-minutes-every-day-for-your-craft-committing-code-to-github-for-365-consecutive-days-eec8b73b5105 
-                and Robert "Uncle Bob" Martin's ever eloquent ideas. Never had time to focus on what I wanted to make. Constantly make whatever the next class needed.
-                So since the start of 2022 that's been my life.
+            <li>Git Committing<br>
+                With proper self-reflection and consciously dusting of my feelings built up towards programming I eventually started actively code again.
+                Programming was in my mind one and the same with computer science courses.
+                Accepting the simple reality that it's ok to program anything that you want and by your own volition is very freeing
+                and I've been running on this high since the start of 2022. Having fun trying to git commit everyday as per 
+                <a href="https://medium.com/@rieckpil/30-minutes-every-day-for-your-craft-committing-code-to-github-for-365-consecutive-days-eec8b73b5105">this blogpost</a>
+                and following Robert "Uncle Bob" Martin's ever eloquent ideas regarding honing your craft and building a routine.
             </li>
-            <li> ??? </li>
         </div>
         <a href="#nav_bar", class="down_scroll_button_click_area">
             <div class="up_scroll_button"></div>
