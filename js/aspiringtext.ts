@@ -4,6 +4,7 @@
 const element = document.getElementById("main_page_aspiring_text");
 const el_tvshow = document.getElementById("timeline_tv_show");
 const el_game = document.getElementById("timeline_game");
+const el_sport = document.getElementById("timeline_sport");
 
 setInterval(_get_Random_Word, 5200);
 
@@ -23,11 +24,15 @@ function _get_Random_Tv_Show(){
     el_tvshow.textContent = tv_shows[Math.floor(Math.random() * tv_shows.length)];
 };
 
-function _get_Random_game(){
+function _get_Random_Game(){
     const childhood_games = ['counter-strike','battlefront','halo','runescape', 'pokemon sapphire','sherwood dungeon','battleon','guitar hero','san andreas'];
     el_game.textContent = childhood_games[Math.floor(Math.random() * childhood_games.length)];
 };
 
+function _get_Random_Sport(){
+    const childhood_sports = ['swimming','football','bowling','table tennis','ice-hockey'];
+    el_sport.textContent = childhood_sports[Math.floor(Math.random() * childhood_sports.length)];
+};
 function copyEmail(){
     navigator.clipboard.writeText("joshua.backstrom@gmail.com");
 
