@@ -11,8 +11,36 @@
     <link rel="stylesheet" href="../css/styles.css">
     <style>
         .cvs{
+            position: absolute;
+            top: 8%;
+            left: 50%;
+            transform: translate(-50%,0%);
+            display: inline-flex;
+            flex-flow: column;
+            justify-content:center;
+            text-align: center;
+        }
+        .cv iframe{
+            position: relative;
+            width: 50vw;
+            height:92vh;
+            margin: 3px;
+        }
+        .newtab_cv{
+            
             
         }
+        @media (max-width: 1370px){
+            .cv iframe{
+            width: 90vw;
+            }
+        }
+        @media (max-width: 450px){
+            .cv iframe{
+                height:50vh;
+            }
+        }
+
     </style>
     <title>CV | Joshua Bäckström</title>
 </head>
@@ -32,8 +60,12 @@
         </ul>
     </nav>
     <div class="cvs">
-        <embed src="../pdf/CV - Joshua Bäckström - 2022-04-11 - EN.pdf" width="49%" height="1080px" />
-        <embed src="../pdf/CV - Joshua Bäckström - 2022-04-11.pdf" width="49%" height="1080px" />
+        <a class="newtab_cv" href="../pdf/CV - Joshua Bäckström - 2022-04-11 - EN.pdf" target="_blank">English CV</a> 
+        <a class="newtab_cv" href="../pdf/CV - Joshua Bäckström - 2022-04-11.pdf" target="_blank">Swedish CV</a>
+        <div class="cv"><iframe src="../pdf/CV - Joshua Bäckström - 2022-04-11 - EN.pdf"></iframe></div>,
+        <div class="cv"><iframe src="../pdf/CV - Joshua Bäckström - 2022-04-11.pdf"></iframe></div>
     </div>
+    
+    <div id="out_of_bound_blocker"></div>
 </body>
 </html>
