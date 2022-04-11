@@ -60,7 +60,6 @@
         .hero_body_text{
             font-size: x-large;
             overflow-wrap: break-word;
-            width: 50vw;
             display: inline-block;
             color: rgb(213, 245, 204);
             filter: drop-shadow(0.3rem 0.3rem 0.19rem rgba(0, 0, 0, 0.5));
@@ -307,33 +306,16 @@
             filter: drop-shadow(0.3rem 0.3rem 0.19rem rgba(0, 0, 0, 0.5));
         }
         @media (max-width: 1700px) {
-            h1{
-            font-size: 80px;
-            }
-            .hero_subtitle .subtitle_text{
-            font-size: x-large;
-            }
-        }
-        @media (max-width: 1450px) {
-            h1{
-            font-size: 50px;
-            }
-            .hero_subtitle .subtitle_text{
-            font-size: x-large;
+            .hero_body{
+            width: 90vw;
             }
         }
         @media (max-width: 600px) {
             h1{
-            font-size: 40px;
-            }
-            .page_header{
-            font-size: 60px;
+            font-size: 70px;
             }
             .hero_subtitle .subtitle_text{
-            font-size: large;
-            }
-            .hero_body_text{
-            font-size: large;
+            font-size: x-large;
             }
             .hamburger_menu {
                 display: flex;      /*When the viewport is narrow is when the hamburger menu should be displayed. It's none by default.*/
@@ -374,21 +356,15 @@
         }
         @media (max-width: 400px) {
             h1{
-            font-size: x-large;
-            }
-            .hero_subtitle .subtitle_text{
-            font-size: large;
-            }
-            .hero_body_text{
-            font-size: large;
+                font-size: 50px;
             }
         }
-        @media (max-width: 700px) and (orientation: landscape) {
+        @media (max-width: 950px) and (orientation: landscape) {
             h1{
-                font-size: 30px;
+                font-size: 45px;
             }
-            .hero_body_text{
-                font-size: large;
+            .hero_subtitle .subtitle_text{
+                font-size: x-large;
             }
         }
         
