@@ -21,6 +21,7 @@
             top: 10%;
             transform: translate(-50%,0%); /*If not 0% it will grow upwards when screen gets smaller*/
             width: 60vw;
+            z-index: 1;
         }
         .page_title{
             text-align: center;
@@ -31,42 +32,52 @@
             font-size: small;
             font-size: 25px;
         }
+
+
+
+
         .all_projects{
             display: inline-flex;
             flex-wrap:wrap;
             justify-content:space-evenly;
         }
-        .a_project{
-            transition: 400ms cubic-bezier(.14,.82,.7,.92);
-            position: relative; /*Puts each project title inside the square */
-            text-align: center;
-        }
-        .a_project img{
-            width:200px;
-            height:200px;
-            border-radius: 10%;
-        }
-        .all_projects li{
+        .all_projects .a_project{
             background-color: orange;
+            background-image: url(../images/under_constructions.png);
+            background-size: contain;
             list-style: none;
             width: 200px;
             height: 200px;
             margin: 30px;
             margin-bottom: 60px;    
+            transition: 400ms cubic-bezier(.14,.82,.7,.92);
+            position: relative; /*Puts each project title inside the square */
+            text-align: center;
+            border-radius: 10%;
+            border: 2px solid;
+            color:rgb(0, 0, 0);
+        }
+        #pomodoro_timer_project{
+            background-image: url(../images/Pomodoro_Technique.jpg);
         }
         .project_title{
             font-size: x-large;
             color: white;
         }
-        #pomodoro_timer_project img:hover{
-            content:url(../images/disintegrate.gif);
-            transition: 400ms cubic-bezier(.14,.82,.7,.92);
+        #pomodoro_timer_project:hover{
+            color:white;
         }
-        .active_project{
+        #pomodoro_timer_project_toggle:checked + .a_project{
+            background-image: none;
             background-color: red;
             width: 500px;
             height: 500px;
-            border-radius: 2%;
+            border-radius: 10%;
+            padding: 25px;
+        }
+
+        .all_projects input{
+            display: none;
         }
     </style>
     <title>Projects | Joshua Bäckström</title>
@@ -101,14 +112,75 @@
         </div>
         
         <div class="all_projects">
-            <li class="a_project" id="pomodoro_timer_project"> <img src="../images/Pomodoro_Technique.jpg" alt="Image of Pomodoro Technique Timer"><div class="project_title">Pomodoro Timer</div> </li>
-            <li class="a_project"> <img src="../images/under_constructions.png" alt="Image of Quiz App"> <div class="project_title">Quiz Multiplayer</div> </li>
-            <li class="a_project"> <img src="../images/under_constructions.png" alt="Image of Quiz App"> <div class="project_title">Game Scripts</div> </li>
+            <!-- <li id="pomodoro_timer_project" class="a_project" > 
+                <input id="pomodoro_timer_project_toggle" type="checkbox">
+                <label>
+                        <img src="../images/Pomodoro_Technique.jpg" alt="Image of Pomodoro Technique Timer">
+                        <div class="project_title">Pomodoro Timer</div> 
+                </label>
+            </li> -->
+            
+            <!-- <li id="pomodoro_timer_project" class="a_project" > 
+                <img src="../images/Pomodoro_Technique.jpg" alt="Image of Pomodoro Technique Timer">
+                <div class="project_title">Pomodoro Timer</div> 
+            </li> -->
+            <label>
+                <input id="pomodoro_timer_project_toggle" type="checkbox">
+                <div id="pomodoro_timer_project" class="a_project" > 
+                    
+                    <div class="project_title">Pomodoro Timer</div> 
+                </div>
+            </label>
+
+            <label>
+                <input id="quiz_app_toggle" type="checkbox">
+                <div id="quiz_app" class="a_project" > 
+                    <div class="project_title">Quiz Multiplayer</div> 
+                </div>
+            </label>
+            <label>
+                <input id="quiz_app_toggle" type="checkbox">
+                <div id="quiz_app" class="a_project" > 
+                    <div class="project_title">Image Macro Creator</div> 
+                </div>
+            </label>
+            <label>
+                <input id="quiz_app_toggle" type="checkbox">
+                <div id="quiz_app" class="a_project" > 
+                    <div class="project_title">Portfolio</div> 
+                </div>
+            </label>
+            <label>
+                <input id="quiz_app_toggle" type="checkbox">
+                <div id="quiz_app" class="a_project" > 
+                    <div class="project_title">Hamster Mania</div> 
+                </div>
+            </label>
+            <label>
+                <input id="quiz_app_toggle" type="checkbox">
+                <div id="quiz_app" class="a_project" > 
+                    <div class="project_title">Sky Writer</div> 
+                </div>
+            </label>
+            <label>
+                <input id="quiz_app_toggle" type="checkbox">
+                <div id="quiz_app" class="a_project" > 
+                    <div class="project_title">The Grand Tree</div> 
+                </div>
+            </label>
+            <label>
+                <input id="quiz_app_toggle" type="checkbox">
+                <div id="quiz_app" class="a_project" > 
+                    <div class="project_title">Game Scripts</div> 
+                </div>
+            </label>
+
+            <!-- <li class="a_project"> <img src="../images/under_constructions.png" alt="Image of Quiz App"> <div class="project_title">Game Scripts</div> </li>
             <li class="a_project"> <img src="../images/under_constructions.png" alt="Image of Quiz App"> <div class="project_title">Image Macro Creator</div> </li>
             <li class="a_project"> <img src="../images/under_constructions.png" alt="Image of Quiz App"> <div class="project_title">Portfolio</div> </li>
             <li class="a_project"> <img src="../images/under_constructions.png" alt="Image of Quiz App"> <div class="project_title">Hamster Mania</div> </li>
             <li class="a_project"> <img src="../images/under_constructions.png" alt="Image of Quiz App"> <div class="project_title">Sky Writer</div> </li>
-            <li class="a_project"> <img src="../images/under_constructions.png" alt="Image of Quiz App"> <div class="project_title">The Grand Tree</div> </li>
+            <li class="a_project"> <img src="../images/under_constructions.png" alt="Image of Quiz App"> <div class="project_title">The Grand Tree</div> </li> -->
         </div>
     </div>
     <div id="out_of_bound_blocker"></div>
