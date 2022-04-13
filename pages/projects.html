@@ -21,9 +21,10 @@
             top: 10%;
             transform: translate(-50%,0%); /*If not 0% it will grow upwards when screen gets smaller*/
             width: 60vw;
-            z-index: 1;
         }
         .page_title{
+            color: rgb(212, 212, 212);
+            filter: drop-shadow(0.3rem 0.3rem 0.3rem rgb(0, 0, 0, 0.7));
             text-align: center;
             font-weight:400;
             font-size: 75px;
@@ -32,19 +33,16 @@
             font-size: small;
             font-size: 25px;
         }
-
-
-
-
         .all_projects{
             display: inline-flex;
             flex-wrap:wrap;
             justify-content:space-evenly;
+            
         }
         .all_projects .a_project{
             background-color: orange;
             background-image: url(../images/under_constructions.png);
-            background-size: contain;
+            background-size: cover;
             list-style: none;
             width: 200px;
             height: 200px;
@@ -56,9 +54,11 @@
             border-radius: 10%;
             border: 2px solid;
             color:rgb(0, 0, 0);
+            z-index: 2;
         }
         #pomodoro_timer_project{
             background-image: url(../images/Pomodoro_Technique.jpg);
+            
         }
         .project_title{
             font-size: x-large;
@@ -68,21 +68,48 @@
             color:white;
         }
         #pomodoro_timer_project_toggle:checked + .a_project{
+            
             background-image: none;
             background-color: red;
-            width: 500px;
-            height: 500px;
+            width: 50vw;
+            height: 100vh;
             border-radius: 10%;
             padding: 25px;
+        }
+        #pomodoro_timer_project_toggle:checked + .a_project iframe{
+            display: flex;
+        }
+        #pomodoro_timer_project_toggle:checked + .a_project .project_body_text{
+            display: flex;
         }
 
         .all_projects input{
             display: none;
         }
+        .a_project iframe, .a_project .project_body_text{
+            display: none;
+        }
+        
+        /* #out_of_bound_blocker {
+            display: flex;
+            position: absolute;
+            width: 100vw;
+            content: ' ';
+            background: rgba(0,0,0,.5); 
+        } */
+        @media (max-width: 1150px) {
+            .hero_body{
+            width: 90vw;
+            }
+            #pomodoro_timer_project_toggle:checked + .a_project{
+                width: 70vw;
+            }
+        }
     </style>
     <title>Projects | Joshua Bäckström</title>
 </head>
 <body>
+    
     <nav>
         <input id="hamburger_menu_toggle" type="checkbox">
         <label class="hamburger_menu" for="hamburger_menu_toggle">
@@ -97,7 +124,7 @@
             <li><a href="https://www.linkedin.com/in/joshua-b%C3%A4ckstr%C3%B6m-91360b113/", class="navbutton">LinkedIn</a></li>
         </ul>
     </nav>
-    
+    <div id="out_of_bound_blocker"></div>
     <div class="hero_body">
         <div class="page_title">
             Projects
@@ -127,8 +154,11 @@
             <label>
                 <input id="pomodoro_timer_project_toggle" type="checkbox">
                 <div id="pomodoro_timer_project" class="a_project" > 
-                    
                     <div class="project_title">Pomodoro Timer</div> 
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/TXXjeIF7M7I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+                    <div class="project_body_text">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati earum incidunt porro, maxime voluptatibus ducimus tenetur tempore voluptates repellat voluptatum quaerat sequi eum exercitationem deleniti necessitatibus temporibus ea dolor, harum in illo hic ipsam, molestias velit. Assumenda officiis mollitia adipisci hic? Expedita repellendus dicta rem et distinctio optio ad eligendi nam unde sit aut harum officiis doloremque placeat voluptates magni provident ab, fuga aspernatur error dolorum natus debitis. Harum saepe rerum, veniam rem, recusandae assumenda voluptatum dolor praesentium magnam perferendis quia temporibus vero deleniti similique architecto nihil a quam! Esse et quae minus officiis id. Sapiente necessitatibus porro magnam deleniti quod velit voluptas nostrum veritatis. Ducimus aliquam quia corporis, nisi pariatur magni optio fuga accusantium eaque eos quibusdam perspiciatis illum voluptatum ea. Non est corporis architecto! Quae voluptatibus dolorem aut deleniti placeat dolores ratione quibusdam, asperiores consequatur rem animi nesciunt voluptatem at, aspernatur atque unde laboriosam eius aliquid voluptate mollitia provident consectetur reiciendis fugiat harum? Repellendus, doloribus sint numquam sunt officiis accusantium praesentium dolor consectetur dolores quam! Eos, natus. Alias totam, sunt iusto corrupti voluptatibus voluptate itaque dolorum nam mollitia est in unde cupiditate aspernatur sed sint enim perferendis. Praesentium fugiat quidem cupiditate atque deleniti ullam possimus voluptatem? Est, quisquam.
+                    </div>
                 </div>
             </label>
 
@@ -174,7 +204,7 @@
                     <div class="project_title">Game Scripts</div> 
                 </div>
             </label>
-
+            
             <!-- <li class="a_project"> <img src="../images/under_constructions.png" alt="Image of Quiz App"> <div class="project_title">Game Scripts</div> </li>
             <li class="a_project"> <img src="../images/under_constructions.png" alt="Image of Quiz App"> <div class="project_title">Image Macro Creator</div> </li>
             <li class="a_project"> <img src="../images/under_constructions.png" alt="Image of Quiz App"> <div class="project_title">Portfolio</div> </li>
@@ -183,6 +213,6 @@
             <li class="a_project"> <img src="../images/under_constructions.png" alt="Image of Quiz App"> <div class="project_title">The Grand Tree</div> </li> -->
         </div>
     </div>
-    <div id="out_of_bound_blocker"></div>
+    
 </body>
 </html>
