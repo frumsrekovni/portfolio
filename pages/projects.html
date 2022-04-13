@@ -54,7 +54,7 @@
             border-radius: 10%;
             border: 2px solid;
             color:rgb(0, 0, 0);
-            z-index: 2;
+            z-index: 1;
         }
         #pomodoro_timer_project{
             background-image: url(../images/Pomodoro_Technique.jpg);
@@ -62,13 +62,16 @@
         }
         .project_title{
             font-size: x-large;
-            color: white;
+            border-color: black;
         }
         #pomodoro_timer_project:hover{
-            color:white;
+            border-color: white;
+        }
+        label input{
+            width: 0;
+            height: 0;
         }
         #pomodoro_timer_project_toggle:checked + .a_project{
-            
             background-image: none;
             background-color: red;
             width: 50vw;
@@ -89,14 +92,16 @@
         .a_project iframe, .a_project .project_body_text{
             display: none;
         }
-        
-        /* #out_of_bound_blocker {
-            display: flex;
+
+        #out_of_bound_blocker {
+            display: none;
             position: absolute;
-            width: 100vw;
+            top: -10vh;
+            left: -20vw;
+            width: 120vw;
             content: ' ';
-            background: rgba(0,0,0,.5); 
-        } */
+            background: rgba(0,0,0,.5);
+        }
         @media (max-width: 1150px) {
             .hero_body{
             width: 90vw;
@@ -124,7 +129,6 @@
             <li><a href="https://www.linkedin.com/in/joshua-b%C3%A4ckstr%C3%B6m-91360b113/", class="navbutton">LinkedIn</a></li>
         </ul>
     </nav>
-    <div id="out_of_bound_blocker"></div>
     <div class="hero_body">
         <div class="page_title">
             Projects
@@ -133,8 +137,6 @@
                 that I felt like documenting for future reference. Everything from the university forced
                 backend projects like building an operating system to the very frontend like this website you are currently looking at.
                 Also some real physical projects using microcontrollers
-                
-    
             </div>
         </div>
         
@@ -161,6 +163,8 @@
                     </div>
                 </div>
             </label>
+
+
 
             <label>
                 <input id="quiz_app_toggle" type="checkbox">
@@ -204,7 +208,7 @@
                     <div class="project_title">Game Scripts</div> 
                 </div>
             </label>
-            
+            <div id="out_of_bound_blocker"></div>
             <!-- <li class="a_project"> <img src="../images/under_constructions.png" alt="Image of Quiz App"> <div class="project_title">Game Scripts</div> </li>
             <li class="a_project"> <img src="../images/under_constructions.png" alt="Image of Quiz App"> <div class="project_title">Image Macro Creator</div> </li>
             <li class="a_project"> <img src="../images/under_constructions.png" alt="Image of Quiz App"> <div class="project_title">Portfolio</div> </li>
@@ -213,6 +217,5 @@
             <li class="a_project"> <img src="../images/under_constructions.png" alt="Image of Quiz App"> <div class="project_title">The Grand Tree</div> </li> -->
         </div>
     </div>
-    
 </body>
 </html>
