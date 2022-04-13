@@ -41,31 +41,43 @@
         }
         .all_projects .a_project{
             background-color: orange;
-            background-image: url(../images/under_constructions.png);
+            background-image: linear-gradient(
+                rgba(0, 0, 0, 0.5),
+                rgba(0, 0, 0, 0.5)
+                ),url(../images/under_constructions.png);
             background-size: cover;
             list-style: none;
             width: 200px;
             height: 200px;
             margin: 30px;
             margin-bottom: 60px;    
-            transition: 400ms cubic-bezier(.14,.82,.7,.92);
+            transition: 500ms cubic-bezier(.14,.82,.7,.92);
             position: relative; /*Puts each project title inside the square */
             text-align: center;
             border-radius: 10%;
             border: 2px solid;
-            color:rgb(0, 0, 0);
+            border-color:rgb(0, 0, 0);
             z-index: 1;
         }
         #pomodoro_timer_project{
-            background-image: url(../images/Pomodoro_Technique.jpg);
-            
+            background-image: 
+                linear-gradient(
+                rgba(0, 0, 0, 0.5),
+                rgba(0, 0, 0, 0.5)
+                ),url(../images/Pomodoro_Technique.jpg);
         }
         .project_title{
             font-size: x-large;
-            border-color: black;
+            padding-top: 15px;
+            color: rgb(255, 255, 255);
+            filter: drop-shadow(0.3rem 0.3rem 0.3rem rgb(0, 0, 0, 0.7));
         }
         #pomodoro_timer_project:hover{
             border-color: white;
+            background-image:                linear-gradient(
+                rgba(0, 0, 0, 0.2),
+                rgba(0, 0, 0, 0.2)
+                ),url(../images/Pomodoro_Technique.jpg);
         }
         label input{
             width: 0;
@@ -157,7 +169,7 @@
                 <input id="pomodoro_timer_project_toggle" type="checkbox">
                 <div id="pomodoro_timer_project" class="a_project" > 
                     <div class="project_title">Pomodoro Timer</div> 
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/TXXjeIF7M7I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`;
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/TXXjeIF7M7I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <div class="project_body_text">
                         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati earum incidunt porro, maxime voluptatibus ducimus tenetur tempore voluptates repellat voluptatum quaerat sequi eum exercitationem deleniti necessitatibus temporibus ea dolor, harum in illo hic ipsam, molestias velit. Assumenda officiis mollitia adipisci hic? Expedita repellendus dicta rem et distinctio optio ad eligendi nam unde sit aut harum officiis doloremque placeat voluptates magni provident ab, fuga aspernatur error dolorum natus debitis. Harum saepe rerum, veniam rem, recusandae assumenda voluptatum dolor praesentium magnam perferendis quia temporibus vero deleniti similique architecto nihil a quam! Esse et quae minus officiis id. Sapiente necessitatibus porro magnam deleniti quod velit voluptas nostrum veritatis. Ducimus aliquam quia corporis, nisi pariatur magni optio fuga accusantium eaque eos quibusdam perspiciatis illum voluptatum ea. Non est corporis architecto! Quae voluptatibus dolorem aut deleniti placeat dolores ratione quibusdam, asperiores consequatur rem animi nesciunt voluptatem at, aspernatur atque unde laboriosam eius aliquid voluptate mollitia provident consectetur reiciendis fugiat harum? Repellendus, doloribus sint numquam sunt officiis accusantium praesentium dolor consectetur dolores quam! Eos, natus. Alias totam, sunt iusto corrupti voluptatibus voluptate itaque dolorum nam mollitia est in unde cupiditate aspernatur sed sint enim perferendis. Praesentium fugiat quidem cupiditate atque deleniti ullam possimus voluptatem? Est, quisquam.
                     </div>
