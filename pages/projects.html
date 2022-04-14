@@ -59,6 +59,12 @@
             border-color:rgb(0, 0, 0);
             z-index: 1;
         }
+        .project_title{
+            font-size: x-large;
+            padding-top: 15px;
+            color: rgb(255, 255, 255);
+            filter: drop-shadow(0.3rem 0.3rem 0.3rem rgb(0, 0, 0, 0.7));
+        }
         #pomodoro_timer_project{
             background-image: 
                 linear-gradient(
@@ -66,18 +72,38 @@
                 rgba(0, 0, 0, 0.5)
                 ),url(../images/Pomodoro_Technique.jpg);
         }
-        .project_title{
-            font-size: x-large;
-            padding-top: 15px;
-            color: rgb(255, 255, 255);
-            filter: drop-shadow(0.3rem 0.3rem 0.3rem rgb(0, 0, 0, 0.7));
-        }
         #pomodoro_timer_project:hover{
             border-color: white;
             background-image:                linear-gradient(
                 rgba(0, 0, 0, 0.2),
                 rgba(0, 0, 0, 0.2)
                 ),url(../images/Pomodoro_Technique.jpg);
+        }
+        #portfolio_project{
+            background-image: 
+                linear-gradient(
+                rgba(0, 0, 0, 0.5),
+                rgba(0, 0, 0, 0.5)
+                ),url(../images/joshuabackstromwebsite.PNG);
+        }
+        #portfolio_project:hover{
+            border-color: white;
+            background-image:                linear-gradient(
+                rgba(0, 0, 0, 0.2),
+                rgba(0, 0, 0, 0.2)
+                ),url(../images/joshuabackstromwebsite.PNG);
+        }
+        #skywriter_project{
+            border-color: rgb(0, 0, 0);
+            background-image:                linear-gradient(
+                rgba(0, 0, 0, 0.5),
+                rgba(0, 0, 0, 0.5)
+                ),url(../images/skywriterimage.png);
+                background-size: contain;
+        }
+        #skywriter_project:hover{
+            border-color: white;
+            background-image: url(../images/skywritergif.gif);
         }
         label input{
             width: 0;
@@ -91,12 +117,32 @@
             border-radius: 10%;
             padding: 25px;
         }
-        #pomodoro_timer_project_toggle:checked + .a_project iframe{
+        #portfolio_toggle:checked + .a_project{
+            background-image: none;
+            background-color: rgb(177, 38, 170);
+            width: 50vw;
+            height: 100vh;
+            border-radius: 10%;
+            padding: 25px;
+        }
+        #skywriter_toggle:checked + .a_project{
+            background-image: none;
+            background-color: rgb(75, 78, 80);
+            width: 50vw;
+            height: 100vh;
+            border-radius: 10%;
+            padding: 25px;
+        }
+
+        .all_projects label input:checked + .a_project iframe{
             display: flex;
         }
-        #pomodoro_timer_project_toggle:checked + .a_project .project_body_text{
+        .all_projects label input:checked + .a_project .project_body_text{
             display: flex;
         }
+
+
+
 
         .all_projects input{
             display: none;
@@ -125,7 +171,7 @@
     </style>
     <title>Projects | Joshua Bäckström</title>
 </head>
-<body>
+<body onload="disableAllCheckboxes()">
     
     <nav>
         <input id="hamburger_menu_toggle" type="checkbox">
@@ -166,7 +212,7 @@
                 <div class="project_title">Pomodoro Timer</div> 
             </li> -->
             <label>
-                <input id="pomodoro_timer_project_toggle" type="checkbox">
+                <input id="pomodoro_timer_project_toggle" class="project_checkbox" type="checkbox">
                 <div id="pomodoro_timer_project" class="a_project" > 
                     <div class="project_title">Pomodoro Timer</div> 
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/TXXjeIF7M7I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
@@ -175,8 +221,24 @@
                     </div>
                 </div>
             </label>
-
-
+            <label>
+                <input id="portfolio_toggle" class="project_checkbox" type="checkbox">
+                <div id="portfolio_project" class="a_project" > 
+                    <div class="project_title">Portfolio</div> 
+                    <div class="project_body_text">
+                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati earum incidunt porro, maxime voluptatibus ducimus tenetur tempore voluptates repellat voluptatum quaerat sequi eum exercitationem deleniti necessitatibus temporibus ea dolor, harum in illo hic ipsam, molestias velit. Assumenda officiis mollitia adipisci hic? Expedita repellendus dicta rem et distinctio optio ad eligendi nam unde sit aut harum officiis doloremque placeat voluptates magni provident ab, fuga aspernatur error dolorum natus debitis. Harum saepe rerum, veniam rem, recusandae assumenda voluptatum dolor praesentium magnam perferendis quia temporibus vero deleniti similique architecto nihil a quam! Esse et quae minus officiis id. Sapiente necessitatibus porro magnam deleniti quod velit voluptas nostrum veritatis. Ducimus aliquam quia corporis, nisi pariatur magni optio fuga accusantium eaque eos quibusdam perspiciatis illum voluptatum ea. Non est corporis architecto! Quae voluptatibus dolorem aut deleniti placeat dolores ratione quibusdam, asperiores consequatur rem animi nesciunt voluptatem at, aspernatur atque unde laboriosam eius aliquid voluptate mollitia provident consectetur reiciendis fugiat harum? Repellendus, doloribus sint numquam sunt officiis accusantium praesentium dolor consectetur dolores quam! Eos, natus. Alias totam, sunt iusto corrupti voluptatibus voluptate itaque dolorum nam mollitia est in unde cupiditate aspernatur sed sint enim perferendis. Praesentium fugiat quidem cupiditate atque deleniti ullam possimus voluptatem? Est, quisquam.
+                    </div>
+                </div>
+            </label>
+            <label>
+                <input id="skywriter_toggle" class="project_checkbox" type="checkbox">
+                <div id="skywriter_project" class="a_project" > 
+                    <div class="project_title">Sky Writer</div> 
+                    <div class="project_body_text">
+                        Skywriter made in university
+                    </div>
+                </div>
+            </label>
 
             <label>
                 <input id="quiz_app_toggle" type="checkbox">
@@ -193,19 +255,7 @@
             <label>
                 <input id="quiz_app_toggle" type="checkbox">
                 <div id="quiz_app" class="a_project" > 
-                    <div class="project_title">Portfolio</div> 
-                </div>
-            </label>
-            <label>
-                <input id="quiz_app_toggle" type="checkbox">
-                <div id="quiz_app" class="a_project" > 
                     <div class="project_title">Hamster Mania</div> 
-                </div>
-            </label>
-            <label>
-                <input id="quiz_app_toggle" type="checkbox">
-                <div id="quiz_app" class="a_project" > 
-                    <div class="project_title">Sky Writer</div> 
                 </div>
             </label>
             <label>
