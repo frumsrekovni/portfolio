@@ -79,6 +79,21 @@
                 rgba(0, 0, 0, 0.2)
                 ),url(../images/Pomodoro_Technique.jpg);
         }
+        #quiz_battle_project{
+            background-image: 
+                linear-gradient(
+                rgba(0, 0, 0, 0.5),
+                rgba(0, 0, 0, 0.5)
+                ),url(../images/quizbattleimage.png);
+                
+        }
+        #quiz_battle_project:hover{
+            border-color: white;
+            background-image:                linear-gradient(
+                rgba(0, 0, 0, 0.2),
+                rgba(0, 0, 0, 0.2)
+                ),url(../images/realgameofquizbattler.gif);
+        }
         #portfolio_project{
             background-image: 
                 linear-gradient(
@@ -112,6 +127,14 @@
         #pomodoro_timer_project_toggle:checked + .a_project{
             background-image: none;
             background-color: red;
+            width: 50vw;
+            height: 100vh;
+            border-radius: 10%;
+            padding: 25px;
+        }
+        #quiz_battle_toggle:checked + .a_project{
+            background-image: none;
+            background-color: rgb(75, 78, 80);
             width: 50vw;
             height: 100vh;
             border-radius: 10%;
@@ -222,6 +245,16 @@
                 </div>
             </label>
             <label>
+                <input id="quiz_battle_toggle" type="checkbox">
+                <div id="quiz_battle_project" class="a_project" > 
+                    <div class="project_title">Quiz Battle</div> 
+                    <div class="project_body_text">
+                        Online web browser multiplayer quiz battle game
+                        You can play it <a href="https://quiz-battler.herokuapp.com/">here</a>
+                    </div>
+                </div>
+            </label>
+            <label>
                 <input id="portfolio_toggle" class="project_checkbox" type="checkbox">
                 <div id="portfolio_project" class="a_project" > 
                     <div class="project_title">Portfolio</div> 
@@ -237,13 +270,6 @@
                     <div class="project_body_text">
                         Skywriter made in university
                     </div>
-                </div>
-            </label>
-
-            <label>
-                <input id="quiz_app_toggle" type="checkbox">
-                <div id="quiz_app" class="a_project" > 
-                    <div class="project_title">Quiz Multiplayer</div> 
                 </div>
             </label>
             <label>
