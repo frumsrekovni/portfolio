@@ -99,14 +99,14 @@
                 linear-gradient(
                 rgba(0, 0, 0, 0.5),
                 rgba(0, 0, 0, 0.5)
-                ),url(../images/joshuabackstromwebsite.PNG);
+                ),url(../images/portfolioprojectimage.PNG);
         }
         #portfolio_project:hover{
             border-color: white;
             background-image:                linear-gradient(
                 rgba(0, 0, 0, 0.2),
                 rgba(0, 0, 0, 0.2)
-                ),url(../images/joshuabackstromwebsite.PNG);
+                ),url(../images/portfoliogif.gif);
         }
         #skywriter_project{
             border-color: rgb(0, 0, 0);
@@ -119,6 +119,29 @@
         #skywriter_project:hover{
             border-color: white;
             background-image: url(../images/skywritergif.gif);
+        }
+        #image_macro_creator{
+            border-color: rgb(0, 0, 0);
+            background-image:                linear-gradient(
+                rgba(0, 0, 0, 0.5),
+                rgba(0, 0, 0, 0.5)
+                ),url(../images/imagemacrocreatortemplate.jpg);
+        }
+        #image_macro_creator:hover{
+            border-color: white;
+            background-image: url(../images/imagemacro.jpg);
+            
+        }
+        #hamster_mania{
+            border-color: rgb(0, 0, 0);
+            background-image:                linear-gradient(
+                rgba(0, 0, 0, 0.5),
+                rgba(0, 0, 0, 0.5)
+                ),url(../images/hamstermaniaimage.png);
+        }
+        #hamster_mania:hover{
+            border-color: white;
+            background-image: url(../images/hamstermaniagif.gif);
         }
         label input{
             width: 0;
@@ -267,33 +290,61 @@
                 <input id="skywriter_toggle" class="project_checkbox" type="checkbox">
                 <div id="skywriter_project" class="a_project" > 
                     <div class="project_title">Sky Writer</div> 
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/-f4VkDb3iH0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/pX6vImTTlms" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <div class="project_body_text">
                         Skywriter made in university
                     </div>
                 </div>
             </label>
+
             <label>
-                <input id="quiz_app_toggle" type="checkbox">
-                <div id="quiz_app" class="a_project" > 
+                <input id="image_macro_creator_toggle" type="checkbox">
+                <div id="image_macro_creator" class="a_project" > 
                     <div class="project_title">Image Macro Creator</div> 
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Y-86veLWM3o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </label>
+
             <label>
-                <input id="quiz_app_toggle" type="checkbox">
-                <div id="quiz_app" class="a_project" > 
+                <input id="hamster_mania_toggle" type="checkbox">
+                <div id="hamster_mania" class="a_project" > 
                     <div class="project_title">Hamster Mania</div> 
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/Tlrn_tGo-yQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div class="project_body_text">
+                        Hamster Mania is a 2D 2-player network platforming game. Built in C++ and SFML/Tiled map editor/TinyXML-2 for creating the graphics/network.
+                        
+                        Thinking back on making this project with three other university mates back in 2016 for a programming course
+                        it is now steeped in charm and memories. The whole project used to have a nice dedicated website for presentation but has 
+                        since then dissappeared in to the ether.
+
+                        The focus was on using network sockets like SFML's built in sf::TcpSocket and having an object-oriented programming(OOP) approach from start to finish. 
+                        In hindsight I am ever grateful for focusing on this but at the time it was brutal.
+
+                        It being a course in university a disgusting amount of documentation was demanded and the OOP mindset was bashed over our heads where
+                        in the end 80% of time spent was
+                        on making UML-diagrams and detailing every class in design specification documents. In the case anyone would care about hearing about 
+                        this writing process I can hold an extensive presentation just for you.
+                        Looking at the product there 
+                        was just so much more I wanted to add, but, I am in the end proud that the networking aspect actually worked pretty smoothly.
+                    </div>
                 </div>
             </label>
             <label>
-                <input id="quiz_app_toggle" type="checkbox">
-                <div id="quiz_app" class="a_project" > 
-                    <div class="project_title">The Grand Tree</div> 
+                <input id="game_automation_toggle" type="checkbox">
+                <div id="game_automation" class="a_project" > 
+                    <div class="project_title">Game Automation</div> 
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/gmNtVHIqWc0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </label>
+
             <label>
-                <input id="quiz_app_toggle" type="checkbox">
-                <div id="quiz_app" class="a_project" > 
-                    <div class="project_title">Game Scripts</div> 
+                <input id="other_toggle" type="checkbox">
+                <div id="other_projects" class="a_project" > 
+                    <div class="project_title">Other</div> 
+                    <div class="project_body_text">
+                            The grand tree, Signal level indicator, 2D side scroll shooter
+                    </div>
                 </div>
             </label>
             <div id="out_of_bound_blocker"></div>
