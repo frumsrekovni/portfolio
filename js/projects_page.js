@@ -1,37 +1,30 @@
-var pomodoro_timer_project_element = document.getElementById("pomodoro_timer_project");
-var portfolio_project_element = document.getElementById("portfolio_project");
-var skywriter_project_element = document.getElementById("skywriter_project");
-var pomodoro_timer_project_toggle = document.getElementById("pomodoro_timer_project_toggle");
-var portfolio_project_element_toggle = document.getElementById("portfolio_toggle");
-var skywriter_project_element_toggle = document.getElementById("skywriter_toggle");
+var all_project_elements = document.getElementsByClassName("a_project");
 var active_project_blocker = document.getElementById("out_of_bound_blocker");
 var all_project_checkboxes = document.getElementsByClassName("project_checkbox");
+function activateBlocker() {
+    active_project_blocker.style.display = "flex";
+}
+function addEventListenerToAllProjects() {
+    var _loop_1 = function (i) {
+        all_project_elements[i].addEventListener("click", function () {
+            var projectid = all_project_elements[i].id + "_toggle";
+            var projectEl = document.getElementById(projectid);
+            projectEl.checked = true;
+            activateBlocker();
+        });
+    };
+    for (var i = 0; i < all_project_elements.length; i++) {
+        _loop_1(i);
+    }
+}
+// disableAllCheckboxes() is executed when body tag is loaded. It disables all project checkboxes and adds event listeners to all projects.
 function disableAllCheckboxes() {
     for (var i = 0; i < all_project_checkboxes.length; i++) {
         all_project_checkboxes[i].disabled = true;
     }
+    addEventListenerToAllProjects();
 }
-// The repetition here is real ugly but in order make the project be able to expand and not shrink when pressed the project checkboxes unfortunately needs to disabled and handled with javascript.
-pomodoro_timer_project_element.addEventListener("click", function () {
-    pomodoro_timer_project_toggle.checked = true;
-    active_project_blocker.style.display = "flex";
-});
-portfolio_project_element.addEventListener("click", function () {
-    portfolio_project_element_toggle.checked = true;
-    active_project_blocker.style.display = "flex";
-});
-skywriter_project_element.addEventListener("click", function () {
-    skywriter_project_element_toggle.checked = true;
-    active_project_blocker.style.display = "flex";
-});
-// nav_bar_redirects_checkbox.addEventListener("click", () => {
-//     if(nav_bar_redirects_checkbox.checked){
-//         redirect_blocker.style.display = "flex";
-//     }
-//     else{
-//         redirect_blocker.style.display = "none";
-//     }
-// });
+// When the blocker is clicked all projects should minimize(uncheck all project checkboxes)
 active_project_blocker.addEventListener("click", function () {
     for (var i = 0; i < all_project_checkboxes.length; i++) {
         all_project_checkboxes[i].checked = false;
