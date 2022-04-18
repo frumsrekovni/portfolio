@@ -61,7 +61,8 @@
         }
         .project_title{
             font-size: x-large;
-            padding-top: 15px;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
             color: rgb(255, 255, 255);
             filter: drop-shadow(0.3rem 0.3rem 0.3rem rgb(0, 0, 0, 0.7));
         }
@@ -99,7 +100,9 @@
                 linear-gradient(
                 rgba(0, 0, 0, 0.5),
                 rgba(0, 0, 0, 0.5)
-                ),url(../images/portfolioprojectimage.PNG);
+                ),url(../images/portfolioprojectimage2.PNG);
+                background-size: contain;
+                
         }
         #portfolio_project:hover{
             border-color: white;
@@ -130,7 +133,17 @@
         #image_macro_creator:hover{
             border-color: white;
             background-image: url(../images/imagemacro.jpg);
-            
+        }
+        #game_automation{
+            border-color: rgb(0, 0, 0);
+            background-image:                linear-gradient(
+                rgba(0, 0, 0, 0.5),
+                rgba(0, 0, 0, 0.5)
+                ),url(../images/cookieclickerscriptv2.PNG);
+        }
+        #game_automation:hover{
+            border-color: white;
+            background-image: url(../images/cookieclickerhovergif.gif);
         }
         #hamster_mania{
             border-color: rgb(0, 0, 0);
@@ -149,7 +162,7 @@
         }
         #pomodoro_timer_project_toggle:checked + .a_project{
             background-image: none;
-            background-color: red;
+            background-color: #bd1b1b;
             width: 50vw;
             height: 100vh;
             border-radius: 10%;
@@ -179,24 +192,43 @@
             border-radius: 10%;
             padding: 25px;
         }
-
+        .project_body_text{
+            color: white;
+            filter: drop-shadow(0.3rem 0.3rem 0.3rem rgb(0, 0, 0, 0.7));
+            margin-top: 1rem;
+            flex-flow: column;
+            align-items: center;
+        }
+        .all_projects iframe{
+            margin:auto;
+        }
         .all_projects label input:checked + .a_project iframe{
-            display: flex;
+            display: block;
         }
         .all_projects label input:checked + .a_project .project_body_text{
             display: flex;
         }
-
-
-
-
         .all_projects input{
             display: none;
         }
         .a_project iframe, .a_project .project_body_text{
             display: none;
         }
-
+        #my_timer:hover + #kitchen_timer_image{
+            display: block;
+        }
+        #kitchen_timer_image{
+            display: none;
+        }
+        .project_body_text a img:last-child {
+            display: none;  
+        }
+        .project_body_text a:hover img:first-child {
+            display: none;
+        }
+        .project_body_text a:hover img:last-child {
+            display:flex;  
+        }
         #out_of_bound_blocker {
             display: none;
             position: absolute;
@@ -208,10 +240,26 @@
         }
         @media (max-width: 1150px) {
             .hero_body{
-            width: 90vw;
+            width: 100vw;
             }
             #pomodoro_timer_project_toggle:checked + .a_project{
-                width: 70vw;
+            width: 70vw;
+            height: 175vh;
+            }
+            #skywriter_toggle:checked + .a_project{
+            width: 70vw;
+            height: 175vh;
+            }
+        }
+        @media (max-width: 800px) {
+            .all_projects iframe{
+            width: 280px;
+            height: 157px;
+            }
+        }
+        @media (max-width: 420px) {
+            #pomodoro_timer_project_toggle:checked + .a_project{
+            height: 175vh;
             }
         }
     </style>
@@ -245,25 +293,41 @@
         </div>
         
         <div class="all_projects">
-            <!-- <li id="pomodoro_timer_project" class="a_project" > 
-                <input id="pomodoro_timer_project_toggle" type="checkbox">
-                <label>
-                        <img src="../images/Pomodoro_Technique.jpg" alt="Image of Pomodoro Technique Timer">
-                        <div class="project_title">Pomodoro Timer</div> 
-                </label>
-            </li> -->
-            
-            <!-- <li id="pomodoro_timer_project" class="a_project" > 
-                <img src="../images/Pomodoro_Technique.jpg" alt="Image of Pomodoro Technique Timer">
-                <div class="project_title">Pomodoro Timer</div> 
-            </li> -->
             <label>
                 <input id="pomodoro_timer_project_toggle" class="project_checkbox" type="checkbox">
                 <div id="pomodoro_timer_project" class="a_project" > 
                     <div class="project_title">Pomodoro Timer</div> 
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/TXXjeIF7M7I" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/KHl9TzsLUOo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                    
                     <div class="project_body_text">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati earum incidunt porro, maxime voluptatibus ducimus tenetur tempore voluptates repellat voluptatum quaerat sequi eum exercitationem deleniti necessitatibus temporibus ea dolor, harum in illo hic ipsam, molestias velit. Assumenda officiis mollitia adipisci hic? Expedita repellendus dicta rem et distinctio optio ad eligendi nam unde sit aut harum officiis doloremque placeat voluptates magni provident ab, fuga aspernatur error dolorum natus debitis. Harum saepe rerum, veniam rem, recusandae assumenda voluptatum dolor praesentium magnam perferendis quia temporibus vero deleniti similique architecto nihil a quam! Esse et quae minus officiis id. Sapiente necessitatibus porro magnam deleniti quod velit voluptas nostrum veritatis. Ducimus aliquam quia corporis, nisi pariatur magni optio fuga accusantium eaque eos quibusdam perspiciatis illum voluptatum ea. Non est corporis architecto! Quae voluptatibus dolorem aut deleniti placeat dolores ratione quibusdam, asperiores consequatur rem animi nesciunt voluptatem at, aspernatur atque unde laboriosam eius aliquid voluptate mollitia provident consectetur reiciendis fugiat harum? Repellendus, doloribus sint numquam sunt officiis accusantium praesentium dolor consectetur dolores quam! Eos, natus. Alias totam, sunt iusto corrupti voluptatibus voluptate itaque dolorum nam mollitia est in unde cupiditate aspernatur sed sint enim perferendis. Praesentium fugiat quidem cupiditate atque deleniti ullam possimus voluptatem? Est, quisquam.
+                        <p> 
+                            A virtual pomodoro timer based on the time management technique created by Francesco Cirillo.
+                            Saves and categorize work time between work sessions. 
+                        </p>
+                        <p>
+                            The idea is that you set a work time and break time with neither being especially long
+                            essentially tricking ourselves into making the task at hand not seem as daunting with these clear bite sized time chunks infront of you.
+                            I have used this technique extensively during university where the largest issue was just clearing the first
+                            hurdle of getting started.
+                            You usually use a real physical kitchen timer which commonly has the appearance of a tomato(pomodoro) and wind up each time chunk everytime.
+                        </p>
+                        <p id="mytimer_paragraph">
+                            The problem is that I wanted a way to track my worked time and disliked fiddling with resetting the timer each time, most likely just because
+                            my particular timer used bad squishy silicon buttons instead of a satisfying twist.
+                            <b id="my_timer">My kitchen timer</b> <img id="kitchen_timer_image" src="../images/mykitchentimer.png" alt="kitchen_timer_image"> also had no way to quickly input large numbers which made
+                            playing around with different time intervals unnecessarily annoying.
+                            I also wanted my tracked time to be categorised and 
+                            saved between sessions.
+                        </p>
+                        <p>
+                            Built with <b>GDScript</b> using the <b>Godot Engine</b>. I have played around in unreal engine 4 before but Godot being much more lightweight
+                            and heavily recommended especially when 3D renders are not of importance I dove in. 
+                            GDScript is very similar to Python which I was interested in also learning at the time so I decided to make something
+                            easy but simultaneously meaningful for me.
+                        </p>
+                        <a href="https://github.com/frumsrekovni/pomodoro_technique_timer">
+                            <img src="../images/GitHub-Mark-64px.png" /> 
+                            <img src="../images/GitHub-Mark-Light-64px.png" />
+                        </a>
                     </div>
                 </div>
             </label>
@@ -272,8 +336,15 @@
                 <div id="quiz_battle_project" class="a_project" > 
                     <div class="project_title">Quiz Battle</div> 
                     <div class="project_body_text">
-                        Online web browser multiplayer quiz battle game
-                        You can play it <a href="https://quiz-battler.herokuapp.com/">here</a>
+                        <p>                       
+                            Online web browser multiplayer quiz battle game
+                            You can play it <a href="https://quiz-battler.herokuapp.com/">here</a></p>
+                        <p></p>
+                        <p></p>
+                        <a href="https://github.com/frumsrekovni/chat-application">
+                            <img src="../images/GitHub-Mark-64px.png" /> 
+                            <img src="../images/GitHub-Mark-Light-64px.png" />
+                        </a>
                     </div>
                 </div>
             </label>
@@ -282,8 +353,15 @@
                 <div id="portfolio_project" class="a_project" > 
                     <div class="project_title">Portfolio</div> 
                     <div class="project_body_text">
-                        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Obcaecati earum incidunt porro, maxime voluptatibus ducimus tenetur tempore voluptates repellat voluptatum quaerat sequi eum exercitationem deleniti necessitatibus temporibus ea dolor, harum in illo hic ipsam, molestias velit. Assumenda officiis mollitia adipisci hic? Expedita repellendus dicta rem et distinctio optio ad eligendi nam unde sit aut harum officiis doloremque placeat voluptates magni provident ab, fuga aspernatur error dolorum natus debitis. Harum saepe rerum, veniam rem, recusandae assumenda voluptatum dolor praesentium magnam perferendis quia temporibus vero deleniti similique architecto nihil a quam! Esse et quae minus officiis id. Sapiente necessitatibus porro magnam deleniti quod velit voluptas nostrum veritatis. Ducimus aliquam quia corporis, nisi pariatur magni optio fuga accusantium eaque eos quibusdam perspiciatis illum voluptatum ea. Non est corporis architecto! Quae voluptatibus dolorem aut deleniti placeat dolores ratione quibusdam, asperiores consequatur rem animi nesciunt voluptatem at, aspernatur atque unde laboriosam eius aliquid voluptate mollitia provident consectetur reiciendis fugiat harum? Repellendus, doloribus sint numquam sunt officiis accusantium praesentium dolor consectetur dolores quam! Eos, natus. Alias totam, sunt iusto corrupti voluptatibus voluptate itaque dolorum nam mollitia est in unde cupiditate aspernatur sed sint enim perferendis. Praesentium fugiat quidem cupiditate atque deleniti ullam possimus voluptatem? Est, quisquam.
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                        <a href="https://github.com/frumsrekovni/portfolio">
+                            <img src="../images/GitHub-Mark-64px.png" /> 
+                            <img src="../images/GitHub-Mark-Light-64px.png" />
+                        </a>
                     </div>
+                    
                 </div>
             </label>
             <label>
@@ -293,7 +371,9 @@
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/-f4VkDb3iH0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/pX6vImTTlms" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <div class="project_body_text">
-                        Skywriter made in university
+                        <p>A physical digital alarmclock that displays the illusion that the time is floating infront of you</p>
+                        <p></p>
+                        <p></p>
                     </div>
                 </div>
             </label>
@@ -303,6 +383,15 @@
                 <div id="image_macro_creator" class="a_project" > 
                     <div class="project_title">Image Macro Creator</div> 
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/Y-86veLWM3o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div class="project_body_text">
+                        <p></p>
+                        <p></p>
+                        <p></p>
+                        <a href="https://github.com/frumsrekovni/web_image_macro_creator">
+                            <img src="../images/GitHub-Mark-64px.png" /> 
+                            <img src="../images/GitHub-Mark-Light-64px.png" />
+                        </a>
+                    </div>
                 </div>
             </label>
 
@@ -312,21 +401,26 @@
                     <div class="project_title">Hamster Mania</div> 
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/Tlrn_tGo-yQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <div class="project_body_text">
-                        Hamster Mania is a 2D 2-player network platforming game. Built in C++ and SFML/Tiled map editor/TinyXML-2 for creating the graphics/network.
-                        
-                        Thinking back on making this project with three other university mates back in 2016 for a programming course
-                        it is now steeped in charm and memories. The whole project used to have a nice dedicated website for presentation but has 
-                        since then dissappeared in to the ether.
-
-                        The focus was on using network sockets like SFML's built in sf::TcpSocket and having an object-oriented programming(OOP) approach from start to finish. 
-                        In hindsight I am ever grateful for focusing on this but at the time it was brutal.
-
-                        It being a course in university a disgusting amount of documentation was demanded and the OOP mindset was bashed over our heads where
-                        in the end 80% of time spent was
-                        on making UML-diagrams and detailing every class in design specification documents. In the case anyone would care about hearing about 
-                        this writing process I can hold an extensive presentation just for you.
-                        Looking at the product there 
-                        was just so much more I wanted to add, but, I am in the end proud that the networking aspect actually worked pretty smoothly.
+                        <p>
+                            Hamster Mania is a 2D 2-player network platforming game. Built in C++ and SFML/Tiled map editor/TinyXML-2 for creating the graphics/network.
+                        </p>
+                        <p>
+                            Thinking back on making this project with three other university mates back in 2016 for a programming course
+                            it is now steeped in charm and memories. The whole project used to have a nice dedicated website for presentation but has 
+                            since then dissappeared in to the ether.
+                        </p>
+                        <p>
+                            The focus was on using network sockets like SFML's built in sf::TcpSocket and having an object-oriented programming(OOP) approach from start to finish. 
+                            In hindsight I am ever grateful for focusing on this but at the time it was brutal.
+                        </p>
+                        <p>
+                            It being a course in university a disgusting amount of documentation was demanded and the OOP mindset was bashed over our heads where
+                            in the end 80% of time spent was
+                            on making UML-diagrams and detailing every class in design specification documents. In the case anyone would care about hearing about 
+                            this writing process I can hold an extensive presentation just for you.
+                            Looking at the product there 
+                            was just so much more I wanted to add, but, I am in the end proud that the networking aspect actually worked pretty smoothly.
+                        </p>
                     </div>
                 </div>
             </label>
@@ -335,6 +429,7 @@
                 <div id="game_automation" class="a_project" > 
                     <div class="project_title">Game Automation</div> 
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/gmNtVHIqWc0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/DEAa0eT4sJ4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 </div>
             </label>
 
