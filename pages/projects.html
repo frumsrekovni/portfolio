@@ -162,13 +162,45 @@
         }
         #pomodoro_timer_project_toggle:checked + .a_project{
             background-image: none;
-            background-color: #bd1b1b;
+            background-color: #c10d1e;
             width: 50vw;
             height: 100vh;
             border-radius: 10%;
             padding: 25px;
         }
-        #quiz_battle_toggle:checked + .a_project{
+        #quiz_battle_project_toggle:checked + .a_project{
+            background-image: none;
+            background-color: rgb(75, 78, 80);
+            width: 25vw;
+            height: 75vh;
+            border-radius: 10%;
+            padding: 25px;
+        }
+        #portfolio_project_toggle:checked + .a_project{
+            background-image: none;
+            background-color: rgb(62, 0, 94);
+            width: 25vw;
+            height: 50vh;
+            border-radius: 10%;
+            padding: 25px;
+        }
+        #skywriter_project_toggle:checked + .a_project{
+            background-image: none;
+            background-color: #f0740f;
+            width: 50vw;
+            height: 100vh;
+            border-radius: 10%;
+            padding: 25px;
+        }
+        #image_macro_creator_toggle:checked + .a_project{
+            background-image: none;
+            background-color: #6F4E37;
+            width: 50vw;
+            height: 100vh;
+            border-radius: 10%;
+            padding: 25px;
+        }
+        #hamster_mania_toggle:checked + .a_project{
             background-image: none;
             background-color: rgb(75, 78, 80);
             width: 50vw;
@@ -176,17 +208,17 @@
             border-radius: 10%;
             padding: 25px;
         }
-        #portfolio_toggle:checked + .a_project{
+        #game_automation_toggle:checked + .a_project{
             background-image: none;
-            background-color: rgb(177, 38, 170);
+            background-color:#102633;
             width: 50vw;
             height: 100vh;
             border-radius: 10%;
             padding: 25px;
         }
-        #skywriter_toggle:checked + .a_project{
+        #other_projects_toggle:checked + .a_project{
             background-image: none;
-            background-color: rgb(75, 78, 80);
+            background-color:#010f18;
             width: 50vw;
             height: 100vh;
             border-radius: 10%;
@@ -246,9 +278,25 @@
             width: 70vw;
             height: 175vh;
             }
-            #skywriter_toggle:checked + .a_project{
+            #quiz_battle_project_toggle:checked + .a_project{
+            width: 50vw;
+            height: 100vh;
+            }
+            #skywriter_project_toggle:checked + .a_project{
             width: 70vw;
-            height: 175vh;
+            height: 150vh;
+            }
+            #image_macro_creator_toggle:checked + .a_project{
+            width: 70vw;
+            height: 150vh;
+            }
+            #hamster_mania_toggle:checked + .a_project{
+            width: 70vw;
+            height: 150vh;
+            }
+            #game_automation_toggle:checked + .a_project{
+            width: 70vw;
+            height: 150vh;
             }
         }
         @media (max-width: 800px) {
@@ -260,6 +308,12 @@
         @media (max-width: 420px) {
             #pomodoro_timer_project_toggle:checked + .a_project{
             height: 175vh;
+            }
+            #quiz_battle_project_toggle:checked + .a_project{
+            width: 70vw;
+            }
+            #portfolio_project_toggle:checked + .a_project{
+            width: 70vw;
             }
         }
     </style>
@@ -332,15 +386,28 @@
                 </div>
             </label>
             <label>
-                <input id="quiz_battle_toggle" type="checkbox">
+                <input id="quiz_battle_project_toggle" class="project_checkbox" type="checkbox">
                 <div id="quiz_battle_project" class="a_project" > 
                     <div class="project_title">Quiz Battle</div> 
                     <div class="project_body_text">
                         <p>                       
-                            Online web browser multiplayer quiz battle game
-                            You can play it <a href="https://quiz-battler.herokuapp.com/">here</a></p>
-                        <p></p>
-                        <p></p>
+                            A competitive multiplayer quiz game that anyone can play in their web browser. Players can 
+                            create private rooms with livechat and randomly generated questions each time.
+                            It is deployed on Heroku and can be played right now <a href="https://quiz-battler.herokuapp.com/"><b>here.</b></a></p>
+                        <p>
+                            Built with <b>Typescript, Node.js, HTML</b> and <b>CSS</b>. Uses the <b>socket.IO</b> library for all communication between server and players.
+                        </p>
+                        <p>
+                            I have always found it appealing to use and create games and programs that can be accessed instantly inside a web browser anywhere.
+                            It's the prime reason why I even chose to learn Typescript and Node.js which nowadays is more or less the de facto
+                            tools for frontend development.
+                        </p>
+                        <p>
+                            Watching myself and others choose new games and tools the first few minutes are pivotal. Accessibility is such a huge factor in deciding whether
+                            you will even try something to begin with even if it's a good program, when something requires downloading a zip-file with instructions
+                            for the actual install for seemingly no reason then you have already sifted out a large group of potential users.
+                        </p>
+
                         <a href="https://github.com/frumsrekovni/chat-application">
                             <img src="../images/GitHub-Mark-64px.png" /> 
                             <img src="../images/GitHub-Mark-Light-64px.png" />
@@ -349,12 +416,12 @@
                 </div>
             </label>
             <label>
-                <input id="portfolio_toggle" class="project_checkbox" type="checkbox">
+                <input id="portfolio_project_toggle" class="project_checkbox" type="checkbox">
                 <div id="portfolio_project" class="a_project" > 
                     <div class="project_title">Portfolio</div> 
                     <div class="project_body_text">
-                        <p></p>
-                        <p></p>
+                        <p>The very website that you are looking at right now</p>
+                        <p>Built entirely by me from scratch using Typescript, HTML and CSS</p>
                         <p></p>
                         <a href="https://github.com/frumsrekovni/portfolio">
                             <img src="../images/GitHub-Mark-64px.png" /> 
@@ -365,28 +432,49 @@
                 </div>
             </label>
             <label>
-                <input id="skywriter_toggle" class="project_checkbox" type="checkbox">
+                <input id="skywriter_project_toggle" class="project_checkbox" type="checkbox">
                 <div id="skywriter_project" class="a_project" > 
                     <div class="project_title">Sky Writer</div> 
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/-f4VkDb3iH0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/pX6vImTTlms" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <div class="project_body_text">
-                        <p>A physical digital alarmclock that displays the illusion that the time is floating infront of you</p>
-                        <p></p>
-                        <p></p>
+                        <p>
+                            A physical digital alarmclock that displays the illusion that time is floating infront of you.
+                            The actual time and alarm time can be changed with a remote.
+                        </p>
+                        <p>
+                           Using a detached fan motor, LEDs, magnets, sensors of all kinds, ATmega8 microcontrollers, IR-emitter,
+                           a way too loud speaker and a bunch of random scraps for balancing it is in hindsight a
+                           miracle the time managed to display in such a stable fashion while receiving IR signals much to the 
+                           courseleader's surprise aswell. This was for a microcontroller university course completed together with 3 other people.
+                        </p>
+                        <p>
+                            As if balancing this piece of breadboard with all kinds of bits and bobs to barely glide over
+                            a magnet in order to measure a complete rotation wasn't hard enough the entire logic
+                            had to be written in <b>Assembler</b>, if anyone wants to discuss our 
+                            hilariously long and detailed documentation of the assembler code I'm all open arms since it is pretty much 
+                            singed into my head at this point.
+                        </p>
                     </div>
                 </div>
             </label>
 
             <label>
-                <input id="image_macro_creator_toggle" type="checkbox">
+                <input id="image_macro_creator_toggle" class="project_checkbox" type="checkbox">
                 <div id="image_macro_creator" class="a_project" > 
                     <div class="project_title">Image Macro Creator</div> 
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/Y-86veLWM3o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <div class="project_body_text">
-                        <p></p>
-                        <p></p>
-                        <p></p>
+                        <p>
+                            Automatically creates and saves an image macro from given search terms. Script written in <b>Python</b>
+                            using the <b>selenium</b> library for web crawling.
+                        </p>
+                        <p>
+                            A simple project entirely motivated by my childish desire to efficiently make fun of my friends.
+                            But I do scratch my chin sometimes and envision a future where this would be 
+                            merged with a twitter bot the fetches popular search terms and uses them
+                            to create and tweet these images automatically.
+                        </p>
                         <a href="https://github.com/frumsrekovni/web_image_macro_creator">
                             <img src="../images/GitHub-Mark-64px.png" /> 
                             <img src="../images/GitHub-Mark-Light-64px.png" />
@@ -396,49 +484,83 @@
             </label>
 
             <label>
-                <input id="hamster_mania_toggle" type="checkbox">
+                <input id="hamster_mania_toggle" class="project_checkbox" type="checkbox">
                 <div id="hamster_mania" class="a_project" > 
                     <div class="project_title">Hamster Mania</div> 
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/Tlrn_tGo-yQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <div class="project_body_text">
                         <p>
-                            Hamster Mania is a 2D 2-player network platforming game. Built in C++ and SFML/Tiled map editor/TinyXML-2 for creating the graphics/network.
+                            Hamster Mania is a 2D 2-player network platforming game. 
+                            Built in <b>C++</b> and <b>SFML/Tiled map editor/TinyXML-2</b> for creating the graphics/network.
+                        </p>
+                        <p>
+                            Precise platforming to get ahead and landing precise headstomps to destroy your opponent was the main appeal.
+                            Playing on the same keyboard for these types of games is very unappealing so 
+                            the focus was on using network sockets like SFML's built in sf::TcpSocket to be able to play on separate computers.
                         </p>
                         <p>
                             Thinking back on making this project with three other university mates back in 2016 for a programming course
                             it is now steeped in charm and memories. The whole project used to have a nice dedicated website for presentation but has 
-                            since then dissappeared in to the ether.
+                            since then dissappeared in to the ether. I take no credit in making the video above, during this project
+                            I was more the programming/designing guy and not much involved in the presentation.
                         </p>
                         <p>
-                            The focus was on using network sockets like SFML's built in sf::TcpSocket and having an object-oriented programming(OOP) approach from start to finish. 
-                            In hindsight I am ever grateful for focusing on this but at the time it was brutal.
-                        </p>
-                        <p>
-                            It being a course in university a disgusting amount of documentation was demanded and the OOP mindset was bashed over our heads where
-                            in the end 80% of time spent was
-                            on making UML-diagrams and detailing every class in design specification documents. In the case anyone would care about hearing about 
-                            this writing process I can hold an extensive presentation just for you.
-                            Looking at the product there 
-                            was just so much more I wanted to add, but, I am in the end proud that the networking aspect actually worked pretty smoothly.
+                            It being a course in university focused on having an <b>object-oriented programming(OOP)</b> approach from start to 
+                            finish it resulted in a disgusting amount of documentation demanded and the OOP mindset was bashed over our heads.
+                            In the end 80% of time spent was on making UML-diagrams and detailing every class in design specification documents and
+                            in hindsight I am ever grateful to this but at the time it was brutal.
                         </p>
                     </div>
                 </div>
             </label>
             <label>
-                <input id="game_automation_toggle" type="checkbox">
+                <input id="game_automation_toggle" class="project_checkbox" type="checkbox">
                 <div id="game_automation" class="a_project" > 
                     <div class="project_title">Game Automation</div> 
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/gmNtVHIqWc0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/DEAa0eT4sJ4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div class="project_body_text">
+                        <p>
+                            Here are two game automation scripts written in <b>Python</b> with the <b>selenium</b> library.
+                        </p>
+                        <p>
+                            Automating <b>Seterra</b> threw problems at me that I never expected. 
+                        </p>
+                        <p>
+                            Automating <b>Cookie Clicker</b> was motivated by seeing other peoples' scripts where there was essentially a non-existent logic
+                            behind building/upgrade purchases. Simply buying either as soon you can afford anything or just bought the cheapest thing after X amount of clicks.
+                            I noticed how the new cookie clicker's store provides a building's increase in cookies per second(cps) in the tooltip I wanted to use that for the logic.
+
+
+                            The classic version uses the aforementioned "non-existent" logic to play, simply buying the cheapest after inputted amount of clicks.
+                        </p>
+                        <a href="https://github.com/frumsrekovni">
+                            <img src="../images/GitHub-Mark-64px.png" /> 
+                            <img src="../images/GitHub-Mark-Light-64px.png" />
+                        </a>
+                    </div>
                 </div>
             </label>
 
             <label>
-                <input id="other_toggle" type="checkbox">
+                <input id="other_projects_toggle" class="project_checkbox" type="checkbox">
                 <div id="other_projects" class="a_project" > 
                     <div class="project_title">Other</div> 
                     <div class="project_body_text">
-                            The grand tree, Signal level indicator, 2D side scroll shooter
+                        <p>
+                            <b>The grand tree</b> was my first 3D game and was made in <b>Godot</b> using <b>GDScript</b>. Simple platformer where the
+                            main game mechanic was that you had a gun that could shoot bouncing teleportation spheres and you had to make your way up an enormous tree.
+                            You could shoot the orbs at different speeds and only when you click again do you teleport to it, making the difficulty stem from 
+                            teleporting with correct timing.
+                        </p>
+                        <p>
+                            Signal level indicator
+                        </p>
+                        <p>
+                            A no named 2D side scroll shooter built in <b>C++</b> using <b>SDL2</b> and <b>TinyXML-2</b> for graphics and read the level files.
+                            My first introduction to representing obstacles and enemies in a XML file and parse it to make actual objects in-game. This was made for a 
+                            object-oriented programming course in university.  
+                        </p>
                     </div>
                 </div>
             </label>
