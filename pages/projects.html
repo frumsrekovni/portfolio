@@ -251,6 +251,13 @@
         .all_projects label input:checked + .a_project iframe{
             display: block;
         }
+        .a_project .the_grand_tree_demo{
+            display: none;
+            margin: auto;
+        }
+        .all_projects label input:checked + .a_project .the_grand_tree_demo{
+            display: block;
+        }
         .all_projects label input:checked + .a_project .project_body_text{
             display: flex;
         }
@@ -303,7 +310,7 @@
             }
             #quiz_battle_project_toggle:checked + .a_project{
             width: 50vw;
-            height: 100vh;
+            height: 125vh;
             }
             #skywriter_project_toggle:checked + .a_project{
             width: 70vw;
@@ -311,19 +318,26 @@
             }
             #image_macro_creator_toggle:checked + .a_project{
             width: 70vw;
-            height: 150vh;
             }
             #hamster_mania_toggle:checked + .a_project{
             width: 70vw;
-            height: 150vh;
+            height: 175vh;
             }
             #game_automation_toggle:checked + .a_project{
+            width: 70vw;
+            height: 150vh;
+            }
+            #other_projects_toggle:checked + .a_project{
             width: 70vw;
             height: 150vh;
             }
         }
         @media (max-width: 800px) {
             .all_projects iframe{
+            width: 280px;
+            height: 157px;
+            }
+            .all_projects .the_grand_tree_demo{
             width: 280px;
             height: 157px;
             }
@@ -337,6 +351,12 @@
             }
             #portfolio_project_toggle:checked + .a_project{
             width: 70vw;
+            }
+            #game_automation_toggle:checked + .a_project{
+            height: 225vh;
+            }
+            #other_projects_toggle:checked + .a_project{
+            height: 225vh;
             }
         }
     </style>
@@ -362,7 +382,7 @@
         <div class="page_title">
             Projects
             <div class="sub_title">
-                All projects that I have done myself or been apart of both
+                All projects that I have done myself or been a part of
                 that I felt like documenting for future reference. Everything from the university forced
                 backend projects like building an operating system to the very frontend like this website you are currently looking at.
                 Also some real physical projects using microcontrollers
@@ -580,7 +600,8 @@
                 <input id="other_projects_toggle" class="project_checkbox" type="checkbox">
                 <div id="other_projects" class="a_project" > 
                     <div class="project_title">Other</div> 
-                    <iframe width="600" height="338" src="../images/tehgrandtreedemogif.gif" frameborder="0"></iframe>
+                    <img width="600" height="338" class="the_grand_tree_demo" src="../images/tehgrandtreedemogif.gif" alt="game_demo">
+                    <!-- <iframe width="600" height="338" src="../images/tehgrandtreedemogif.gif" frameborder="0"></iframe> -->
                     <div class="project_body_text">
                         <p>
                             Above you can see <b>The Grand Tree</b>, a 3D game made in <b>Godot</b> using <b>GDScript</b>. Platformer where the
