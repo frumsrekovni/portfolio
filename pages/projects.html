@@ -156,6 +156,20 @@
             border-color: white;
             background-image: url(../images/hamstermaniagif.gif);
         }
+        #other_projects{
+            border-color: rgb(0, 0, 0);
+            background-image:                linear-gradient(
+                rgba(0, 0, 0, 0.5),
+                rgba(0, 0, 0, 0.5)
+                ),url(../images/vaticanstaircase.jpg);
+        }
+        #other_projects:hover{
+            border-color: white;
+            background-image:                linear-gradient(
+                rgba(0, 0, 0, 0.2),
+                rgba(0, 0, 0, 0.2)
+                ),url(../images/vaticanstaircase.jpg);
+        }
         label input{
             width: 0;
             height: 0;
@@ -212,7 +226,7 @@
             background-image: none;
             background-color:#102633;
             width: 50vw;
-            height: 100vh;
+            height: 150vh;
             border-radius: 10%;
             padding: 25px;
         }
@@ -252,6 +266,15 @@
         #kitchen_timer_image{
             display: none;
         }
+        #dirty_uml_diagram:hover + #dirty_umldiagram_image{
+            display: block;
+        }
+        #dirty_umldiagram_image{
+            display: none;
+            width: 100%;
+            height: auto;
+        }
+
         .project_body_text a img:last-child {
             display: none;  
         }
@@ -355,27 +378,27 @@
                     <div class="project_body_text">
                         <p> 
                             A virtual pomodoro timer based on the time management technique created by Francesco Cirillo.
-                            Saves and categorize work time between work sessions. 
+                            Saves and categorizes work time between work sessions. 
                         </p>
                         <p>
-                            The idea is that you set a work time and break time with neither being especially long
-                            essentially tricking ourselves into making the task at hand not seem as daunting with these clear bite sized time chunks infront of you.
+                            The idea is that you set a work time and break time with neither being especially long,
+                            essentially tricking ourselves into making the task at hand not seem as daunting with these clear bite sized time chunks in front of you.
                             I have used this technique extensively during university where the largest issue was just clearing the first
                             hurdle of getting started.
                             You usually use a real physical kitchen timer which commonly has the appearance of a tomato(pomodoro) and wind up each time chunk everytime.
                         </p>
                         <p id="mytimer_paragraph">
-                            The problem is that I wanted a way to track my worked time and disliked fiddling with resetting the timer each time, most likely just because
+                            The problem is that I wanted a way to track my work time and disliked fiddling with resetting the timer each time, most likely just because
                             my particular timer used bad squishy silicon buttons instead of a satisfying twist.
                             <b id="my_timer">My kitchen timer</b> <img id="kitchen_timer_image" src="../images/mykitchentimer.png" alt="kitchen_timer_image"> also had no way to quickly input large numbers which made
                             playing around with different time intervals unnecessarily annoying.
-                            I also wanted my tracked time to be categorised and 
+                            I also wanted my tracked time to be categorized and 
                             saved between sessions.
                         </p>
                         <p>
                             Built with <b>GDScript</b> using the <b>Godot Engine</b>. I have played around in unreal engine 4 before but Godot being much more lightweight
                             and heavily recommended especially when 3D renders are not of importance I dove in. 
-                            GDScript is very similar to Python which I was interested in also learning at the time so I decided to make something
+                            GDScript is very similar to Python which I was interested in learning at the time so I decided to make something
                             easy but simultaneously meaningful for me.
                         </p>
                         <a href="https://github.com/frumsrekovni/pomodoro_technique_timer">
@@ -399,7 +422,7 @@
                         </p>
                         <p>
                             I have always found it appealing to use and create games and programs that can be accessed instantly inside a web browser anywhere.
-                            It's the prime reason why I even chose to learn Typescript and Node.js which nowadays is more or less the de facto
+                            It's the prime reason why I even chose to learn Typescript and Node.js which nowadays are more or less the de facto
                             tools for frontend development.
                         </p>
                         <p>
@@ -439,14 +462,14 @@
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/pX6vImTTlms" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     <div class="project_body_text">
                         <p>
-                            A physical digital alarmclock that displays the illusion that time is floating infront of you.
+                            A physical digital alarm clock that displays the illusion that time is floating in front of you.
                             The actual time and alarm time can be changed with a remote.
                         </p>
                         <p>
                            Using a detached fan motor, LEDs, magnets, sensors of all kinds, ATmega8 microcontrollers, IR-emitter,
                            a way too loud speaker and a bunch of random scraps for balancing it is in hindsight a
                            miracle the time managed to display in such a stable fashion while receiving IR signals much to the 
-                           courseleader's surprise aswell. This was for a microcontroller university course completed together with 3 other people.
+                           course leader's surprise as well. This was for a microcontroller university course completed together with 3 other people.
                         </p>
                         <p>
                             As if balancing this piece of breadboard with all kinds of bits and bobs to barely glide over
@@ -472,7 +495,7 @@
                         <p>
                             A simple project entirely motivated by my childish desire to efficiently make fun of my friends.
                             But I do scratch my chin sometimes and envision a future where this would be 
-                            merged with a twitter bot the fetches popular search terms and uses them
+                            merged with a twitter bot that fetches popular search terms and uses them
                             to create and tweet these images automatically.
                         </p>
                         <a href="https://github.com/frumsrekovni/web_image_macro_creator">
@@ -496,17 +519,17 @@
                         <p>
                             Precise platforming to get ahead and landing precise headstomps to destroy your opponent was the main appeal.
                             Playing on the same keyboard for these types of games is very unappealing so 
-                            the focus was on using network sockets like SFML's built in sf::TcpSocket to be able to play on separate computers.
+                            the focus was on using network sockets like SFML's built-in sf::TcpSocket to be able to play on separate computers.
                         </p>
                         <p>
-                            Thinking back on making this project with three other university mates back in 2016 for a programming course
+                            Thinking back on making this project with three other university mates back in 2016 for a programming course,
                             it is now steeped in charm and memories. The whole project used to have a nice dedicated website for presentation but has 
-                            since then dissappeared in to the ether. I take no credit in making the video above, during this project
+                            since then disappeared in to the ether. I take no credit in making the video above, during this project
                             I was more the programming/designing guy and not much involved in the presentation.
                         </p>
                         <p>
-                            It being a course in university focused on having an <b>object-oriented programming(OOP)</b> approach from start to 
-                            finish it resulted in a disgusting amount of documentation demanded and the OOP mindset was bashed over our heads.
+                            Being a course in university focused on having an <b>object-oriented programming(OOP)</b> approach from start to 
+                            finish resulted in a disgusting amount of documentation demanded and the OOP mindset was bashed over our heads.
                             In the end 80% of time spent was on making UML-diagrams and detailing every class in design specification documents and
                             in hindsight I am ever grateful to this but at the time it was brutal.
                         </p>
@@ -524,15 +547,26 @@
                             Here are two game automation scripts written in <b>Python</b> with the <b>selenium</b> library.
                         </p>
                         <p>
-                            Automating <b>Seterra</b> threw problems at me that I never expected. 
+                            Automating <b>Seterra</b> was supposed to be a fun afternoon project but turned into a multiple day one for reasons I never could have expected. 
+                             
+                            The super early version used the computer vision library <b>OpenCV</b> since I actually wanted to replicate a human as much as possible
+                            but this resulted in super inaccurate and slow solutions. It was definitely the most human since it was actually moving the mouse and I would 
+                            be happy with this if only it didn't also click the wrong country half the time. I had to sometimes lower the confidence of image recognition 
+                            to 20% and it would click on the Atlantic ocean instead of iceland.
+                            <b>Robotic looking solutions it is then</b>, selenium has a function to click on an element without moving anything and thought this would solve
+                            the whole map instantly but as it turns out the huge square individual country web elements on seterra's website is an overlapping hellhole.
+                            Because all of the elements are overlapping each other many could not be clicked unless hovered with a mouse, which is where <b>action chains</b> comes
+                            in. It effectively mimics a mouse movement but is considerably slower. In the demo above the abrupt pauses is when a country with a messed up element
+                            overlap is reached and action chains kicks in.
                         </p>
                         <p>
                             Automating <b>Cookie Clicker</b> was motivated by seeing other peoples' scripts where there was essentially a non-existent logic
                             behind building/upgrade purchases. Simply buying either as soon you can afford anything or just bought the cheapest thing after X amount of clicks.
-                            I noticed how the new cookie clicker's store provides a building's increase in cookies per second(cps) in the tooltip I wanted to use that for the logic.
+                            I noticed how the new cookie clicker's store provides a building's increase in cookies per second(cps) in the tooltip.
+                            So this script bases its building purchases on that value instead.
 
 
-                            The classic version uses the aforementioned "non-existent" logic to play, simply buying the cheapest after inputted amount of clicks.
+                            The classic version uses the aforementioned "non-existent" logic to play, simply buying the cheapest after the input amount of clicks.
                         </p>
                         <a href="https://github.com/frumsrekovni">
                             <img src="../images/GitHub-Mark-64px.png" /> 
@@ -546,20 +580,36 @@
                 <input id="other_projects_toggle" class="project_checkbox" type="checkbox">
                 <div id="other_projects" class="a_project" > 
                     <div class="project_title">Other</div> 
+                    <iframe width="600" height="338" src="../images/tehgrandtreedemogif.gif" frameborder="0"></iframe>
                     <div class="project_body_text">
                         <p>
-                            <b>The grand tree</b> was my first 3D game and was made in <b>Godot</b> using <b>GDScript</b>. Simple platformer where the
-                            main game mechanic was that you had a gun that could shoot bouncing teleportation spheres and you had to make your way up an enormous tree.
-                            You could shoot the orbs at different speeds and only when you click again do you teleport to it, making the difficulty stem from 
-                            teleporting with correct timing.
+                            Above you can see <b>The Grand Tree</b>, a 3D game made in <b>Godot</b> using <b>GDScript</b>. Platformer where the
+                            main game mechanic was a gun that could shoot bouncy teleportation spheres and you had to make your way up an enormous tree.
+                            You could shoot the spheres at different speeds and only when you press again do you teleport, making the main gameplay loop stem from 
+                            teleporting with correct timing. Uses the default Godot assets which makes me not exactly proud of its appearance,
+                            I was more excited about making the mechanics.
                         </p>
                         <p>
-                            Signal level indicator
+                            <b>Space Shooter</b> was a very basic 2D side-scrolling shooter built in <b>C++</b> using <b>SDL2.0</b> for rendering the graphics.
+                            The project that introduced to me the idea of representing whole game levels in .txt files and then parse them in order to build game objects
+                            like obstacles and enemies. Resulted in level designing being as easy as editing a .txt file.
+                            This was made for a object-oriented programming course in university together with 3 other people ages ago and digging up these ancient files I got a good laugh discovering
+                            that I drew the entire project's <b id="dirty_uml_diagram">first UML-diagram</b><img id="dirty_umldiagram_image" src="../images/spaceshooterumldiagram.png" alt="bad_uml_diagram_image"> with a lead pencil in my worn-out notebook and used my phone to photograph it to my professor.
                         </p>
                         <p>
-                            A no named 2D side scroll shooter built in <b>C++</b> using <b>SDL2</b> and <b>TinyXML-2</b> for graphics and read the level files.
-                            My first introduction to representing obstacles and enemies in a XML file and parse it to make actual objects in-game. This was made for a 
-                            object-oriented programming course in university.  
+                            The <b>Signal level indicator</b> showed on a screen the inserted sound's volume and balance.
+                            This simple description might be deceptive, this was a huge and very low level component project together with 4 other university people who had vastly
+                            different responsibilities and honestly makes me uncomfortable saying I was a part of certain parts of this project.
+                            But, the entire project was built on a <b>DE2 board</b> and the built-in WM8731 sound chip receives an analog audio signal and creates a 
+                            16-bit digital sample that is sent to speakers and the field-programmable gate array(FPGA).
+                            On this custom programmed FPGA plenty of our 
+                            VHDL code magically deciphers the sample's audio balance, volume and power. 
+                            Depending on these values the screen's graphics are manipulated(color and movement mostly) and an appropriate
+                            image is chosen from a static random-access memory(SRAM) which is sent to a 
+                            VGA controller for display. Just imagine an image of a cat sleeping changing to a cat screaming when the bass drops.<br>
+                            
+                            What I spent the majority of my time on was to get more familiar than I'd like with <b>VHDL</b> to 
+                            figure out how to accurately measure and represent a 16-bit sound sample's decibel and power.
                         </p>
                     </div>
                 </div>
