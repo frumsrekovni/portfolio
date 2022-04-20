@@ -254,6 +254,8 @@
         .a_project .the_grand_tree_demo{
             display: none;
             margin: auto;
+            width: 100%;
+            height: auto;
         }
         .all_projects label input:checked + .a_project .the_grand_tree_demo{
             display: block;
@@ -334,12 +336,8 @@
         }
         @media (max-width: 800px) {
             .all_projects iframe{
-            width: 280px;
-            height: 157px;
-            }
-            .all_projects .the_grand_tree_demo{
-            width: 280px;
-            height: 157px;
+            width: 100%;
+            height: auto;
             }
         }
         @media (max-width: 420px) {
@@ -356,7 +354,7 @@
             height: 225vh;
             }
             #other_projects_toggle:checked + .a_project{
-            height: 225vh;
+            height: 250vh;
             }
         }
     </style>
