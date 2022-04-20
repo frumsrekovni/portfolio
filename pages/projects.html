@@ -32,6 +32,7 @@
         .sub_title{
             font-size: small;
             font-size: 25px;
+            padding: 25px;
         }
         .all_projects{
             display: inline-flex;
@@ -178,7 +179,7 @@
             background-image: none;
             background-color: #c10d1e;
             width: 50vw;
-            height: 100vh;
+            height: auto;
             border-radius: 10%;
             padding: 25px;
         }
@@ -186,7 +187,7 @@
             background-image: none;
             background-color: rgb(75, 78, 80);
             width: 25vw;
-            height: 75vh;
+            height: auto;
             border-radius: 10%;
             padding: 25px;
         }
@@ -194,7 +195,7 @@
             background-image: none;
             background-color: rgb(62, 0, 94);
             width: 25vw;
-            height: 50vh;
+            height: auto;
             border-radius: 10%;
             padding: 25px;
         }
@@ -202,7 +203,7 @@
             background-image: none;
             background-color: #f0740f;
             width: 50vw;
-            height: 100vh;
+            height: auto;
             border-radius: 10%;
             padding: 25px;
         }
@@ -210,7 +211,7 @@
             background-image: none;
             background-color: #6F4E37;
             width: 50vw;
-            height: 100vh;
+            height: auto;
             border-radius: 10%;
             padding: 25px;
         }
@@ -218,7 +219,7 @@
             background-image: none;
             background-color: rgb(75, 78, 80);
             width: 50vw;
-            height: 100vh;
+            height: auto;
             border-radius: 10%;
             padding: 25px;
         }
@@ -226,7 +227,7 @@
             background-image: none;
             background-color:#102633;
             width: 50vw;
-            height: 150vh;
+            height:auto;
             border-radius: 10%;
             padding: 25px;
         }
@@ -234,7 +235,7 @@
             background-image: none;
             background-color:#010f18;
             width: 50vw;
-            height: 100vh;
+            height: auto;
             border-radius: 10%;
             padding: 25px;
         }
@@ -254,9 +255,10 @@
         .a_project .the_grand_tree_demo{
             display: none;
             margin: auto;
-            width: 100%;
-            height: auto;
+            width:560px;
+            height:315px;
         }
+
         .all_projects label input:checked + .a_project .the_grand_tree_demo{
             display: block;
         }
@@ -302,36 +304,34 @@
             content: ' ';
             background: rgba(0,0,0,.5);
         }
-        @media (max-width: 1150px) {
+        @media (max-width: 1400px) {
             .hero_body{
             width: 100vw;
             }
             #pomodoro_timer_project_toggle:checked + .a_project{
             width: 70vw;
-            height: 175vh;
             }
             #quiz_battle_project_toggle:checked + .a_project{
             width: 50vw;
-            height: 125vh;
             }
             #skywriter_project_toggle:checked + .a_project{
             width: 70vw;
-            height: 150vh;
             }
             #image_macro_creator_toggle:checked + .a_project{
             width: 70vw;
             }
             #hamster_mania_toggle:checked + .a_project{
             width: 70vw;
-            height: 175vh;
             }
             #game_automation_toggle:checked + .a_project{
             width: 70vw;
-            height: 150vh;
             }
             #other_projects_toggle:checked + .a_project{
             width: 70vw;
-            height: 150vh;
+            }
+            .a_project .the_grand_tree_demo{
+            width: 100%;
+            height: auto;
             }
         }
         @media (max-width: 800px) {
@@ -341,20 +341,11 @@
             }
         }
         @media (max-width: 420px) {
-            #pomodoro_timer_project_toggle:checked + .a_project{
-            height: 175vh;
-            }
             #quiz_battle_project_toggle:checked + .a_project{
             width: 70vw;
             }
             #portfolio_project_toggle:checked + .a_project{
             width: 70vw;
-            }
-            #game_automation_toggle:checked + .a_project{
-            height: 225vh;
-            }
-            #other_projects_toggle:checked + .a_project{
-            height: 250vh;
             }
         }
     </style>
