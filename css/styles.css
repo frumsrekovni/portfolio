@@ -101,6 +101,576 @@ nav li a:hover{
     content: ' ';
     background: rgba(0,0,0,.5); 
 }
+/************** ABOUT PAGE CSS START **************/
+.about_body{
+    height: 3750px;
+}
+.about_hero_body{
+    position: absolute;
+    width: 50vw;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%,-50%);
+    display: inline-flexbox;
+    text-align: center;
+}
+.about_hero_body .hero_title{                 
+    display:flex;           /*Makes align-items and justify-content work*/
+    align-items:center;     /*Puts subtitle inline with title*/
+    text-align:start;
+    justify-content:center; /*Puts subtitle and title in the middle of the screen*/
+}
+.about_hero_body h1{
+    font-weight: 255;
+    color: rgb(212, 212, 212);
+    font-size: 100px;
+    text-align: center;
+    filter: drop-shadow(0.3rem 0.3rem 0.3rem rgb(0, 0, 0, 0.7));
+}
+.about_hero_body .hero_subtitle{
+    display:flex;
+    flex-flow: column wrap; /*Make programmer appear under Aspiring*/
+}
+.about_hero_body .hero_subtitle .subtitle_text{
+    font-size: 32px;
+    font-weight: 255;
+    color:grey;
+    filter: drop-shadow(0.3rem 0.3rem 0.19rem rgba(0, 0, 0, 0.5));
+}
+.about_hero_body .hero_body_text{
+    font-size: x-large;
+    overflow-wrap: break-word;
+    display: inline-block;
+    color: rgb(213, 245, 204);
+    filter: drop-shadow(0.3rem 0.3rem 0.19rem rgba(0, 0, 0, 0.5));
+}
+.about_hero_body .hero_body_text a{
+    text-decoration: none;
+}
+
+.about_hero_body .hero_body_text a .projects_hero_redirect{
+    color: rgb(213, 245, 204);
+    transition:0.6s cubic-bezier(0.16, 0.84, 0.44, 1);
+}
+.about_hero_body .hero_body_text a:hover .projects_hero_redirect{
+    filter: drop-shadow(0rem 0rem 0.1rem rgba(255, 223, 0, 1));
+    font-size: 1030;
+}
+.about_hero_body .hero_body_text .emaildiv:hover span{
+    display: none;
+}
+.about_hero_body .hero_body_text .emaildiv:hover::before{
+    content: "joshua.backstrom@gmail.com";
+}
+.copy_alert{ /*Alert that shows up for 1s when user clicks on "Email me!"*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 5px;
+    font-size: x-large;
+    font-weight: 500;
+    background-color:white;
+    opacity: 0.9;
+    border-radius: 2px;
+}
+.fadeIn_fadeOut{
+    opacity: 0;
+    animation: fadeIn_fadeOut 5s;
+}
+#timeline_tv_show,#timeline_game,#timeline_sport{
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+}
+.welcome_screen{
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    align-items: flex-end;
+}
+.about_body .down_scroll_button_click_area{
+    position: relative;
+    display: inline-flex;
+    width: 100%;
+    height: 14vh;
+}
+.about_body .down_scroll_button{
+    border-left: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    transform: rotate(-45deg);
+    padding: 0.75em;
+    display:inline-flex;
+    position: relative;
+    left: 50%;
+    height: 0;
+    
+    animation: down_scroll_button_animation 3s infinite;
+}
+.about_body .up_scroll_button{
+    border-left: 1px solid #fff;
+    border-bottom: 1px solid #fff;
+    transform: rotate(135deg);
+    padding: 0.75em;
+    display:inline-flex;
+    position: relative;
+    left: 50%;
+    height: 0;
+    animation: 5s;
+}
+
+.down_scroll_button_click_area:hover .down_scroll_button{
+    animation: down_scroll_button_animation_when_hovered 2s infinite;
+}
+.down_scroll_button_click_area:hover .up_scroll_button{
+    animation: up_scroll_button_animation_when_hovered 2s infinite;
+}
+#personal_timeline{
+    width: 100%;
+    top: 100vh;     /*It is positioned under the initial landing screen*/
+    position: relative;
+    display: flex;
+    flex-flow: column;
+}
+#timeline_header{
+    font-weight: 255;
+    color: rgb(212, 212, 212);
+    font-size: 100px;
+    text-align: center;
+    filter: drop-shadow(0.3rem 0.3rem 0.3rem rgb(0, 0, 0, 0.7));
+    top: 0;
+    width: 100%;
+}
+.all_nodes li{
+    list-style: none;
+    padding: 25px;
+    position: relative;
+    text-align: center;
+    max-width: 440px;
+    left: 50%;
+    transform: translate(-50%,0%);
+
+    font-size: x-large;
+    overflow-wrap: break-word;
+    color: rgb(213, 245, 204);
+    filter: drop-shadow(0.3rem 0.3rem 0.19rem rgba(0, 0, 0, 0.5));
+}
+.all_nodes li a{
+    color: rgb(213, 245, 204);
+    text-decoration:underline;
+}
+@media (max-width: 1700px) {
+    .about_hero_body{
+    width: 90vw;
+    }
+}
+@media (max-width: 600px) {
+    .about_hero_body h1{
+    font-size: 70px;
+    }
+    .about_hero_body .hero_subtitle .subtitle_text{
+    font-size: x-large;
+    }    
+}
+@media (max-width: 400px) {
+    .about_hero_body h1{
+        font-size: 50px;
+    }
+}
+@media (max-width: 950px) and (orientation: landscape) {
+    .about_hero_body h1{
+        font-size: 45px;
+    }
+    .about_hero_body .hero_subtitle .subtitle_text{
+        font-size: x-large;
+    }
+}
+/************** ABOUT PAGE CSS END **************/
+
+
+/************** PROJECTS PAGE CSS START **************/
+.projects_page_body .hero_body{
+    position: absolute;
+    display:inline-flexbox;
+    left: 50%;
+    top: 10%;
+    transform: translate(-50%,0%); /*If not 0% it will grow upwards when screen gets smaller*/
+    width: 60vw;
+}
+.projects_page_body .page_title{
+    color: rgb(212, 212, 212);
+    filter: drop-shadow(0.3rem 0.3rem 0.3rem rgb(0, 0, 0, 0.7));
+    text-align: center;
+    font-weight:400;
+    font-size: 75px;
+}
+.projects_page_body .sub_title{
+    font-size: small;
+    font-size: 25px;
+    padding: 25px;
+}
+.all_projects{
+    display: inline-flex;
+    flex-wrap:wrap;
+    justify-content:space-evenly;
+    
+}
+.all_projects .a_project{
+    background-color: orange;
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+        ),url(../images/under_constructions.png);
+    background-size: cover;
+    list-style: none;
+    width: 200px;
+    height: 200px;
+    margin: 30px;
+    margin-bottom: 60px;    
+    transition: 500ms cubic-bezier(.14,.82,.7,.92);
+    position: relative; /*Puts each project title inside the square */
+    text-align: center;
+    border-radius: 10%;
+    border: 2px solid;
+    border-color:rgb(0, 0, 0);
+    z-index: 1;
+}
+.project_title{
+    font-size: x-large;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: rgb(255, 255, 255);
+    filter: drop-shadow(0.3rem 0.3rem 0.3rem rgb(0, 0, 0, 0.7));
+}
+#pomodoro_timer_project{
+    background-image: 
+        linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+        ),url(../images/pomodorotimerimage2darkmode.png);
+}
+#pomodoro_timer_project:hover{
+    border-color: white;
+    background-image:                linear-gradient(
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2)
+        ),url(../images/pomodorotimerimage2.png);
+}
+#quiz_battle_project{
+    background-image: 
+        linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+        ),url(../images/quizbattleimage.png);
+        
+}
+#quiz_battle_project:hover{
+    border-color: white;
+    background-image:                linear-gradient(
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2)
+        ),url(../images/realgameofquizbattler.gif);
+}
+#portfolio_project{
+    background-image: 
+        linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+        ),url(../images/portfolioprojectimage2.PNG);
+        background-size: contain;
+        
+}
+#portfolio_project:hover{
+    border-color: white;
+    background-image:                linear-gradient(
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2)
+        ),url(../images/portfoliogif.gif);
+}
+#skywriter_project{
+    border-color: rgb(0, 0, 0);
+    background-image:                linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+        ),url(../images/skywriterimage.png);
+        background-size: contain;
+}
+#skywriter_project:hover{
+    border-color: white;
+    background-image: url(../images/skywritergif.gif);
+}
+#image_macro_creator{
+    border-color: rgb(0, 0, 0);
+    background-image:                linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+        ),url(../images/imagemacrocreatortemplate.jpg);
+}
+#image_macro_creator:hover{
+    border-color: white;
+    background-image: url(../images/imagemacro.jpg);
+}
+#game_automation{
+    border-color: rgb(0, 0, 0);
+    background-image:                linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+        ),url(../images/cookieclickerscriptv2.PNG);
+}
+#game_automation:hover{
+    border-color: white;
+    background-image: url(../images/cookieclickerhovergif.gif);
+}
+#hamster_mania{
+    border-color: rgb(0, 0, 0);
+    background-image:                linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+        ),url(../images/hamstermaniaimage.png);
+}
+#hamster_mania:hover{
+    border-color: white;
+    background-image: url(../images/hamstermaniagif.gif);
+}
+#other_projects{
+    border-color: rgb(0, 0, 0);
+    background-image:                linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+        ),url(../images/vaticanstaircase.jpg);
+}
+#other_projects:hover{
+    border-color: white;
+    background-image:                linear-gradient(
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2)
+        ),url(../images/vaticanstaircase.jpg);
+}
+label input{
+    width: 0;
+    height: 0;
+}
+#pomodoro_timer_project_toggle:checked + .a_project{
+    background-image: none;
+    background-color: #c10d1e;
+    width: 50vw;
+    height: auto;
+    border-radius: 10%;
+    padding: 25px;
+}
+#quiz_battle_project_toggle:checked + .a_project{
+    background-image: none;
+    background-color: rgb(75, 78, 80);
+    width: 25vw;
+    height: auto;
+    border-radius: 10%;
+    padding: 25px;
+}
+#portfolio_project_toggle:checked + .a_project{
+    background-image: none;
+    background-color: rgb(62, 0, 94);
+    width: 25vw;
+    height: auto;
+    border-radius: 10%;
+    padding: 25px;
+}
+#skywriter_project_toggle:checked + .a_project{
+    background-image: none;
+    background-color: #f0740f;
+    width: 50vw;
+    height: auto;
+    border-radius: 10%;
+    padding: 25px;
+}
+#image_macro_creator_toggle:checked + .a_project{
+    background-image: none;
+    background-color: #6F4E37;
+    width: 50vw;
+    height: auto;
+    border-radius: 10%;
+    padding: 25px;
+}
+#hamster_mania_toggle:checked + .a_project{
+    background-image: none;
+    background-color: rgb(75, 78, 80);
+    width: 50vw;
+    height: auto;
+    border-radius: 10%;
+    padding: 25px;
+}
+#game_automation_toggle:checked + .a_project{
+    background-image: none;
+    background-color:#102633;
+    width: 50vw;
+    height:auto;
+    border-radius: 10%;
+    padding: 25px;
+}
+#other_projects_toggle:checked + .a_project{
+    background-image: none;
+    background-color:#010f18;
+    width: 50vw;
+    height: auto;
+    border-radius: 10%;
+    padding: 25px;
+}
+.project_body_text{
+    color: white;
+    filter: drop-shadow(0.3rem 0.3rem 0.3rem rgb(0, 0, 0, 0.7));
+    margin-top: 1rem;
+    flex-flow: column;
+    align-items: center;
+}
+.all_projects iframe{
+    margin:auto;
+}
+.all_projects label input:checked + .a_project iframe{
+    display: block;
+}
+.a_project .the_grand_tree_demo{
+    display: none;
+    margin: auto;
+    width:560px;
+    height:315px;
+}
+
+.all_projects label input:checked + .a_project .the_grand_tree_demo{
+    display: block;
+}
+.all_projects label input:checked + .a_project .project_body_text{
+    display: flex;
+}
+.all_projects input{
+    display: none;
+}
+.a_project iframe, .a_project .project_body_text{
+    display: none;
+}
+#my_timer:hover + #kitchen_timer_image{
+    display: block;
+}
+#kitchen_timer_image{
+    display: none;
+}
+#dirty_uml_diagram:hover + #dirty_umldiagram_image{
+    display: block;
+}
+#dirty_umldiagram_image{
+    display: none;
+    width: 100%;
+    height: auto;
+}
+
+.project_body_text a img{
+    display: flex;
+}
+.project_body_text a img:last-child {
+    display: none;  
+}
+.project_body_text a:hover img:first-child {
+    display: none;
+}
+.project_body_text a:hover img:last-child {
+    display:flex;  
+}
+#out_of_bound_blocker {
+    display: none;
+    position: absolute;
+    top: -10vh;
+    left: -20vw;
+    width: 120vw;
+    content: ' ';
+    background: rgba(0,0,0,.5);
+}
+@media (max-width: 1400px) {
+    .projects_page_body .hero_body{
+    width: 100vw;
+    }
+    #pomodoro_timer_project_toggle:checked + .a_project{
+    width: 70vw;
+    }
+    #quiz_battle_project_toggle:checked + .a_project{
+    width: 50vw;
+    }
+    #skywriter_project_toggle:checked + .a_project{
+    width: 70vw;
+    }
+    #image_macro_creator_toggle:checked + .a_project{
+    width: 70vw;
+    }
+    #hamster_mania_toggle:checked + .a_project{
+    width: 70vw;
+    }
+    #game_automation_toggle:checked + .a_project{
+    width: 70vw;
+    }
+    #other_projects_toggle:checked + .a_project{
+    width: 70vw;
+    }
+    .a_project .the_grand_tree_demo{
+    width: 100%;
+    height: auto;
+    }
+}
+@media (max-width: 800px) {
+    .all_projects iframe{
+    width: 100%;
+    height: auto;
+    }
+}
+@media (max-width: 420px) {
+    #quiz_battle_project_toggle:checked + .a_project{
+    width: 70vw;
+    }
+    #portfolio_project_toggle:checked + .a_project{
+    width: 70vw;
+    }
+}
+/************** PROJECTS PAGE CSS END **************/
+
+/************** CV PAGE CSS START **************/
+
+.cvs{
+    position: absolute;
+    top: 8%;
+    left: 50%;
+    transform: translate(-50%,0%);
+    display: inline-flex;
+    flex-flow: column;
+    align-items: center;
+}
+.cv iframe{
+    position: relative;
+    width: 50vw;
+    height:92vh;
+    margin: 3px;
+}
+.newtab_cv{
+    text-decoration: none;
+    color: #0070c9;
+    font-size: large;
+    margin: 3px;
+}
+.newtab_cv:hover{
+    text-decoration: underline;
+}
+@media (max-width: 1370px){
+    .cv iframe{
+    width: 90vw;
+    }
+}
+@media (max-width: 450px){
+    .cv iframe{
+        height:50vh;
+    }
+}
+/************** CV PAGE CSS END **************/
+
+
+
+
+
+
 @media (max-width: 700px) {
     .hamburger_menu {
         display: flex;      /*When the viewport is narrow is when the hamburger menu should be displayed. It's none by default.*/

@@ -10,6 +10,7 @@ function addEventListenerToAllProjects() {
             var projectid = all_project_elements[i].id + "_toggle";
             var projectEl = document.getElementById(projectid);
             projectEl.checked = true;
+            all_project_elements[i].scrollIntoView({ behavior: "smooth" });
             activateBlocker();
         });
     };

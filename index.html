@@ -11,191 +11,8 @@
     <script src="js/aspiringtext.js" defer></script>
     <script src="js/navbar.js" defer></script>
     <link rel="stylesheet" href="css/styles.css">
-    <style>
-        body{
-            height: 3750px;
-        }
-        .hero_body{
-            position: absolute;
-            width: 50vw;
-            left: 50%;
-            top: 45%;
-            transform: translate(-50%,-50%);
-            display: inline-flexbox;
-            text-align: center;
-        }
-        .hero_title{                 
-            display:flex;           /*Makes align-items and justify-content work*/
-            align-items:center;     /*Puts subtitle inline with title*/
-            text-align:start;
-            justify-content:center; /*Puts subtitle and title in the middle of the screen*/
-        }
-        h1{
-            font-weight: 255;
-            color: rgb(212, 212, 212);
-            font-size: 100px;
-            text-align: center;
-            filter: drop-shadow(0.3rem 0.3rem 0.3rem rgb(0, 0, 0, 0.7));
-        }
-        .hero_subtitle{
-            display:flex;
-            flex-flow: column wrap; /*Make programmer appear under Aspiring*/
-        }
-        .hero_subtitle .subtitle_text{
-            font-size: 32px;
-            font-weight: 255;
-            color:grey;
-            filter: drop-shadow(0.3rem 0.3rem 0.19rem rgba(0, 0, 0, 0.5));
-        }
-        .hero_body_text{
-            font-size: x-large;
-            overflow-wrap: break-word;
-            display: inline-block;
-            color: rgb(213, 245, 204);
-            filter: drop-shadow(0.3rem 0.3rem 0.19rem rgba(0, 0, 0, 0.5));
-        }
-        .hero_body_text a{
-            text-decoration: none;
-        }
-
-        .hero_body_text a .projects_hero_redirect{
-            color: rgb(213, 245, 204);
-            transition:0.6s cubic-bezier(0.16, 0.84, 0.44, 1);
-        }
-        .hero_body_text a:hover .projects_hero_redirect{
-            filter: drop-shadow(0rem 0rem 0.1rem rgba(255, 223, 0, 1));
-            font-size: 1030;
-        }
-        .hero_body_text .emaildiv:hover span{
-            display: none;
-        }
-        .hero_body_text .emaildiv:hover::before{
-            content: "joshua.backstrom@gmail.com";
-        }
-        .copy_alert{ /*Alert that shows up for 1s when user clicks on "Email me!"*/
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%,-50%);
-            padding: 5px;
-            font-size: x-large;
-            font-weight: 500;
-            background-color:white;
-            opacity: 0.9;
-            border-radius: 2px;
-        }
-        .fadeIn_fadeOut{
-            opacity: 0;
-            animation: fadeIn_fadeOut 5s;
-        }
-        #timeline_tv_show,#timeline_game,#timeline_sport{
-            cursor: pointer;
-            color: rgb(255, 255, 255);
-        }
-        .welcome_screen{
-            width: 100%;
-            height: 100vh;
-            position: absolute;
-            display: flex;
-            align-items: flex-end;
-        }
-        .down_scroll_button_click_area{
-            position: relative;
-            display: inline-flex;
-            width: 100%;
-            height: 14vh;
-        }
-        .down_scroll_button{
-            border-left: 1px solid #fff;
-            border-bottom: 1px solid #fff;
-            transform: rotate(-45deg);
-            padding: 0.75em;
-            display:inline-flex;
-            position: relative;
-            left: 50%;
-            height: 0;
-            
-            animation: down_scroll_button_animation 3s infinite;
-        }
-        .up_scroll_button{
-            border-left: 1px solid #fff;
-            border-bottom: 1px solid #fff;
-            transform: rotate(135deg);
-            padding: 0.75em;
-            display:inline-flex;
-            position: relative;
-            left: 50%;
-            height: 0;
-            animation: 5s;
-        }
-
-        .down_scroll_button_click_area:hover .down_scroll_button{
-            animation: down_scroll_button_animation_when_hovered 2s infinite;
-        }
-        .down_scroll_button_click_area:hover .up_scroll_button{
-            animation: up_scroll_button_animation_when_hovered 2s infinite;
-        }
-        .entire_viewport{
-            width: 100%;
-            top: 100vh;     /*It is positioned under the initial landing screen*/
-            position: relative;
-            display: flex;
-            flex-flow: column;
-        }
-        .page_header{
-            font-weight: 255;
-            color: rgb(212, 212, 212);
-            font-size: 100px;
-            text-align: center;
-            filter: drop-shadow(0.3rem 0.3rem 0.3rem rgb(0, 0, 0, 0.7));
-            top: 0;
-            width: 100%;
-        }
-        .all_nodes li{
-            list-style: none;
-            padding: 25px;
-            position: relative;
-            text-align: center;
-            max-width: 440px;
-            left: 50%;
-            transform: translate(-50%,0%);
-
-            font-size: x-large;
-            overflow-wrap: break-word;
-            color: rgb(213, 245, 204);
-            filter: drop-shadow(0.3rem 0.3rem 0.19rem rgba(0, 0, 0, 0.5));
-        }
-        @media (max-width: 1700px) {
-            .hero_body{
-            width: 90vw;
-            }
-        }
-        @media (max-width: 600px) {
-            h1{
-            font-size: 70px;
-            }
-            .hero_subtitle .subtitle_text{
-            font-size: x-large;
-            }    
-        }
-        @media (max-width: 400px) {
-            h1{
-                font-size: 50px;
-            }
-        }
-        @media (max-width: 950px) and (orientation: landscape) {
-            h1{
-                font-size: 45px;
-            }
-            .hero_subtitle .subtitle_text{
-                font-size: x-large;
-            }
-        }
-        
-        
-    </style>
 </head>
-<body>
+<body class="about_body">
     <div class="welcome_screen">
         <nav id="nav_bar">
             <input id="hamburger_menu_toggle" type="checkbox">
@@ -212,7 +29,7 @@
             </ul>
         </nav>
         
-        <div class="hero_body">
+        <div class="about_hero_body">
             <div class="hero_body_text">
                 Hello, My name is
             </div>
@@ -237,15 +54,16 @@
         </a>
     </div>
     
-    <div id="personal_timeline", class="entire_viewport">
-        <div id="first_header", class="page_header">
+    <div id="personal_timeline">
+        <div id="timeline_header">
             My Timeline
         </div>
         <div class="all_nodes">
             <li>Grew up watching <span id="timeline_tv_show" onclick="_get_Random_Tv_Show()">Xena: Warrior Princess</span> <br>
                 Born and raised in a suburb close to Stockholm, Sweden.
-                An entire elementary school worth of <span id="timeline_game" onclick="_get_Random_Game()">halo</span> and <span id="timeline_sport" onclick="_get_Random_Sport()">ice-hockey</span> playing later I entered a language upper secondary school
-                with non-existent retention of my spanish classes because it was the only local school that offered university 
+                After an entire elementary school worth of <span id="timeline_game" onclick="_get_Random_Game()">halo</span> and
+                 <span id="timeline_sport" onclick="_get_Random_Sport()">ice-hockey</span> I entered a language upper secondary school
+                with a non-existent retention of my spanish classes because it was the only local school that offered university 
                 preparing math classes.
             </li>
             <li>18 years old<br>
