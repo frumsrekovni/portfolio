@@ -532,6 +532,7 @@ label input{
     margin: auto;
     width:560px;
     height:315px;
+    src:url("../images/tehgrandtreedemogif.gif")
 }
 
 .all_projects label input:checked + .a_project .the_grand_tree_demo{
@@ -547,10 +548,22 @@ label input{
     display: none;
 }
 #my_timer:hover + #kitchen_timer_image{
-    display: block;
+    display: inline;
 }
 #kitchen_timer_image{
     display: none;
+}
+#kitchen_timer_image:hover{
+    display: inline;
+}
+#dirty_umldiagram_image{
+    display: none;
+}
+#dirty_uml_diagram{
+    display: inline;
+}
+#dirty_uml_diagram:hover{
+    display: inline;
 }
 #dirty_uml_diagram:hover + #dirty_umldiagram_image{
     display: block;
@@ -559,6 +572,9 @@ label input{
     display: none;
     width: 100%;
     height: auto;
+}
+#dirty_umldiagram_image:hover{
+    display: block;
 }
 
 .project_body_text a img{

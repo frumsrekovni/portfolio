@@ -29,11 +29,3 @@ function _get_Random_Sport() {
     el_sport.textContent = childhood_sports[Math.floor(Math.random() * childhood_sports.length)];
 }
 ;
-function copyEmail() {
-    navigator.clipboard.writeText("joshua.backstrom@gmail.com");
-    var alertbox = document.createElement("div");
-    alertbox.classList.add("copy_alert");
-    alertbox.innerHTML = "Email Copied!";
-    setTimeout(function () { alertbox.parentNode.removeChild(alertbox); }, 1000);
-    document.body.appendChild(alertbox);
-}

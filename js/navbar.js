@@ -12,3 +12,11 @@ redirect_blocker.addEventListener("click", function () {
     nav_bar_redirects_checkbox.checked = false;
     redirect_blocker.style.display = "none";
 });
+function copyEmail() {
+    navigator.clipboard.writeText("joshua.backstrom@gmail.com");
+    var alertbox = document.createElement("div");
+    alertbox.classList.add("copy_alert");
+    alertbox.innerHTML = "Email Copied!";
+    setTimeout(function () { alertbox.parentNode.removeChild(alertbox); }, 1000);
+    document.body.appendChild(alertbox);
+}
