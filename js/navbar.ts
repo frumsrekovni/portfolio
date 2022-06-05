@@ -1,5 +1,7 @@
 const nav_bar_redirects_checkbox = document.getElementById("hamburger_menu_toggle") as HTMLInputElement;
 const redirect_blocker = document.getElementById("out_of_bound_blocker");
+const bgColor = document.getElementById("bgcolor") as HTMLInputElement
+const midBgColor = document.getElementById("bgcolormid") as HTMLInputElement
 
 nav_bar_redirects_checkbox.addEventListener("click", () => {
     if(nav_bar_redirects_checkbox.checked){
@@ -23,3 +25,10 @@ function copyEmail(){
     setTimeout(function(){alertbox.parentNode.removeChild(alertbox);},1000);
     document.body.appendChild(alertbox);
 }
+
+bgColor.addEventListener("change", function() {
+    document.body.style.background ="linear-gradient(180deg, "+(this as HTMLInputElement).value+" 0%, "+midBgColor.value+" 15%,"+midBgColor.value+" 85%,"+(this as HTMLInputElement).value+" 100%)";
+});
+midBgColor.addEventListener("change", function() {
+    document.body.style.background ="linear-gradient(180deg, "+bgColor.value+" 0%, "+(this as HTMLInputElement).value+" 15%,"+(this as HTMLInputElement).value+" 85%,"+bgColor.value+" 100%)";
+});

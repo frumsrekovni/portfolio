@@ -670,6 +670,27 @@ label input{
 .newtab_cv:hover{
     text-decoration: underline;
 }
+footer{
+    position: absolute;
+    bottom: 0;
+}
+.colorpickercontainer{
+    overflow: hidden;
+    width: 1rem;
+    height: 1rem;
+    border: solid 1px #ddd;
+    border-radius: 50%;
+    filter: drop-shadow(0.3rem 0.3rem 0.19rem rgba(0, 0, 0, 0.5));
+    margin: 1rem;
+}
+.bgcolor{
+    position: absolute;
+    right: -1rem;
+    top: -1rem;
+    width: 56px;
+    height: 56px;
+    cursor: pointer;
+}
 @media (max-width: 1370px){
     .cv iframe{
     width: 90vw;
