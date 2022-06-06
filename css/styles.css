@@ -675,6 +675,7 @@ footer{
     bottom: 0;
 }
 .colorpickercontainer{
+    display: flex;
     overflow: hidden;
     width: 1rem;
     height: 1rem;
@@ -690,6 +691,10 @@ footer{
     width: 56px;
     height: 56px;
     cursor: pointer;
+}
+
+.hiddenpicker{
+    display: none;
 }
 @media (max-width: 1370px){
     .cv iframe{

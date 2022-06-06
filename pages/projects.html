@@ -13,7 +13,7 @@
     <title>Projects | Joshua Bäckström</title>
 </head>
 <body class="projects_page_body" onload="disableAllCheckboxes()">
-    <nav>
+    <nav ondblclick="changenavbg()">
         <input id="hamburger_menu_toggle" type="checkbox">
         <label class="hamburger_menu" for="hamburger_menu_toggle">
             <div class='hamburger_slice'></div>
@@ -293,6 +293,12 @@
         </div>
         <div class="colorpickercontainer">
             <input type="color" id="bgcolormid" class="bgcolor" value="#1a1a1a"/>
+        </div>
+        <div class="colorpickercontainer hiddenpicker">
+            <input type="color" id="leftbar" class="bgcolor" value="#fd1d1d"/>
+        </div>
+        <div class="colorpickercontainer hiddenpicker">
+            <input type="color" id="rightbar" class="bgcolor" value="#fc7836"/>
         </div>
     </footer>
 </body>

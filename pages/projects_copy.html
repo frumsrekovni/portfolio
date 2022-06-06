@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yantramanav:wght@100;300&display=swap" rel="stylesheet">
+    <style>
+        html{
+            scroll-behavior: smooth;
+        }
+        body{
+            font-family: "Yantramanav", Helvetica, Arial, sans-serif; 
+            font-weight: 255;
+            height: 3000px;
+            background-color: #320549;/* For browsers that do not support gradients */
+            background-image: linear-gradient(#7a0eef,#320549);
+            margin: 0; /*Make header flush with top corners*/
+            padding: 0; 
+        }
+        .hero_body{
+            background-color: rgb(151, 60, 60);
+            position: absolute;
+            display:inline-flexbox;
+            left: 50%;
+            top: 10%;
+            transform: translate(-50%,0%); /*If not 0% it will grow upwards when screen gets smaller*/
+            width: 60vw;
+            
+        }
+        .page_title{
+            text-align: center;
+            font-weight:400;
+            font-size: 75px;
+        }
+        .sub_title{
+            font-size: small;
+            font-size: 25px;
+        }
+        .all_projects{
+            background-color: aqua;
+            display: inline-flex;
+            flex-wrap:wrap;
+            justify-content:space-evenly;
+        }
+        .a_project{
+            position: relative; /*Puts each project title inside the square */
+        }
+        .a_project img{
+            width:200px;
+            height:200px;
+            border-radius: 10%;
+        }
+        .all_projects li{
+            list-style: none;
+            width: 200px;
+            height: 200px;
+            margin: 30px;
+            margin-bottom: 60px;    
+        }
+        .project_title{
+            position: absolute;
+            left: 50%;
+            top: 20%;
+            transform: translate(-50%,-50%);
+        }
+        #pomodoro_timer_project img:hover{
+            content:url(../images/disintegrate.gif);
+        }
+        @media screen and (max-width: 500px) {
+
+        }
+
+/* * {
+  box-sizing: border-box;
+} */
+
+nav {
+  opacity: 0.95;
+  display: flex;          /*Keep the buttons inline*/
+  flex-wrap: wrap;
+  justify-content:center; /*How the buttons in the nav bar will be positioned*/
+  list-style-type: none; /*Remove the list dots*/
+  align-items: center;
+  background-image: linear-gradient(to bottom left, rgb(255, 230, 0), rgb(165, 212, 103));
+  height: 40px;
+
+  width: 100%;
+  top: 0%;
+}
+
+.menu {
+  display: flex;
+  flex-direction:row;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu li {
+  margin-inline: 2%; /*Keep the buttons separated*/
+  text-transform:capitalize;
+  font-size: x-large;
+}
+.menu li a{
+  text-decoration:none;
+}
+
+.hamburger-menu { /*The clickable area of the hamburger menu*/
+  display: none; /*The hamburger menu should only show up when the screen is narrow*/
+  height: 100%; /*The entire height of whatever the nav bar is*/
+  width: 50px;
+  cursor: pointer;
+  justify-content: center; /*Center the visible parts of the hamburger menu to the clickable container*/
+  align-items: center;     /*Center the visible parts of the hamburger menu to the clickable container*/
+}
+
+#hamburger_menu_toggle {/*The hamburger menu is really just a fancy toggleable checkbox*/
+  display: none;
+}
+
+.menu-button,
+.menu-button::before,
+.menu-button::after { /*The visible part of the hamburger menu*/
+  /* display: block; */
+  background-color: white;
+  position: absolute;
+  height: 4px; /*The height of each indivisual hamburger line*/
+  width: 33px; /*The width of each indivisual hamburger line*/
+  transition-timing-function: cubic-bezier(0.2, 1, 0.32, 1);
+  transition-duration: 500ms;
+  border-radius: 2px;
+}
+
+.menu-button::before {
+  content: '';
+  margin-top: -10px;  /*How far above the middle line the top line will be*/
+}
+
+.menu-button::after {
+  content: '';
+  margin-top: 10px;   /*How far below the middle line the bottom line will be*/
+}
+
+#hamburger_menu_toggle:checked + .hamburger-menu .menu-button::before { /*When the hamburger menu is checked the hamburger slices needs to animate*/
+  margin-top: 0px;
+  transform: rotate(765deg); /*45 will just go to down. 405 will spin one time before going down etc just add 360 per spin*/
+}
+
+#hamburger_menu_toggle:checked + .hamburger-menu .menu-button {
+  background: rgba(255, 255, 255, 0); /*Make the middle slice dissappear when hamburger menu is checked*/
+}
+
+#hamburger_menu_toggle:checked + .hamburger-menu .menu-button::after {
+  margin-top: 0px;
+  transform: rotate(-765deg);
+}
+
+@media (max-width: 600px) {
+  .hamburger-menu {
+    display: flex;
+  }
+  .menu {
+    position: absolute;
+    top:0;
+    margin-top: 50px;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  #hamburger_menu_toggle ~ .menu li {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    transition:500ms cubic-bezier(0.2, 1, 0.3, 1);
+    pointer-events: none;
+    opacity: 0;
+  }
+  #hamburger_menu_toggle:checked ~ .menu li {
+    border: 1px solid #333;
+    height: 2em;
+    transition:500ms cubic-bezier(0.2, 1, 0.3, 1);
+    pointer-events:all;
+    opacity: 1;
+  }
+  .menu > li {
+    display: inline-flex;
+    justify-content: center;
+    width: 100%;
+    color: white;
+    background-color: rgb(0, 0, 0);
+  }
+}
+.shine,.chrome {
+	margin: 0 auto;
+  }
+  .shine {
+	background: #222 -webkit-gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff)) 0 0 no-repeat;
+	-webkit-background-size: 150px;
+	color: rgba(255, 255, 255, 0.3);;
+	-webkit-background-clip: text;
+	-webkit-animation-name: shine;
+	-webkit-animation-duration: 5s;
+	-webkit-animation-iteration-count: infinite;
+	text-shadow: 0 0px 0px rgba(255, 255, 255, 0.5);
+}
+.chrome {
+	background: #222 -webkit-gradient(linear, left top, right top, from(#222), to(#222), color-stop(0.5, #fff)) 0 0 no-repeat;
+	background-image: -webkit-linear-gradient(-40deg, transparent 0%, transparent 40%, #fff 50%, transparent 60%, transparent 100%);
+	background-size: 200px;
+	color: rgba(0, 0, 0, 0.3);;
+	-webkit-background-clip: text;
+	animation-name: shine;
+	animation-duration: 8s;
+	animation-iteration-count: infinite;
+	text-shadow: 0 0px 0px rgba(0, 0, 0, 0.5);
+}
+@-webkit-keyframes shine {
+	0%, 10% {
+		background-position: -1000px;
+	}
+	0% {
+		background-position: top left;
+	}
+	50% {
+		background-position: top right;
+	}
+	100% {
+		background-position: 1000px;
+	}
+}
+    </style>
+    <title>TESTING PAGE !!!!</title>
+</head>
+<body>
+
+
+
+
+  
+    <nav>
+      <input id="hamburger_menu_toggle" type="checkbox" />
+      <label class='hamburger-menu' for="hamburger_menu_toggle">
+      <div class='menu-button'></div>
+      </label>
+        <ul class="menu">
+          <li><a href="../index.html", class="navbutton">Portfolio</a></li>
+          <li><a href="projects_copy.html", class="navbutton">Projects</a></li>
+          <li><a href="cv.html", class="navbutton">CV</a></li>
+          <li><a href="mailto:joshua.backstrom@gmail.com", class="navbutton">Email</a></li>
+          <li><a href="https://github.com/frumsrekovni", class="navbutton">Github</a></li>
+          <li><a href="https://www.linkedin.com/in/joshua-b%C3%A4ckstr%C3%B6m-91360b113/", class="navbutton">LinkedIn</a></li>
+        </ul>
+    </nav>
+
+    <div class="hero_body">
+        <div class="page_title">
+            Projects
+            <div class="sub_title">
+                All projects that I have done myself or been apart of both
+                that I felt like documenting for future reference. Everything from the university forced
+                backend projects like building an operating system to the very frontend like this website you are currently looking at.
+                Also some real physical projects using microcontrollers. <div class="shine">Shine Bright Like a Diamond</div>
+                <div class="chrome">Shine Bright Like a Diamond</div>
+                
+    
+            </div>
+        </div>
+        <div class="all_projects">
+            <li class="a_project" id="pomodoro_timer_project"> <div class="project_title">Pomodoro Tim</div> <img src="../images/Pomodoro_Technique.jpg" alt="Image of Pomodoro Technique Timer"> </li>
+            <li class="a_project"> <div class="project_title">Quiz Application</div> <img src="../images/quiz.png" alt="Image of Quiz App"> </li>
+            <li class="a_project"> <div class="project_title">Quiz Application</div> <img src="../images/quiz.png" alt="Image of Quiz App"> </li>
+            <li class="a_project"> <div class="project_title">Pomodoro Technique Timer</div> <img src="../images/Pomodoro_Technique.jpg" alt="Image of Pomodoro Technique Timer"> </li>
+            <li class="a_project"> <div class="project_title">Quiz Application</div> <img src="../images/quiz.png" alt="Image of Quiz App"> </li>
+            <li class="a_project"> <div class="project_title">Quiz Application</div> <img src="../images/quiz.png" alt="Image of Quiz App"> </li>
+            <li class="a_project"> <div class="project_title">Pomodoro Technique Timer</div> <img src="../images/Pomodoro_Technique.jpg" alt="Image of Pomodoro Technique Timer"> </li>
+            <li class="a_project"> <div class="project_title">Quiz Application</div> <img src="../images/quiz.png" alt="Image of Quiz App"> </li>
+            <li class="a_project"> <div class="project_title">Quiz Application</div> <img src="../images/quiz.png" alt="Image of Quiz App"> </li>
+        </div>
+    </div>
+
+</body>
+</html>

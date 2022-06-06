@@ -14,7 +14,7 @@
 </head>
 <body class="about_body">
     <div class="welcome_screen">
-        <nav id="nav_bar">
+        <nav id="nav_bar" ondblclick="changenavbg()">
             <input id="hamburger_menu_toggle" type="checkbox">
             <label class="hamburger_menu" for="hamburger_menu_toggle">
                 <div class='hamburger_slice'></div>
@@ -85,7 +85,7 @@
                 Programming was in my mind one and the same with computer science courses.
                 Accepting the simple reality that it's ok to program anything that you want and by your own volition is very freeing
                 and I've been running on this high since the start of 2022 just having fun trying to git commit everyday as per 
-                <a href="https://medium.com/@rieckpil/30-minutes-every-day-for-your-craft-committing-code-to-github-for-365-consecutive-days-eec8b73b5105">this blogpost</a>
+                <a href="https://medium.com/@rieckpil/30-minutes-every-day-for-your-craft-committing-code-to-github-for-365-consecutive-days-eec8b73b5105" target="_blank">this blogpost</a>
             </li>
         </div>
         <a href="#nav_bar", class="down_scroll_button_click_area">
@@ -98,6 +98,12 @@
         </div>
         <div class="colorpickercontainer">
             <input type="color" id="bgcolormid" class="bgcolor" value="#1a1a1a"/>
+        </div>
+        <div class="colorpickercontainer hiddenpicker">
+            <input type="color" id="leftbar" class="bgcolor" value="#fd1d1d"/>
+        </div>
+        <div class="colorpickercontainer hiddenpicker">
+            <input type="color" id="rightbar" class="bgcolor" value="#fc7836"/>
         </div>
     </footer>
     <div id="out_of_bound_blocker"></div>
