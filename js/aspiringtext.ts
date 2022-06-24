@@ -9,8 +9,8 @@ const el_sport = document.getElementById("timeline_sport");
 setInterval(_get_Random_Word, 5200);
 
 function _get_Random_Word(){
-    const aspiring_words = ['Ambitious','Aspiring', 'Aspirant','Avid','Ardent','C/C++','Dynamic','Determined',
-    'Driven','Diligent','Enthusiastic' ,'Endeavoring','Fervent','Eager','Keen','Raring','Ready','Resolved',
+    const aspiring_words = ['Ambitious','Aspiring', 'Aspirant','Avid','Ardent','Back-end','C/C++','Dynamic','Determined',
+    'Driven','Diligent','Enthusiastic' ,'Endeavoring','Fervent','Front-end','Eager','Keen','Raring','Ready','React','Resolved',
     'Striving','Self-seeking','Tenacious','Typescript','Go-getting','Passionate','Python','Zealous','Wishful','Willing'];
     element.textContent = aspiring_words[Math.floor(Math.random() * aspiring_words.length)];
     element.classList.add('fadeIn_fadeOut');
