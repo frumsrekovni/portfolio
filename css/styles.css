@@ -91,16 +91,6 @@ nav li a:hover{
     color: black;
     transition: 250ms ease;
 }
-#out_of_bound_blocker {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    content: ' ';
-    background: rgba(0,0,0,.5); 
-}
 /************** ABOUT PAGE CSS START **************/
 .about_body{
     height: 3750px;
@@ -289,6 +279,10 @@ nav li a:hover{
 
 
 /************** PROJECTS PAGE CSS START **************/
+.projects_page_body{
+    background-size: cover;
+}
+
 .projects_page_body .hero_body{
     position: absolute;
     display:inline-flexbox;
@@ -591,10 +585,23 @@ label input{
 }
 #out_of_bound_blocker {
     display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    content: ' ';
+    background: rgba(0,0,0,.5); 
+}
+#projects_out_of_bound_blocker {
+    display: none;
     position: absolute;
     top: -10vh;
     left: -20vw;
+    bottom: 0;
+    right: 0;
     width: 120vw;
+    
     content: ' ';
     background: rgba(0,0,0,.5);
 }

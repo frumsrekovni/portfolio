@@ -1,7 +1,13 @@
 
-const all_project_elements = document.getElementsByClassName("a_project");
-const active_project_blocker = document.getElementById("out_of_bound_blocker");
+const all_project_elements = document.getElementsByClassName("a_project") as HTMLCollectionOf<Element>;
+const active_project_blocker = document.getElementById("projects_out_of_bound_blocker") as HTMLElement;
 const all_project_checkboxes = document.getElementsByClassName("project_checkbox") as HTMLCollectionOf<HTMLInputElement>;
+
+// Done as soon as the page starts loading
+// Disable all of these input checkboxes. A roundabout solution but they can only be checked with javascript.
+// Make all projects clickable by adding event listeners.
+disableAllCheckboxes()
+addEventListenerToAllProjects();
 
 function activateBlocker(){
     active_project_blocker.style.display = "flex";
@@ -20,12 +26,10 @@ function addEventListenerToAllProjects(){
 }
 
 // disableAllCheckboxes() is executed when body tag is loaded. It disables all project checkboxes and adds event listeners to all projects.
-function disableAllCheckboxes(){ 
-
+function disableAllCheckboxes(){
     for (let i = 0; i < all_project_checkboxes.length; i++) {
         all_project_checkboxes[i].disabled = true;
       }
-    addEventListenerToAllProjects();
 }
 
 // When the blocker is clicked all projects should minimize(uncheck all project checkboxes)
