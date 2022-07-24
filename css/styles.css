@@ -134,18 +134,35 @@ nav li a:hover{
     color: rgb(213, 245, 204);
     filter: drop-shadow(0.3rem 0.3rem 0.19rem rgba(0, 0, 0, 0.5));
 }
+.about_hero_body .hero_body_text_bottom{
+    display:inline-flex;
+    justify-content: center;
+    width: 100%;
+}
 .about_hero_body .hero_body_text a{
     text-decoration: none;
+    color: rgb(213, 245, 204);
+}
+.inner_hero_body_text{
+   
 }
 
+.about_hero_body .hero_body_text .hero_body_text_questions{
+    text-align: right;
+    width: 100%;
+}
+.about_hero_body .hero_body_text .hero_body_text_imperatives{
+    text-align: left;
+    width: 100%;
+}
 .about_hero_body .hero_body_text a .projects_hero_redirect{
-    color: rgb(213, 245, 204);
     transition:0.6s cubic-bezier(0.16, 0.84, 0.44, 1);
 }
 .about_hero_body .hero_body_text a:hover .projects_hero_redirect{
     filter: drop-shadow(0rem 0rem 0.1rem rgba(255, 223, 0, 1));
     font-size: 1030;
 }
+
 .about_hero_body .hero_body_text .emaildiv:hover span{
     display: none;
 }
