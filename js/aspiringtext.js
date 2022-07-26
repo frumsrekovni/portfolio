@@ -3,6 +3,9 @@ const element = document.getElementById("main_page_aspiring_text");
 const el_tvshow = document.getElementById("timeline_tv_show");
 const el_game = document.getElementById("timeline_game");
 const el_sport = document.getElementById("timeline_sport");
+const el_factoids = document.getElementById("about-me-factoids");
+const el_aboutMeText = document.getElementById("about-me-text");
+const el_aboutMe = document.getElementById("about-me");
 setInterval(_get_Random_Word, 5200);
 function _get_Random_Word() {
     const aspiring_words = ['Ambitious', 'Aspiring', 'Ardent', 'Back-end', 'C/C++', 'Dynamic', 'Determined',
@@ -46,3 +49,13 @@ function _get_Random_Sport() {
     el_sport.textContent = childhood_sports[Math.floor(Math.random() * childhood_sports.length)];
 }
 ;
+function aboutMeToggle() {
+    el_aboutMeText.style.display = "none";
+    el_factoids.style.display = "block";
+    el_aboutMe.scrollIntoView({ behavior: "smooth" });
+}
+function factoidsToggle() {
+    el_factoids.style.display = "none";
+    el_aboutMeText.style.display = "block";
+    el_aboutMe.scrollIntoView({ behavior: "smooth" });
+}
