@@ -143,10 +143,19 @@ nav li a:hover{
     text-decoration: none;
     color: rgb(213, 245, 204);
 }
-.inner_hero_body_text{
-   
+#about-me-factoids{
+    display: none;
+    margin-left: 25%;
+    margin-right: 25%;
 }
+#about-me-factoids li{
+    margin:0;
+    color: white;
 
+}
+#factoid-trigger:hover{
+    cursor: pointer;
+}
 .about_hero_body .hero_body_text .hero_body_text_questions{
     text-align: right;
     width: 100%;
@@ -158,10 +167,16 @@ nav li a:hover{
 .about_hero_body .hero_body_text a .projects_hero_redirect{
     transition:0.6s cubic-bezier(0.16, 0.84, 0.44, 1);
 }
-.about_hero_body .hero_body_text a:hover .projects_hero_redirect{
+.hero_body_text_imperatives_redirects:hover .projects_hero_redirect{
     filter: drop-shadow(0rem 0rem 0.1rem rgba(255, 223, 0, 1));
-    font-size: 1030;
 }
+.hero_body_text_imperatives_redirects .projects_hero_redirect_cv:hover{
+    color: goldenrod;
+}
+.hero_body_text_imperatives_redirects .projects_hero_redirect_projects:hover{
+    color: goldenrod;
+}
+
 
 .about_hero_body .hero_body_text .emaildiv:hover span{
     display: none;
@@ -232,14 +247,15 @@ nav li a:hover{
 .down_scroll_button_click_area:hover .up_scroll_button{
     animation: up_scroll_button_animation_when_hovered 2s infinite;
 }
-#personal_timeline{
+.about-subsection{
     width: 100%;
+    height: auto;
     top: 100vh;     /*It is positioned under the initial landing screen*/
     position: relative;
     display: flex;
     flex-flow: column;
 }
-#timeline_header{
+.subheader{
     font-weight: 255;
     color: rgb(212, 212, 212);
     font-size: 100px;
@@ -277,6 +293,10 @@ nav li a:hover{
     }
     .about_hero_body .hero_subtitle .subtitle_text{
     font-size: x-large;
+    }
+    #about-me-factoids{
+        margin-left: 3%;
+        margin-right: 3%;
     }    
 }
 @media (max-width: 400px) {

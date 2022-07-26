@@ -32,7 +32,7 @@
         
         <div class="about_hero_body">
             <div class="hero_body_text">
-                Hello, My name is
+                Hello! My name is
             </div>
             <div class="hero_title">
 
@@ -46,24 +46,101 @@
             </div>
             <div class="hero_body_text hero_body_text_bottom">
                 <div class="inner_hero_body_text hero_body_text_questions">
-                    What have I developed?&nbsp<br>
+                    What are my experiences?&nbsp<br>
                     Want to contact me?&nbsp<br>
                     Who am I?&nbsp
                 </div>
                 <div class="inner_hero_body_text hero_body_text_imperatives">
-                    <a href="pages/projects.html" ><span class="projects_hero_redirect">Check out my projects page</span></a><br>
+                    <div class="hero_body_text_imperatives_redirects">
+                        Check out my 
+                        <a href="pages/projects.html" ><span class="projects_hero_redirect projects_hero_redirect_projects">projects</span></a>
+                        and 
+                        <a href="pages/cv.html"><span class="projects_hero_redirect projects_hero_redirect_cv">CV</span></a>
+                    </div>
                     <div class="emaildiv" onclick="copyEmail()"><span id="email-me">Send me an email</span></div>
-                    <a href="#personal_timeline">Keep scrolling</a>
+                    <a href="#about-me">Keep scrolling</a>
                 </div>
             </div>
         </div>
+        <a href="#about-me", class="down_scroll_button_click_area">
+            <div class="down_scroll_button"></div>
+        </a>
+    </div>
+    <div id="about-me" class="about-subsection">
+        <div class="subheader">
+            About me
+        </div>
+        <div id="about-me-text" class="all_nodes">
+            <li>
+                I am a software developer born in 1995.
+                I got a half-assed computer engineering degree and 
+                a full-assed computer dependency.
+            </li>
+            <li>
+                I remedy this vice by hiking small mountains and weightlifting.
+                All while defending the title of world's slowest Japanese learner.
+            </li>
+            <li>
+                My body survives by applying an excellent internet prowess for processing various data used for machine learning.
+                My mind survives by developing projects that I find meaningful, in whatever framework is suited for it.
+            </li>
+            <li id="factoid-trigger" onclick="aboutMeToggle()">
+                If you subscribe to the notion of judging a book by its cover then click here for some rapid fire factoids otherwise
+                please continue to my sappy timeline below.
+            </li>
+        </div>
+        <div id="about-me-factoids" onclick="factoidsToggle()">
+            <li>
+                Shavasana is my favorite yoga pose.
+            </li>
+            <li>
+                KIDS SEE GHOSTS is my favorite album.
+            </li>
+            <li>
+                Kung Pow: Enter the Fist is underrated.
+            </li>
+            <li>
+                No limit Texas hold 'em is the best game ever invented that I love to hate. Riichi mahjong a close second.
+            </li>
+            <li>
+                I am Swedish but every exchange student I have ever talked to insisted that I am not.
+            </li>
+            <li>
+                I do Olympic lifts because I enjoy screaming like Shi Zhiyong even though I am terrible at them but I am tired of pretending 
+                that the tricep kickback doesn't feel the best.
+            </li>
+            <li>
+                The Last Airbender and Ping Pong the animation shaped my ideology more than I care to admit.
+            </li>
+            <li>
+                Humble Pie by Gordon Ramsey needs to be adapted by Martin Scorsese.
+            </li>
+            <li>
+                Super Smash Bros Ultimate is a miracle that it ever got made and we don't appreciate that enough. 
+            </li>
+            <li>
+                Masaaki Yuasa, Hayao Miyazaki, Naoko Yamada, Eiichiro Oda, Masashi Kishimoto, Shigeru Miyamoto, Hidetaka Miyazaki and Masahiro Sakurai
+                are to blame for sparking and fostering my awe towards Japanese media. Which never stopped,
+                I keep finding more. Recently(2022), mainly literature, just to really hammer in the guilt of not knowing the language. Stuff like mandatory ancient scripts by
+                Miyamoto Musashi and Yagyu Munenori are crazy for even existing, but also dipped my toes in the obvious modern must-read texts by Haruki Murakami and Yukio Mishima.
+            </li>
+            <li>
+                If you pass the JLPT but can't order a bento from the konbini then do you really know the language?
+            </li>
+            <li>
+                Every program will find a way to transpile into C or Javascript so why not just learn those first.
+            </li>
+            <li>
+                I uploaded videos semi regularly to YouTube in 2007 that ridiculously garnered 300k+ views. Only bribery will get the channel name out of me. 
+            </li>
+        </div>
+            
         <a href="#personal_timeline", class="down_scroll_button_click_area">
             <div class="down_scroll_button"></div>
         </a>
     </div>
-    
-    <div id="personal_timeline">
-        <div id="timeline_header">
+    <div id="personal_timeline" class="about-subsection">
+        <div class="subheader">
             My Timeline
         </div>
         <div class="all_nodes">
@@ -71,12 +148,12 @@
                 Born and raised in Södertälje, Sweden.
                 After an entire elementary school worth of <span id="timeline_game" onclick="_get_Random_Game()">halo</span> and
                  <span id="timeline_sport" onclick="_get_Random_Sport()">ice-hockey</span> I entered an upper secondary school
-                that had a great international focus even though I had a non-existent retention of my Spanish classes. Uni prep,
-                that's just what you do. Nobody told me to go, yet it felt like the thing I should do. <br>What should I do?
+                that had a great international focus even though I had a non-existent retention of my Spanish classes. University prep is
+                just what you're supposed do right? Nobody told me to go, yet I gravitated towards it and it felt like the thing one should do. <br>What should I do?
             </li>
             <li>18 years old<br>
                 Prep school is done. I'm ready for university now with all of these formulas and random languages that I do not care about.
-                My entire academic career at this point is basically my entire life. What is a working life even like? Well, Nepotism sure is a virtue... 
+                Apart from some family restaurant odd-jobs, my entire academic career at this point is basically my entire life. What is a working life even like? Well, nepotism sure is a virtue... 
                 so I quickly found myself as a traffic flagger for a construction company, which in reality also meant construction fence builder.
                 Never in my life have I gained this much appreciation towards air-conditioning. <br>Why am I doing this?</li>
             <li>University<br>
