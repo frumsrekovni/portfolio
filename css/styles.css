@@ -145,6 +145,7 @@ nav li a:hover{
 }
 #about-me-factoids{
     display: none;
+    height: 100%;
     margin-left: 25%;
     margin-right: 25%;
 }
@@ -253,7 +254,6 @@ nav li a:hover{
 }
 .about-subsection{
     width: 100%;
-    height: auto;
     top: 100vh;     /*It is positioned under the initial landing screen*/
     position: relative;
     display: flex;
@@ -267,6 +267,12 @@ nav li a:hover{
     filter: drop-shadow(0.3rem 0.3rem 0.3rem rgb(0, 0, 0, 0.7));
     top: 0;
     width: 100%;
+}
+#about-me{
+    height: 100vh;
+}
+#about-me-text{
+    height: 100%;
 }
 .all_nodes li{
     list-style: none;
@@ -694,6 +700,9 @@ label input{
     }
     .mobile-hero-body-text-questions{
         display: block !important;
+    }
+    #about-me{
+        height: auto;
     }
 }
 /************** PROJECTS PAGE CSS END **************/
