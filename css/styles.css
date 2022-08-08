@@ -418,7 +418,9 @@ nav li a:hover{
         rgba(0, 0, 0, 0.5)
         ),url(../images/portfolioprojectimage2.PNG);
         background-size: contain;
-        
+}
+#portfolio_project a{
+    color: palevioletred;
 }
 #portfolio_project:hover{
     border-color: white;
