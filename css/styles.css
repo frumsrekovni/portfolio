@@ -6,20 +6,31 @@ body{
     font-weight: 255;
     height: 2000px;
     background-color: rgb(26, 26, 26);;/* For browsers that do not support gradients */
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(50,5,73,1)), color-stop(15%, rgba(26,26,26,1)),color-stop(85%, rgba(26,26,26,1)),to(rgba(50,5,73,1)));
+    background: -o-linear-gradient(top, rgba(50,5,73,1) 0%, rgba(26,26,26,1) 15%,rgba(26,26,26,1) 85%,rgba(50,5,73,1) 100%);
     background: linear-gradient(180deg, rgba(50,5,73,1) 0%, rgba(26,26,26,1) 15%,rgba(26,26,26,1) 85%,rgba(50,5,73,1) 100%);
     margin: 0; /*Make header flush with top corners*/
     padding: 0; 
 }
 nav{
     background: rgba(50,5,73,1);
+    background: -webkit-gradient(linear, left top, right top, color-stop(5%, rgba(50,5,73,1)), color-stop(30%, rgba(253,29,29,1)), color-stop(70%, rgba(252,120,54,1)), color-stop(95%, rgba(50,5,73,1)));
+    background: -o-linear-gradient(left, rgba(50,5,73,1) 5%, rgba(253,29,29,1) 30%, rgba(252,120,54,1) 70%, rgba(50,5,73,1) 95%);
     background: linear-gradient(90deg, rgba(50,5,73,1) 5%, rgba(253,29,29,1) 30%, rgba(252,120,54,1) 70%, rgba(50,5,73,1) 95%);
     width: 100%;
     top: 0%;
     height: 40px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;          /*Keep the buttons inline*/
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content:center; /*How the buttons in the nav bar will be positioned*/
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack:center;
+        -ms-flex-pack:center;
+            justify-content:center; /*How the buttons in the nav bar will be positioned*/
     position: absolute;     /*Make the nav bar flush to the top of the page*/
 }
 .all_redirects{
@@ -28,25 +39,38 @@ nav{
     margin: 0;
     padding: 0;
     list-style-type:none;  /*Remove the list dots*/
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;          /*Keep the buttons inline*/
-    flex-wrap: wrap;
-    justify-content:center; /*How all the redirects in the nav bar will be positioned*/
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack:center;
+        -ms-flex-pack:center;
+            justify-content:center; /*How all the redirects in the nav bar will be positioned*/
 }
 .hamburger_menu{ /*The clickable area of the hamburger menu*/
     display: none; /*The hamburger menu should only show up when the screen is narrow*/
     height: 100%; /*The entire height of whatever the nav bar is*/
     width: 50px;
     cursor: pointer;
-    justify-content: center; /*Center the visible parts of the hamburger menu to the clickable container*/
-    align-items: center;     /*Center the visible parts of the hamburger menu to the clickable container*/
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; /*Center the visible parts of the hamburger menu to the clickable container*/
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;     /*Center the visible parts of the hamburger menu to the clickable container*/
 }
 .hamburger_slice,.hamburger_slice::before,.hamburger_slice::after { /*The entire visible part of the hamburger menu*/
     background-color: white;
     position: absolute;
     height: 4px; /*The height of each indivisual hamburger line*/
     width: 33px; /*The width of each indivisual hamburger line*/
-    transition-timing-function: cubic-bezier(0.2, 1, 0.32, 1);
-    transition-duration: 500ms;
+    -webkit-transition-timing-function: cubic-bezier(0.2, 1, 0.32, 1);
+         -o-transition-timing-function: cubic-bezier(0.2, 1, 0.32, 1);
+            transition-timing-function: cubic-bezier(0.2, 1, 0.32, 1);
+    -webkit-transition-duration: 500ms;
+         -o-transition-duration: 500ms;
+            transition-duration: 500ms;
     border-radius: 2px;
 }
 #hamburger_menu_toggle {/*The hamburger menu is really just a checkbox wrapped in a styled label*/
@@ -63,7 +87,9 @@ nav{
 }
 #hamburger_menu_toggle:checked + .hamburger_menu .hamburger_slice::before { /*When the hamburger menu is checked the hamburger slices needs to animate*/
     margin-top: 0px;
-    transform: rotate(765deg); /*45 will just go to down. 405 will spin one time before going down etc just add 360 per spin*/
+    -webkit-transform: rotate(765deg);
+        -ms-transform: rotate(765deg);
+            transform: rotate(765deg); /*45 will just go to down. 405 will spin one time before going down etc just add 360 per spin*/
 }
 
 #hamburger_menu_toggle:checked + .hamburger_menu .hamburger_slice { /*Make the middle slice dissappear when hamburger menu is checked*/
@@ -72,16 +98,21 @@ nav{
 
 #hamburger_menu_toggle:checked + .hamburger_menu .hamburger_slice::after { /*When the hamburger menu is checked the hamburger slices needs to animate*/
     margin-top: 0px;
-    transform: rotate(-765deg);
+    -webkit-transform: rotate(-765deg);
+        -ms-transform: rotate(-765deg);
+            transform: rotate(-765deg);
 }
 nav li{
     margin-inline: 2%; /*Keep the buttons separated*/
     text-transform:capitalize;
     font-size: x-large;
-    filter: drop-shadow(0.3rem 0.3rem 0.19rem rgba(0, 0, 0, 0.5));
+    -webkit-filter: drop-shadow(0.3rem 0.3rem 0.19rem rgba(0, 0, 0, 0.5));
+            filter: drop-shadow(0.3rem 0.3rem 0.19rem rgba(0, 0, 0, 0.5));
 }
 nav li a{
     color: white;
+    -webkit-transition: 250ms ease;
+    -o-transition: 250ms ease;
     transition: 250ms ease;
     text-decoration: none;
     width: 100%;
@@ -89,6 +120,8 @@ nav li a{
 }
 nav li a:hover{
     color: black;
+    -webkit-transition: 250ms ease;
+    -o-transition: 250ms ease;
     transition: 250ms ease;
 }
 /************** ABOUT PAGE CSS START **************/
@@ -100,43 +133,63 @@ nav li a:hover{
     width: 50vw;
     left: 50%;
     top: 45%;
-    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
     display: inline-flexbox;
     text-align: center;
 }
 .about_hero_body .hero_title{                 
+    display:-webkit-box;                 
+    display:-ms-flexbox;                 
     display:flex;           /*Makes align-items and justify-content work*/
-    align-items:center;     /*Puts subtitle inline with title*/
+    -webkit-box-align:center;
+        -ms-flex-align:center;
+            align-items:center;     /*Puts subtitle inline with title*/
     text-align:start;
-    justify-content:center; /*Puts subtitle and title in the middle of the screen*/
+    -webkit-box-pack:center;
+        -ms-flex-pack:center;
+            justify-content:center; /*Puts subtitle and title in the middle of the screen*/
 }
 .about_hero_body h1{
     font-weight: 255;
     color: rgb(212, 212, 212);
     font-size: 100px;
     text-align: center;
-    filter: drop-shadow(0.3rem 0.3rem 0.3rem rgb(0, 0, 0, 0.7));
+    -webkit-filter: drop-shadow(0.3rem 0.3rem 0.3rem rgb(0, 0, 0, 0.7));
+            filter: drop-shadow(0.3rem 0.3rem 0.3rem rgb(0, 0, 0, 0.7));
 }
 .about_hero_body .hero_subtitle{
+    display:-webkit-box;
+    display:-ms-flexbox;
     display:flex;
-    flex-flow: column wrap; /*Make programmer appear under Aspiring*/
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap; /*Make programmer appear under Aspiring*/
 }
 .about_hero_body .hero_subtitle .subtitle_text{
     font-size: 32px;
     font-weight: 255;
     color:grey;
-    filter: drop-shadow(0.3rem 0.3rem 0.19rem rgba(0, 0, 0, 0.5));
+    -webkit-filter: drop-shadow(0.3rem 0.3rem 0.19rem rgba(0, 0, 0, 0.5));
+            filter: drop-shadow(0.3rem 0.3rem 0.19rem rgba(0, 0, 0, 0.5));
 }
 .about_hero_body .hero_body_text{
     font-size: x-large;
     overflow-wrap: break-word;
     display: inline-block;
     color: rgb(213, 245, 204);
-    filter: drop-shadow(0.3rem 0.3rem 0.19rem rgba(0, 0, 0, 0.5));
+    -webkit-filter: drop-shadow(0.3rem 0.3rem 0.19rem rgba(0, 0, 0, 0.5));
+            filter: drop-shadow(0.3rem 0.3rem 0.19rem rgba(0, 0, 0, 0.5));
 }
 .about_hero_body .hero_body_text_bottom{
+    display:-webkit-inline-box;
+    display:-ms-inline-flexbox;
     display:inline-flex;
-    justify-content: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     width: 100%;
 }
 .about_hero_body .hero_body_text a{
@@ -170,10 +223,13 @@ nav li a:hover{
     width: 100%;
 }
 .about_hero_body .hero_body_text a .projects_hero_redirect{
+    -webkit-transition:0.6s cubic-bezier(0.16, 0.84, 0.44, 1);
+    -o-transition:0.6s cubic-bezier(0.16, 0.84, 0.44, 1);
     transition:0.6s cubic-bezier(0.16, 0.84, 0.44, 1);
 }
 .hero_body_text_imperatives_redirects:hover .projects_hero_redirect{
-    filter: drop-shadow(0rem 0rem 0.1rem rgba(255, 223, 0, 1));
+    -webkit-filter: drop-shadow(0rem 0rem 0.1rem rgba(255, 223, 0, 1));
+            filter: drop-shadow(0rem 0rem 0.1rem rgba(255, 223, 0, 1));
 }
 .hero_body_text_imperatives_redirects .projects_hero_redirect_cv:hover{
     color: goldenrod;
@@ -193,7 +249,9 @@ nav li a:hover{
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+            transform: translate(-50%,-50%);
     padding: 5px;
     font-size: x-large;
     font-weight: 500;
@@ -203,7 +261,8 @@ nav li a:hover{
 }
 .fadeIn_fadeOut{
     opacity: 0;
-    animation: fadeIn_fadeOut 5s;
+    -webkit-animation: fadeIn_fadeOut 5s;
+            animation: fadeIn_fadeOut 5s;
 }
 #timeline_tv_show,#timeline_game,#timeline_sport{
     cursor: pointer;
@@ -213,8 +272,12 @@ nav li a:hover{
     width: 100%;
     height: 100vh;
     position: absolute;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: flex-end;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
 }
 .about_body .down_scroll_button_click_area{
     position: relative;
@@ -224,46 +287,65 @@ nav li a:hover{
 .about_body .down_scroll_button{
     border-left: 1px solid #fff;
     border-bottom: 1px solid #fff;
-    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg);
     padding: 0.75em;
+    display:-webkit-inline-box;
+    display:-ms-inline-flexbox;
     display:inline-flex;
     position: relative;
     left: 50%;
     height: 0;
     
-    animation: down_scroll_button_animation 3s infinite;
+    -webkit-animation: down_scroll_button_animation 3s infinite;
+    
+            animation: down_scroll_button_animation 3s infinite;
 }
 .about_body .up_scroll_button{
     border-left: 1px solid #fff;
     border-bottom: 1px solid #fff;
-    transform: rotate(135deg);
+    -webkit-transform: rotate(135deg);
+        -ms-transform: rotate(135deg);
+            transform: rotate(135deg);
     padding: 0.75em;
+    display:-webkit-inline-box;
+    display:-ms-inline-flexbox;
     display:inline-flex;
     position: relative;
     left: 50%;
     height: 0;
-    animation: 5s;
+    -webkit-animation: 5s;
+            animation: 5s;
 }
 
 .down_scroll_button_click_area:hover .down_scroll_button{
-    animation: down_scroll_button_animation_when_hovered 2s infinite;
+    -webkit-animation: down_scroll_button_animation_when_hovered 2s infinite;
+            animation: down_scroll_button_animation_when_hovered 2s infinite;
 }
 .down_scroll_button_click_area:hover .up_scroll_button{
-    animation: up_scroll_button_animation_when_hovered 2s infinite;
+    -webkit-animation: up_scroll_button_animation_when_hovered 2s infinite;
+            animation: up_scroll_button_animation_when_hovered 2s infinite;
 }
 .about-subsection{
     width: 100%;
     top: 100vh;     /*It is positioned under the initial landing screen*/
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-flow: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
 }
 .subheader{
     font-weight: 255;
     color: rgb(212, 212, 212);
     font-size: 100px;
     text-align: center;
-    filter: drop-shadow(0.3rem 0.3rem 0.3rem rgb(0, 0, 0, 0.7));
+    -webkit-filter: drop-shadow(0.3rem 0.3rem 0.3rem rgb(0, 0, 0, 0.7));
+            filter: drop-shadow(0.3rem 0.3rem 0.3rem rgb(0, 0, 0, 0.7));
     top: 0;
     width: 100%;
 }
@@ -280,12 +362,15 @@ nav li a:hover{
     text-align: center;
     max-width: 440px;
     left: 50%;
-    transform: translate(-50%,0%);
+    -webkit-transform: translate(-50%,0%);
+        -ms-transform: translate(-50%,0%);
+            transform: translate(-50%,0%);
 
     font-size: x-large;
     overflow-wrap: break-word;
     color: rgb(213, 245, 204);
-    filter: drop-shadow(0.3rem 0.3rem 0.19rem rgba(0, 0, 0, 0.5));
+    -webkit-filter: drop-shadow(0.3rem 0.3rem 0.19rem rgba(0, 0, 0, 0.5));
+            filter: drop-shadow(0.3rem 0.3rem 0.19rem rgba(0, 0, 0, 0.5));
 }
 .all_nodes li a{
     color: rgb(213, 245, 204);
@@ -338,12 +423,15 @@ nav li a:hover{
     display:inline-flexbox;
     left: 50%;
     top: 10%;
-    transform: translate(-50%,0%); /*If not 0% it will grow upwards when screen gets smaller*/
+    -webkit-transform: translate(-50%,0%);
+        -ms-transform: translate(-50%,0%);
+            transform: translate(-50%,0%); /*If not 0% it will grow upwards when screen gets smaller*/
     width: 60vw;
 }
 .projects_page_body .page_title{
     color: rgb(212, 212, 212);
-    filter: drop-shadow(0.3rem 0.3rem 0.3rem rgb(0, 0, 0, 0.7));
+    -webkit-filter: drop-shadow(0.3rem 0.3rem 0.3rem rgb(0, 0, 0, 0.7));
+            filter: drop-shadow(0.3rem 0.3rem 0.3rem rgb(0, 0, 0, 0.7));
     text-align: center;
     font-weight:400;
     font-size: 75px;
@@ -354,13 +442,28 @@ nav li a:hover{
     padding: 25px;
 }
 .all_projects{
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
-    flex-wrap:wrap;
-    justify-content:space-evenly;
+    -ms-flex-wrap:wrap;
+        flex-wrap:wrap;
+    -webkit-box-pack:space-evenly;
+        -ms-flex-pack:space-evenly;
+            justify-content:space-evenly;
     
 }
 .all_projects .a_project{
     background-color: orange;
+    background-image: -webkit-gradient(
+        linear,
+        left top, left bottom,
+        from(rgba(0, 0, 0, 0.5)),
+        to(rgba(0, 0, 0, 0.5))
+        ),url(../images/under_constructions.png);
+    background-image: -o-linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+        ),url(../images/under_constructions.png);
     background-image: linear-gradient(
         rgba(0, 0, 0, 0.5),
         rgba(0, 0, 0, 0.5)
@@ -371,6 +474,8 @@ nav li a:hover{
     height: 200px;
     margin: 30px;
     margin-bottom: 60px;    
+    -webkit-transition: 500ms cubic-bezier(.14,.82,.7,.92);    
+    -o-transition: 500ms cubic-bezier(.14,.82,.7,.92);    
     transition: 500ms cubic-bezier(.14,.82,.7,.92);
     position: relative; /*Puts each project title inside the square */
     text-align: center;
@@ -384,9 +489,22 @@ nav li a:hover{
     margin-top: 1rem;
     margin-bottom: 1rem;
     color: rgb(255, 255, 255);
-    filter: drop-shadow(0.3rem 0.3rem 0.3rem rgb(0, 0, 0, 0.7));
+    -webkit-filter: drop-shadow(0.3rem 0.3rem 0.3rem rgb(0, 0, 0, 0.7));
+            filter: drop-shadow(0.3rem 0.3rem 0.3rem rgb(0, 0, 0, 0.7));
 }
 #pomodoro_timer_project{
+    background-image: 
+        -webkit-gradient(
+        linear,
+        left top, left bottom,
+        from(rgba(0, 0, 0, 0.5)),
+        to(rgba(0, 0, 0, 0.5))
+        ),url(../images/pomodorotimerimage2darkmode.png);
+    background-image: 
+        -o-linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+        ),url(../images/pomodorotimerimage2darkmode.png);
     background-image: 
         linear-gradient(
         rgba(0, 0, 0, 0.5),
@@ -395,12 +513,34 @@ nav li a:hover{
 }
 #pomodoro_timer_project:hover{
     border-color: white;
+    background-image:                -webkit-gradient(
+        linear,
+        left top, left bottom,
+        from(rgba(0, 0, 0, 0.2)),
+        to(rgba(0, 0, 0, 0.2))
+        ),url(../images/pomodorotimerimage2.png);
+    background-image:                -o-linear-gradient(
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2)
+        ),url(../images/pomodorotimerimage2.png);
     background-image:                linear-gradient(
         rgba(0, 0, 0, 0.2),
         rgba(0, 0, 0, 0.2)
         ),url(../images/pomodorotimerimage2.png);
 }
 #quiz_battle_project{
+    background-image: 
+        -webkit-gradient(
+        linear,
+        left top, left bottom,
+        from(rgba(0, 0, 0, 0.5)),
+        to(rgba(0, 0, 0, 0.5))
+        ),url(../images/quizbattleimage.png);
+    background-image: 
+        -o-linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+        ),url(../images/quizbattleimage.png);
     background-image: 
         linear-gradient(
         rgba(0, 0, 0, 0.5),
@@ -410,12 +550,34 @@ nav li a:hover{
 }
 #quiz_battle_project:hover{
     border-color: white;
+    background-image:                -webkit-gradient(
+        linear,
+        left top, left bottom,
+        from(rgba(0, 0, 0, 0.2)),
+        to(rgba(0, 0, 0, 0.2))
+        ),url(../images/realgameofquizbattler.gif);
+    background-image:                -o-linear-gradient(
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2)
+        ),url(../images/realgameofquizbattler.gif);
     background-image:                linear-gradient(
         rgba(0, 0, 0, 0.2),
         rgba(0, 0, 0, 0.2)
         ),url(../images/realgameofquizbattler.gif);
 }
 #portfolio_project{
+    background-image: 
+        -webkit-gradient(
+        linear,
+        left top, left bottom,
+        from(rgba(0, 0, 0, 0.5)),
+        to(rgba(0, 0, 0, 0.5))
+        ),url(../images/portfolioprojectimage2.PNG);
+    background-image: 
+        -o-linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+        ),url(../images/portfolioprojectimage2.PNG);
     background-image: 
         linear-gradient(
         rgba(0, 0, 0, 0.5),
@@ -428,6 +590,16 @@ nav li a:hover{
 }
 #portfolio_project:hover{
     border-color: white;
+    background-image:                -webkit-gradient(
+        linear,
+        left top, left bottom,
+        from(rgba(0, 0, 0, 0.2)),
+        to(rgba(0, 0, 0, 0.2))
+        ),url(../images/portfoliogif.gif);
+    background-image:                -o-linear-gradient(
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2)
+        ),url(../images/portfoliogif.gif);
     background-image:                linear-gradient(
         rgba(0, 0, 0, 0.2),
         rgba(0, 0, 0, 0.2)
@@ -435,6 +607,16 @@ nav li a:hover{
 }
 #skywriter_project{
     border-color: rgb(0, 0, 0);
+    background-image:                -webkit-gradient(
+        linear,
+        left top, left bottom,
+        from(rgba(0, 0, 0, 0.5)),
+        to(rgba(0, 0, 0, 0.5))
+        ),url(../images/skywriterimage.png);
+    background-image:                -o-linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+        ),url(../images/skywriterimage.png);
     background-image:                linear-gradient(
         rgba(0, 0, 0, 0.5),
         rgba(0, 0, 0, 0.5)
@@ -447,6 +629,16 @@ nav li a:hover{
 }
 #image_macro_creator{
     border-color: rgb(0, 0, 0);
+    background-image:                -webkit-gradient(
+        linear,
+        left top, left bottom,
+        from(rgba(0, 0, 0, 0.5)),
+        to(rgba(0, 0, 0, 0.5))
+        ),url(../images/imagemacrocreatortemplate.jpg);
+    background-image:                -o-linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+        ),url(../images/imagemacrocreatortemplate.jpg);
     background-image:                linear-gradient(
         rgba(0, 0, 0, 0.5),
         rgba(0, 0, 0, 0.5)
@@ -458,6 +650,16 @@ nav li a:hover{
 }
 #game_automation{
     border-color: rgb(0, 0, 0);
+    background-image:                -webkit-gradient(
+        linear,
+        left top, left bottom,
+        from(rgba(0, 0, 0, 0.5)),
+        to(rgba(0, 0, 0, 0.5))
+        ),url(../images/cookieclickerscriptv2.PNG);
+    background-image:                -o-linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+        ),url(../images/cookieclickerscriptv2.PNG);
     background-image:                linear-gradient(
         rgba(0, 0, 0, 0.5),
         rgba(0, 0, 0, 0.5)
@@ -469,6 +671,16 @@ nav li a:hover{
 }
 #hamster_mania{
     border-color: rgb(0, 0, 0);
+    background-image:                -webkit-gradient(
+        linear,
+        left top, left bottom,
+        from(rgba(0, 0, 0, 0.5)),
+        to(rgba(0, 0, 0, 0.5))
+        ),url(../images/hamstermaniaimage.png);
+    background-image:                -o-linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+        ),url(../images/hamstermaniaimage.png);
     background-image:                linear-gradient(
         rgba(0, 0, 0, 0.5),
         rgba(0, 0, 0, 0.5)
@@ -480,6 +692,16 @@ nav li a:hover{
 }
 #other_projects{
     border-color: rgb(0, 0, 0);
+    background-image:                -webkit-gradient(
+        linear,
+        left top, left bottom,
+        from(rgba(0, 0, 0, 0.5)),
+        to(rgba(0, 0, 0, 0.5))
+        ),url(../images/vaticanstaircase.jpg);
+    background-image:                -o-linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+        ),url(../images/vaticanstaircase.jpg);
     background-image:                linear-gradient(
         rgba(0, 0, 0, 0.5),
         rgba(0, 0, 0, 0.5)
@@ -487,6 +709,16 @@ nav li a:hover{
 }
 #other_projects:hover{
     border-color: white;
+    background-image:                -webkit-gradient(
+        linear,
+        left top, left bottom,
+        from(rgba(0, 0, 0, 0.2)),
+        to(rgba(0, 0, 0, 0.2))
+        ),url(../images/vaticanstaircase.jpg);
+    background-image:                -o-linear-gradient(
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2)
+        ),url(../images/vaticanstaircase.jpg);
     background-image:                linear-gradient(
         rgba(0, 0, 0, 0.2),
         rgba(0, 0, 0, 0.2)
@@ -562,10 +794,16 @@ label input{
 }
 .project_body_text{
     color: white;
-    filter: drop-shadow(0.3rem 0.3rem 0.3rem rgb(0, 0, 0, 0.7));
+    -webkit-filter: drop-shadow(0.3rem 0.3rem 0.3rem rgb(0, 0, 0, 0.7));
+            filter: drop-shadow(0.3rem 0.3rem 0.3rem rgb(0, 0, 0, 0.7));
     margin-top: 1rem;
-    flex-flow: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .all_projects iframe{
     margin:auto;
@@ -585,6 +823,8 @@ label input{
     display: block;
 }
 .all_projects label input:checked + .a_project .project_body_text{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 .all_projects input{
@@ -624,6 +864,8 @@ label input{
 }
 
 .project_body_text a img{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 .project_body_text a img:last-child {
@@ -633,6 +875,8 @@ label input{
     display: none;
 }
 .project_body_text a:hover img:last-child {
+    display:-webkit-box;
+    display:-ms-flexbox;
     display:flex;  
 }
 #out_of_bound_blocker {
@@ -718,10 +962,19 @@ label input{
     position: absolute;
     top: 8%;
     left: 50%;
-    transform: translate(-50%,0%);
+    -webkit-transform: translate(-50%,0%);
+        -ms-transform: translate(-50%,0%);
+            transform: translate(-50%,0%);
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
-    flex-flow: column;
-    align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column;
+            flex-flow: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 .cv iframe{
     position: relative;
@@ -743,13 +996,16 @@ footer{
     bottom: 0;
 }
 .colorpickercontainer{
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     overflow: hidden;
     width: 1rem;
     height: 1rem;
     border: solid 1px #ddd;
     border-radius: 50%;
-    filter: drop-shadow(0.3rem 0.3rem 0.19rem rgba(0, 0, 0, 0.5));
+    -webkit-filter: drop-shadow(0.3rem 0.3rem 0.19rem rgba(0, 0, 0, 0.5));
+            filter: drop-shadow(0.3rem 0.3rem 0.19rem rgba(0, 0, 0, 0.5));
     margin: 1rem;
 }
 .bgcolor{
@@ -783,19 +1039,27 @@ footer{
 
 @media (max-width: 700px) {
     .hamburger_menu {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;      /*When the viewport is narrow is when the hamburger menu should be displayed. It's none by default.*/
         z-index: 1;
     }
     .all_redirects{
-        position: absolute;
         top:0;             /*Make the tab flush with the nav bar*/
         margin-top: 40px; /*Account for the height of the nav bar*/
         z-index: 1;
+        
     }
     .all_redirects li {
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
         display: inline-flex;
-        justify-content: center;                  /*Center the redirect*/
-        align-items: center;                      /*Center the redirect*/
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;                  /*Center the redirect*/
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;                      /*Center the redirect*/
         background-color: rgb(0, 0, 0);         /*Color of the individual redirect tabs*/
         width: 100%;                              /*Make the tab flush with the sides of the viewport*/
         margin: 0;                                /*Make the tab flush with the sides of the viewport*/
@@ -804,10 +1068,14 @@ footer{
         position:absolute;
         left:   50%;
         top:    50%;
-        transform: translate(-50%,-50%);
+        -webkit-transform: translate(-50%,-50%);
+            -ms-transform: translate(-50%,-50%);
+                transform: translate(-50%,-50%);
     }
     #hamburger_menu_toggle ~ .all_redirects li {
         height: 0;          /*The individual redirect tabs needs to be reset to 0 in order to make the animation look good*/
+        -webkit-transition:500ms cubic-bezier(0.2, 1, 0.3, 1);
+        -o-transition:500ms cubic-bezier(0.2, 1, 0.3, 1);
         transition:500ms cubic-bezier(0.2, 1, 0.3, 1); /*Details regarding how the tab dissappearing animates*/
         pointer-events: none;                          /*The redirects should not be clickable*/
         opacity: 0;                                    /*The redirects should not be visible */
@@ -816,6 +1084,8 @@ footer{
     #hamburger_menu_toggle:checked ~ .all_redirects li {
         height: 2em;                    /*How tall the redirect tabs should be*/
         border: 1px solid #333;       /*Size and color of border between redirect tabs*/
+        -webkit-transition:500ms cubic-bezier(0.2, 1, 0.3, 1);
+        -o-transition:500ms cubic-bezier(0.2, 1, 0.3, 1);
         transition:500ms cubic-bezier(0.2, 1, 0.3, 1); /*Details regarding how the tab appearing animates*/
         pointer-events:all;             /*The redirects should be clickable*/
         opacity: 1;                     /*The redirects should be visible */
@@ -829,43 +1099,108 @@ footer{
     }   
 }
 
-@keyframes down_scroll_button_animation {
+@-webkit-keyframes down_scroll_button_animation {
     0% {
-        transform: rotate(-45deg) translate(0, 0)
+        -webkit-transform: rotate(-45deg) translate(0, 0);
+                transform: rotate(-45deg) translate(0, 0)
     }
     20% {
-        transform: rotate(-45deg) translate(-15px, 15px)
+        -webkit-transform: rotate(-45deg) translate(-15px, 15px);
+                transform: rotate(-45deg) translate(-15px, 15px)
     }
     40% {
-        transform: rotate(-45deg) translate(0, 0)
+        -webkit-transform: rotate(-45deg) translate(0, 0);
+                transform: rotate(-45deg) translate(0, 0)
+    }
+}
+
+@keyframes down_scroll_button_animation {
+    0% {
+        -webkit-transform: rotate(-45deg) translate(0, 0);
+                transform: rotate(-45deg) translate(0, 0)
+    }
+    20% {
+        -webkit-transform: rotate(-45deg) translate(-15px, 15px);
+                transform: rotate(-45deg) translate(-15px, 15px)
+    }
+    40% {
+        -webkit-transform: rotate(-45deg) translate(0, 0);
+                transform: rotate(-45deg) translate(0, 0)
+    }
+}
+@-webkit-keyframes up_scroll_button_animation {
+    0% {
+        -webkit-transform: rotate(-45deg) translate(0, 0);
+                transform: rotate(-45deg) translate(0, 0)
+    }
+    20% {
+        -webkit-transform: rotate(-45deg) translate(-15px, 15px);
+                transform: rotate(-45deg) translate(-15px, 15px)
+    }
+    40% {
+        -webkit-transform: rotate(-45deg) translate(0, 0);
+                transform: rotate(-45deg) translate(0, 0)
     }
 }
 @keyframes up_scroll_button_animation {
     0% {
-        transform: rotate(-45deg) translate(0, 0)
+        -webkit-transform: rotate(-45deg) translate(0, 0);
+                transform: rotate(-45deg) translate(0, 0)
     }
     20% {
-        transform: rotate(-45deg) translate(-15px, 15px)
+        -webkit-transform: rotate(-45deg) translate(-15px, 15px);
+                transform: rotate(-45deg) translate(-15px, 15px)
     }
     40% {
-        transform: rotate(-45deg) translate(0, 0)
+        -webkit-transform: rotate(-45deg) translate(0, 0);
+                transform: rotate(-45deg) translate(0, 0)
+    }
+}
+@-webkit-keyframes down_scroll_button_animation_when_hovered {
+    0% {
+        -webkit-transform: rotateY(0) rotateZ(-45deg);
+                transform: rotateY(0) rotateZ(-45deg);
+    }
+    100% {
+        -webkit-transform: rotateY(720deg) rotateZ(-45deg);
+                transform: rotateY(720deg) rotateZ(-45deg);
     }
 }
 @keyframes down_scroll_button_animation_when_hovered {
     0% {
-        transform: rotateY(0) rotateZ(-45deg);
+        -webkit-transform: rotateY(0) rotateZ(-45deg);
+                transform: rotateY(0) rotateZ(-45deg);
     }
     100% {
-        transform: rotateY(720deg) rotateZ(-45deg);
+        -webkit-transform: rotateY(720deg) rotateZ(-45deg);
+                transform: rotateY(720deg) rotateZ(-45deg);
+    }
+}
+@-webkit-keyframes up_scroll_button_animation_when_hovered {
+    0% {
+        -webkit-transform: rotateY(0) rotateZ(135deg);
+                transform: rotateY(0) rotateZ(135deg);
+    }
+    100% {
+        -webkit-transform: rotateY(180deg) rotateZ(135deg);
+                transform: rotateY(180deg) rotateZ(135deg);
     }
 }
 @keyframes up_scroll_button_animation_when_hovered {
     0% {
-        transform: rotateY(0) rotateZ(135deg);
+        -webkit-transform: rotateY(0) rotateZ(135deg);
+                transform: rotateY(0) rotateZ(135deg);
     }
     100% {
-        transform: rotateY(180deg) rotateZ(135deg);
+        -webkit-transform: rotateY(180deg) rotateZ(135deg);
+                transform: rotateY(180deg) rotateZ(135deg);
     }
+}
+@-webkit-keyframes fadeIn_fadeOut {
+    0%      { opacity:0; }
+    20%     { opacity:1; }
+    80%     { opacity:1; }
+    100%     { opacity:0; }
 }
 @keyframes fadeIn_fadeOut {
     0%      { opacity:0; }
