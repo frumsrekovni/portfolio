@@ -6,16 +6,16 @@ body{
     font-weight: 255;
     height: 2000px;
     background-color: rgb(26, 26, 26);;/* For browsers that do not support gradients */
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(50,5,73,1)), color-stop(15%, rgba(26,26,26,1)),color-stop(85%, rgba(26,26,26,1)),to(rgba(50,5,73,1)));
     background: -o-linear-gradient(top, rgba(50,5,73,1) 0%, rgba(26,26,26,1) 15%,rgba(26,26,26,1) 85%,rgba(50,5,73,1) 100%);
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(50,5,73,1)), color-stop(15%, rgba(26,26,26,1)),color-stop(85%, rgba(26,26,26,1)),to(rgba(50,5,73,1)));
     background: linear-gradient(180deg, rgba(50,5,73,1) 0%, rgba(26,26,26,1) 15%,rgba(26,26,26,1) 85%,rgba(50,5,73,1) 100%);
     margin: 0; /*Make header flush with top corners*/
     padding: 0; 
 }
 nav{
     background: rgba(50,5,73,1);
-    background: -webkit-gradient(linear, left top, right top, color-stop(5%, rgba(50,5,73,1)), color-stop(30%, rgba(253,29,29,1)), color-stop(70%, rgba(252,120,54,1)), color-stop(95%, rgba(50,5,73,1)));
     background: -o-linear-gradient(left, rgba(50,5,73,1) 5%, rgba(253,29,29,1) 30%, rgba(252,120,54,1) 70%, rgba(50,5,73,1) 95%);
+    background: -webkit-gradient(linear, left top, right top, color-stop(5%, rgba(50,5,73,1)), color-stop(30%, rgba(253,29,29,1)), color-stop(70%, rgba(252,120,54,1)), color-stop(95%, rgba(50,5,73,1)));
     background: linear-gradient(90deg, rgba(50,5,73,1) 5%, rgba(253,29,29,1) 30%, rgba(252,120,54,1) 70%, rgba(50,5,73,1) 95%);
     width: 100%;
     top: 0%;
@@ -454,15 +454,15 @@ nav li a:hover{
 }
 .all_projects .a_project{
     background-color: orange;
+    background-image: -o-linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+        ),url(../images/under_constructions.png);
     background-image: -webkit-gradient(
         linear,
         left top, left bottom,
         from(rgba(0, 0, 0, 0.5)),
         to(rgba(0, 0, 0, 0.5))
-        ),url(../images/under_constructions.png);
-    background-image: -o-linear-gradient(
-        rgba(0, 0, 0, 0.5),
-        rgba(0, 0, 0, 0.5)
         ),url(../images/under_constructions.png);
     background-image: linear-gradient(
         rgba(0, 0, 0, 0.5),
@@ -494,16 +494,16 @@ nav li a:hover{
 }
 #pomodoro_timer_project{
     background-image: 
+        -o-linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+        ),url(../images/pomodorotimerimage2darkmode.png);
+    background-image: 
         -webkit-gradient(
         linear,
         left top, left bottom,
         from(rgba(0, 0, 0, 0.5)),
         to(rgba(0, 0, 0, 0.5))
-        ),url(../images/pomodorotimerimage2darkmode.png);
-    background-image: 
-        -o-linear-gradient(
-        rgba(0, 0, 0, 0.5),
-        rgba(0, 0, 0, 0.5)
         ),url(../images/pomodorotimerimage2darkmode.png);
     background-image: 
         linear-gradient(
@@ -513,15 +513,15 @@ nav li a:hover{
 }
 #pomodoro_timer_project:hover{
     border-color: white;
+    background-image:                -o-linear-gradient(
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2)
+        ),url(../images/pomodorotimerimage2.png);
     background-image:                -webkit-gradient(
         linear,
         left top, left bottom,
         from(rgba(0, 0, 0, 0.2)),
         to(rgba(0, 0, 0, 0.2))
-        ),url(../images/pomodorotimerimage2.png);
-    background-image:                -o-linear-gradient(
-        rgba(0, 0, 0, 0.2),
-        rgba(0, 0, 0, 0.2)
         ),url(../images/pomodorotimerimage2.png);
     background-image:                linear-gradient(
         rgba(0, 0, 0, 0.2),
@@ -530,16 +530,16 @@ nav li a:hover{
 }
 #quiz_battle_project{
     background-image: 
+        -o-linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+        ),url(../images/quizbattleimage.png);
+    background-image: 
         -webkit-gradient(
         linear,
         left top, left bottom,
         from(rgba(0, 0, 0, 0.5)),
         to(rgba(0, 0, 0, 0.5))
-        ),url(../images/quizbattleimage.png);
-    background-image: 
-        -o-linear-gradient(
-        rgba(0, 0, 0, 0.5),
-        rgba(0, 0, 0, 0.5)
         ),url(../images/quizbattleimage.png);
     background-image: 
         linear-gradient(
@@ -550,15 +550,15 @@ nav li a:hover{
 }
 #quiz_battle_project:hover{
     border-color: white;
+    background-image:                -o-linear-gradient(
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2)
+        ),url(../images/realgameofquizbattler.gif);
     background-image:                -webkit-gradient(
         linear,
         left top, left bottom,
         from(rgba(0, 0, 0, 0.2)),
         to(rgba(0, 0, 0, 0.2))
-        ),url(../images/realgameofquizbattler.gif);
-    background-image:                -o-linear-gradient(
-        rgba(0, 0, 0, 0.2),
-        rgba(0, 0, 0, 0.2)
         ),url(../images/realgameofquizbattler.gif);
     background-image:                linear-gradient(
         rgba(0, 0, 0, 0.2),
@@ -567,16 +567,16 @@ nav li a:hover{
 }
 #portfolio_project{
     background-image: 
+        -o-linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+        ),url(../images/portfolioprojectimage2.PNG);
+    background-image: 
         -webkit-gradient(
         linear,
         left top, left bottom,
         from(rgba(0, 0, 0, 0.5)),
         to(rgba(0, 0, 0, 0.5))
-        ),url(../images/portfolioprojectimage2.PNG);
-    background-image: 
-        -o-linear-gradient(
-        rgba(0, 0, 0, 0.5),
-        rgba(0, 0, 0, 0.5)
         ),url(../images/portfolioprojectimage2.PNG);
     background-image: 
         linear-gradient(
@@ -590,15 +590,15 @@ nav li a:hover{
 }
 #portfolio_project:hover{
     border-color: white;
+    background-image:                -o-linear-gradient(
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2)
+        ),url(../images/portfoliogif.gif);
     background-image:                -webkit-gradient(
         linear,
         left top, left bottom,
         from(rgba(0, 0, 0, 0.2)),
         to(rgba(0, 0, 0, 0.2))
-        ),url(../images/portfoliogif.gif);
-    background-image:                -o-linear-gradient(
-        rgba(0, 0, 0, 0.2),
-        rgba(0, 0, 0, 0.2)
         ),url(../images/portfoliogif.gif);
     background-image:                linear-gradient(
         rgba(0, 0, 0, 0.2),
@@ -607,15 +607,15 @@ nav li a:hover{
 }
 #skywriter_project{
     border-color: rgb(0, 0, 0);
+    background-image:                -o-linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+        ),url(../images/skywriterimage.png);
     background-image:                -webkit-gradient(
         linear,
         left top, left bottom,
         from(rgba(0, 0, 0, 0.5)),
         to(rgba(0, 0, 0, 0.5))
-        ),url(../images/skywriterimage.png);
-    background-image:                -o-linear-gradient(
-        rgba(0, 0, 0, 0.5),
-        rgba(0, 0, 0, 0.5)
         ),url(../images/skywriterimage.png);
     background-image:                linear-gradient(
         rgba(0, 0, 0, 0.5),
@@ -629,15 +629,15 @@ nav li a:hover{
 }
 #image_macro_creator{
     border-color: rgb(0, 0, 0);
+    background-image:                -o-linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+        ),url(../images/imagemacrocreatortemplate.jpg);
     background-image:                -webkit-gradient(
         linear,
         left top, left bottom,
         from(rgba(0, 0, 0, 0.5)),
         to(rgba(0, 0, 0, 0.5))
-        ),url(../images/imagemacrocreatortemplate.jpg);
-    background-image:                -o-linear-gradient(
-        rgba(0, 0, 0, 0.5),
-        rgba(0, 0, 0, 0.5)
         ),url(../images/imagemacrocreatortemplate.jpg);
     background-image:                linear-gradient(
         rgba(0, 0, 0, 0.5),
@@ -650,15 +650,15 @@ nav li a:hover{
 }
 #game_automation{
     border-color: rgb(0, 0, 0);
+    background-image:                -o-linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+        ),url(../images/cookieclickerscriptv2.PNG);
     background-image:                -webkit-gradient(
         linear,
         left top, left bottom,
         from(rgba(0, 0, 0, 0.5)),
         to(rgba(0, 0, 0, 0.5))
-        ),url(../images/cookieclickerscriptv2.PNG);
-    background-image:                -o-linear-gradient(
-        rgba(0, 0, 0, 0.5),
-        rgba(0, 0, 0, 0.5)
         ),url(../images/cookieclickerscriptv2.PNG);
     background-image:                linear-gradient(
         rgba(0, 0, 0, 0.5),
@@ -671,15 +671,15 @@ nav li a:hover{
 }
 #hamster_mania{
     border-color: rgb(0, 0, 0);
+    background-image:                -o-linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+        ),url(../images/hamstermaniaimage.png);
     background-image:                -webkit-gradient(
         linear,
         left top, left bottom,
         from(rgba(0, 0, 0, 0.5)),
         to(rgba(0, 0, 0, 0.5))
-        ),url(../images/hamstermaniaimage.png);
-    background-image:                -o-linear-gradient(
-        rgba(0, 0, 0, 0.5),
-        rgba(0, 0, 0, 0.5)
         ),url(../images/hamstermaniaimage.png);
     background-image:                linear-gradient(
         rgba(0, 0, 0, 0.5),
@@ -692,15 +692,15 @@ nav li a:hover{
 }
 #other_projects{
     border-color: rgb(0, 0, 0);
+    background-image:                -o-linear-gradient(
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+        ),url(../images/vaticanstaircase.jpg);
     background-image:                -webkit-gradient(
         linear,
         left top, left bottom,
         from(rgba(0, 0, 0, 0.5)),
         to(rgba(0, 0, 0, 0.5))
-        ),url(../images/vaticanstaircase.jpg);
-    background-image:                -o-linear-gradient(
-        rgba(0, 0, 0, 0.5),
-        rgba(0, 0, 0, 0.5)
         ),url(../images/vaticanstaircase.jpg);
     background-image:                linear-gradient(
         rgba(0, 0, 0, 0.5),
@@ -709,15 +709,15 @@ nav li a:hover{
 }
 #other_projects:hover{
     border-color: white;
+    background-image:                -o-linear-gradient(
+        rgba(0, 0, 0, 0.2),
+        rgba(0, 0, 0, 0.2)
+        ),url(../images/vaticanstaircase.jpg);
     background-image:                -webkit-gradient(
         linear,
         left top, left bottom,
         from(rgba(0, 0, 0, 0.2)),
         to(rgba(0, 0, 0, 0.2))
-        ),url(../images/vaticanstaircase.jpg);
-    background-image:                -o-linear-gradient(
-        rgba(0, 0, 0, 0.2),
-        rgba(0, 0, 0, 0.2)
         ),url(../images/vaticanstaircase.jpg);
     background-image:                linear-gradient(
         rgba(0, 0, 0, 0.2),
@@ -1048,7 +1048,9 @@ footer{
         top:0;             /*Make the tab flush with the nav bar*/
         margin-top: 40px; /*Account for the height of the nav bar*/
         z-index: 1;
-        
+        text-align: center;
+        padding: 0;
+        margin: 0;
     }
     .all_redirects li {
         display: -webkit-inline-box;
@@ -1063,14 +1065,30 @@ footer{
         background-color: rgb(0, 0, 0);         /*Color of the individual redirect tabs*/
         width: 100%;                              /*Make the tab flush with the sides of the viewport*/
         margin: 0;                                /*Make the tab flush with the sides of the viewport*/
+        text-align: center;
+        position: relative;
+        margin: 0;
+    }
+    .all_redirects li a{
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        -webkit-box-pack: center;
+            -ms-flex-pack: center;
+                justify-content: center;                  /*Center the redirect*/
+        -webkit-box-align: center;
+            -ms-flex-align: center;
+                align-items: center;                      /*Center the redirect*/
+        background-color: rgb(0, 0, 0);         /*Color of the individual redirect tabs*/
+        width: 100%;                              /*Make the tab flush with the sides of the viewport*/
+        margin: 0;                                /*Make the tab flush with the sides of the viewport*/
+        text-align: center;
+        position: relative;
+        margin: 0;
     }
     .nav_text{
-        position:absolute;
-        left:   50%;
-        top:    50%;
-        -webkit-transform: translate(-50%,-50%);
-            -ms-transform: translate(-50%,-50%);
-                transform: translate(-50%,-50%);
+        padding: 0;
+        margin: 0;
     }
     #hamburger_menu_toggle ~ .all_redirects li {
         height: 0;          /*The individual redirect tabs needs to be reset to 0 in order to make the animation look good*/
